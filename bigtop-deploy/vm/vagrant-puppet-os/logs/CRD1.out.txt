@@ -1,0 +1,1657 @@
+vagrant conf local repo enabled:  false
+Not creating provisioner directive for tests yet... only on vm 1 of 2
+==> CRD1: Rsyncing folder: /Users/Minying/MOC/hadoop/cloudrank-d/ => /tmp/cloudrank-d
+==> CRD1: Rsyncing folder: /Users/Minying/MOC/hadoop/bigtop-home/ => /bigtop-home
+==> CRD1: Rsyncing folder: /Users/Minying/MOC/hadoop/bigtop-home/bigtop-deploy/vm/vagrant-puppet-os/ => /vagrant
+==> CRD1: Rsyncing folder: /Users/Minying/MOC/hadoop/bigtop-home/bigtop-deploy/puppet/manifests/ => /tmp/vagrant-puppet/manifests-d4a7410ea2597e7ac321c7fdb251251f
+==> CRD1: Rsyncing folder: /Users/Minying/MOC/hadoop/bigtop-home/bigtop-deploy/puppet/modules/ => /tmp/vagrant-puppet/modules-3e509359e947b7e6ef7ee7a41d8bd86d
+==> CRD1: Running provisioner: shell...
+    CRD1: Running: inline script
+==> CRD1: Loaded plugins: fastestmirror, presto
+==> CRD1: Setting up Install Process
+==> CRD1: base                                                     | 3.7 kB     00:00     
+==> CRD1: base/primary_db           25% [===-           ]  0.0 B/s | 1.2 MB     --:-- ETA base/primary_db                                          | 4.6 MB     00:00     
+==> CRD1: extras                                                   | 3.4 kB     00:00     
+==> CRD1: extras/primary_db                                        |  31 kB     00:00     
+==> CRD1: updates                                                  | 3.4 kB     00:00     
+==> CRD1: updates/primary_db        12% [=-             ]  0.0 B/s | 544 kB     --:-- ETA updates/primary_db        47% [=======        ] 2.5 MB/s | 2.1 MB     00:00 ETA updates/primary_db                                       | 4.4 MB     00:00     
+==> CRD1: Resolving Dependencies
+==> CRD1: --> Running transaction check
+==> CRD1: ---> Package words.noarch 0:3.0-17.el6 will be installed
+==> CRD1: --> Finished Dependency Resolution
+==> CRD1: 
+==> CRD1: Dependencies Resolved
+==> CRD1: 
+==> CRD1: ================================================================================
+==> CRD1:  Package          Arch              Version               Repository       Size
+==> CRD1: ================================================================================
+==> CRD1: Installing:
+==> CRD1:  words            noarch            3.0-17.el6            base            1.4 M
+==> CRD1: 
+==> CRD1: Transaction Summary
+==> CRD1: ================================================================================
+==> CRD1: Install       1 Package(s)
+==> CRD1: 
+==> CRD1: Total download size: 1.4 M
+==> CRD1: Installed size: 4.7 M
+==> CRD1: Downloading Packages:
+==> CRD1: Setting up and reading Presto delta metadata
+==> CRD1: Processing delta metadata
+==> CRD1: Package(s) data still to download: 1.4 M
+==> CRD1: words-3.0-17.el6.noarch.rpm                              | 1.4 MB     00:00     
+==> CRD1: warning: rpmts_HdrFromFdno: Header V3 RSA/SHA256 Signature, key ID c105b9de: NOKEY
+==> CRD1: Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-6
+==> CRD1: Importing GPG key 0xC105B9DE:
+==> CRD1:  Userid : CentOS-6 Key (CentOS 6 Official Signing Key) <centos-6-key@centos.org>
+==> CRD1:  Package: centos-release-6-6.el6.centos.12.2.x86_64 (@anaconda-CentOS-201410241409.x86_64/6.6)
+==> CRD1:  From   : /etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-6
+==> CRD1: Running rpm_check_debug
+==> CRD1: Running Transaction Test
+==> CRD1: Transaction Test Succeeded
+==> CRD1: Running Transaction
+==> CRD1:   Installing : words-3.0-17.el6.noarch [                                  ] 1/1  Installing : words-3.0-17.el6.noarch [#                                 ] 1/1  Installing : words-3.0-17.el6.noarch [##                                ] 1/1  Installing : words-3.0-17.el6.noarch [###                               ] 1/1  Installing : words-3.0-17.el6.noarch [####                              ] 1/1  Installing : words-3.0-17.el6.noarch [#####                             ] 1/1  Installing : words-3.0-17.el6.noarch [######                            ] 1/1  Installing : words-3.0-17.el6.noarch [#######                           ] 1/1  Installing : words-3.0-17.el6.noarch [########                          ] 1/1  Installing : words-3.0-17.el6.noarch [#########                         ] 1/1  Installing : words-3.0-17.el6.noarch [##########                        ] 1/1  Installing : words-3.0-17.el6.noarch [###########                       ] 1/1  Installing : words-3.0-17.el6.noarch [############                      ] 1/1  Installing : words-3.0-17.el6.noarch [#############                     ] 1/1  Installing : words-3.0-17.el6.noarch [##############                    ] 1/1  Installing : words-3.0-17.el6.noarch [###############                   ] 1/1  Installing : words-3.0-17.el6.noarch [################                  ] 1/1  Installing : words-3.0-17.el6.noarch [#################                 ] 1/1  Installing : words-3.0-17.el6.noarch [##################                ] 1/1  Installing : words-3.0-17.el6.noarch [###################               ] 1/1  Installing : words-3.0-17.el6.noarch [####################              ] 1/1  Installing : words-3.0-17.el6.noarch [#####################             ] 1/1  Installing : words-3.0-17.el6.noarch [######################            ] 1/1  Installing : words-3.0-17.el6.noarch [#######################           ] 1/1  Installing : words-3.0-17.el6.noarch [########################          ] 1/1  Installing : words-3.0-17.el6.noarch [#########################         ] 1/1  Installing : words-3.0-17.el6.noarch [##########################        ] 1/1  Installing : words-3.0-17.el6.noarch [###########################       ] 1/1  Installing : words-3.0-17.el6.noarch [############################      ] 1/1  Installing : words-3.0-17.el6.noarch [#############################     ] 1/1  Installing : words-3.0-17.el6.noarch [##############################    ] 1/1  Installing : words-3.0-17.el6.noarch [###############################   ] 1/1  Installing : words-3.0-17.el6.noarch [################################  ] 1/1  Installing : words-3.0-17.el6.noarch [################################# ] 1/1  Installing : words-3.0-17.el6.noarch                                      1/1 
+==> CRD1:   Verifying  : words-3.0-17.el6.noarch                                      1/1 
+==> CRD1: 
+==> CRD1: Installed:
+==> CRD1:   words.noarch 0:3.0-17.el6                                                     
+==> CRD1: 
+==> CRD1: Complete!
+==> CRD1: Running provisioner: shell...
+    CRD1: Running: /var/folders/kg/r24kcf9d3dsf1n149zsl8s1m0000gp/T/vagrant-shell20150720-43418-1grajol.sh
+==> CRD1: false
+==> CRD1: Loaded plugins: fastestmirror, presto
+==> CRD1: Setting up Install Process
+==> CRD1: puppetlabs-release-el-6.noarch.rpm                       | 9.9 kB     00:00     
+==> CRD1: Examining /var/tmp/yum-root-D9idnI/puppetlabs-release-el-6.noarch.rpm: puppetlabs-release-6-11.noarch
+==> CRD1: Marking /var/tmp/yum-root-D9idnI/puppetlabs-release-el-6.noarch.rpm to be installed
+==> CRD1: Determining fastest mirrors
+==> CRD1:  * base: mirror.solarvps.com
+==> CRD1:  * extras: mirrors.syringanetworks.net
+==> CRD1:  * updates: cosmos.cites.illinois.edu
+==> CRD1: Resolving Dependencies
+==> CRD1: --> Running transaction check
+==> CRD1: ---> Package puppetlabs-release.noarch 0:6-11 will be installed
+==> CRD1: --> Finished Dependency Resolution
+==> CRD1: 
+==> CRD1: Dependencies Resolved
+==> CRD1: 
+==> CRD1: ================================================================================
+==> CRD1:  Package              Arch     Version  Repository                         Size
+==> CRD1: ================================================================================
+==> CRD1: Installing:
+==> CRD1:  [1mpuppetlabs-release  [m noarch   6-11     /puppetlabs-release-el-6.noarch   8.3 k
+==> CRD1: 
+==> CRD1: Transaction Summary
+==> CRD1: ================================================================================
+==> CRD1: Install       1 Package(s)
+==> CRD1: 
+==> CRD1: Total size: 8.3 k
+==> CRD1: Installed size: 8.3 k
+==> CRD1: Downloading Packages:
+==> CRD1: Running rpm_check_debug
+==> CRD1: Running Transaction Test
+==> CRD1: Transaction Test Succeeded
+==> CRD1: Running Transaction
+==> CRD1:   Installing : puppetlabs-release-6-11.noar [#################            ] 1/1  Installing : puppetlabs-release-6-11.noar [########################     ] 1/1  Installing : puppetlabs-release-6-11.noar [############################ ] 1/1  Installing : puppetlabs-release-6-11.noarch                               1/1 
+==> CRD1:   Verifying  : puppetlabs-release-6-11.noarch                               1/1 
+==> CRD1: 
+==> CRD1: Installed:
+==> CRD1:   puppetlabs-release.noarch 0:6-11                                              
+==> CRD1: 
+==> CRD1: Complete!
+==> CRD1: Loaded plugins: fastestmirror, presto
+==> CRD1: Setting up Install Process
+==> CRD1: Loading mirror speeds from cached hostfile
+==> CRD1:  * base: mirror.solarvps.com
+==> CRD1:  * extras: mirrors.syringanetworks.net
+==> CRD1:  * updates: cosmos.cites.illinois.edu
+==> CRD1: puppetlabs-deps                                          | 2.5 kB     00:00     
+==> CRD1: puppetlabs-deps/primary_db                               |  27 kB     00:00     
+==> CRD1: puppetlabs-products                                      | 2.5 kB     00:00     
+==> CRD1: puppetlabs-products/primary_db                           | 156 kB     00:00     
+==> CRD1: Package sudo-1.8.6p3-15.el6.x86_64 already installed and latest version
+==> CRD1: Resolving Dependencies
+==> CRD1: --> Running transaction check
+==> CRD1: ---> Package curl.x86_64 0:7.19.7-40.el6_6.1 will be updated
+==> CRD1: ---> Package curl.x86_64 0:7.19.7-40.el6_6.4 will be an update
+==> CRD1: --> Processing Dependency: libcurl = 7.19.7-40.el6_6.4 for package: curl-7.19.7-40.el6_6.4.x86_64
+==> CRD1: ---> Package puppet.noarch 0:3.8.1-1.el6 will be installed
+==> CRD1: --> Processing Dependency: ruby >= 1.8 for package: puppet-3.8.1-1.el6.noarch
+==> CRD1: --> Processing Dependency: hiera >= 1.0.0 for package: puppet-3.8.1-1.el6.noarch
+==> CRD1: --> Processing Dependency: ruby >= 1.8.7 for package: puppet-3.8.1-1.el6.noarch
+==> CRD1: --> Processing Dependency: facter >= 1:1.7.0 for package: puppet-3.8.1-1.el6.noarch
+==> CRD1: --> Processing Dependency: ruby-augeas for package: puppet-3.8.1-1.el6.noarch
+==> CRD1: --> Processing Dependency: ruby-shadow for package: puppet-3.8.1-1.el6.noarch
+==> CRD1: --> Processing Dependency: rubygem-json for package: puppet-3.8.1-1.el6.noarch
+==> CRD1: --> Processing Dependency: /usr/bin/ruby for package: puppet-3.8.1-1.el6.noarch
+==> CRD1: --> Processing Dependency: ruby(selinux) for package: puppet-3.8.1-1.el6.noarch
+==> CRD1: ---> Package unzip.x86_64 0:6.0-2.el6_6 will be installed
+==> CRD1: --> Running transaction check
+==> CRD1: ---> Package facter.x86_64 1:2.4.4-1.el6 will be installed
+==> CRD1: --> Processing Dependency: virt-what for package: 1:facter-2.4.4-1.el6.x86_64
+==> CRD1: ---> Package hiera.noarch 0:1.3.4-1.el6 will be installed
+==> CRD1: ---> Package libcurl.x86_64 0:7.19.7-40.el6_6.1 will be updated
+==> CRD1: ---> Package libcurl.x86_64 0:7.19.7-40.el6_6.4 will be an update
+==> CRD1: ---> Package libselinux-ruby.x86_64 0:2.0.94-5.8.el6 will be installed
+==> CRD1: ---> Package ruby.x86_64 0:1.8.7.374-4.el6_6 will be installed
+==> CRD1: --> Processing Dependency: ruby-libs = 1.8.7.374-4.el6_6 for package: ruby-1.8.7.374-4.el6_6.x86_64
+==> CRD1: --> Processing Dependency: libruby.so.1.8()(64bit) for package: ruby-1.8.7.374-4.el6_6.x86_64
+==> CRD1: ---> Package ruby-augeas.x86_64 0:0.4.1-3.el6 will be installed
+==> CRD1: --> Processing Dependency: augeas-libs >= 0.8.0 for package: ruby-augeas-0.4.1-3.el6.x86_64
+==> CRD1: --> Processing Dependency: libaugeas.so.0(AUGEAS_0.10.0)(64bit) for package: ruby-augeas-0.4.1-3.el6.x86_64
+==> CRD1: --> Processing Dependency: libaugeas.so.0(AUGEAS_0.1.0)(64bit) for package: ruby-augeas-0.4.1-3.el6.x86_64
+==> CRD1: --> Processing Dependency: libaugeas.so.0(AUGEAS_0.11.0)(64bit) for package: ruby-augeas-0.4.1-3.el6.x86_64
+==> CRD1: --> Processing Dependency: libaugeas.so.0(AUGEAS_0.8.0)(64bit) for package: ruby-augeas-0.4.1-3.el6.x86_64
+==> CRD1: --> Processing Dependency: libaugeas.so.0(AUGEAS_0.12.0)(64bit) for package: ruby-augeas-0.4.1-3.el6.x86_64
+==> CRD1: --> Processing Dependency: libaugeas.so.0()(64bit) for package: ruby-augeas-0.4.1-3.el6.x86_64
+==> CRD1: ---> Package ruby-shadow.x86_64 1:2.2.0-2.el6 will be installed
+==> CRD1: ---> Package rubygem-json.x86_64 0:1.5.5-3.el6 will be installed
+==> CRD1: --> Processing Dependency: rubygems >= 1.3.7 for package: rubygem-json-1.5.5-3.el6.x86_64
+==> CRD1: --> Running transaction check
+==> CRD1: ---> Package augeas-libs.x86_64 0:1.0.0-7.el6_6.1 will be installed
+==> CRD1: ---> Package ruby-libs.x86_64 0:1.8.7.374-4.el6_6 will be installed
+==> CRD1: --> Processing Dependency: libreadline.so.5()(64bit) for package: ruby-libs-1.8.7.374-4.el6_6.x86_64
+==> CRD1: ---> Package rubygems.noarch 0:1.3.7-5.el6 will be installed
+==> CRD1: --> Processing Dependency: ruby-rdoc for package: rubygems-1.3.7-5.el6.noarch
+==> CRD1: ---> Package virt-what.x86_64 0:1.11-1.2.el6 will be installed
+==> CRD1: --> Running transaction check
+==> CRD1: ---> Package compat-readline5.x86_64 0:5.2-17.1.el6 will be installed
+==> CRD1: ---> Package ruby-rdoc.x86_64 0:1.8.7.374-4.el6_6 will be installed
+==> CRD1: --> Processing Dependency: ruby-irb = 1.8.7.374-4.el6_6 for package: ruby-rdoc-1.8.7.374-4.el6_6.x86_64
+==> CRD1: --> Running transaction check
+==> CRD1: ---> Package ruby-irb.x86_64 0:1.8.7.374-4.el6_6 will be installed
+==> CRD1: --> Finished Dependency Resolution
+==> CRD1: 
+==> CRD1: Dependencies Resolved
+==> CRD1: 
+==> CRD1: ================================================================================
+==> CRD1:  Package            Arch     Version                Repository             Size
+==> CRD1: ================================================================================
+==> CRD1: Installing:
+==> CRD1:  puppet             noarch   3.8.1-1.el6            puppetlabs-products   1.6 M
+==> CRD1:  unzip              x86_64   6.0-2.el6_6            updates               149 k
+==> CRD1: Updating:
+==> CRD1:  curl               x86_64   7.19.7-40.el6_6.4      updates               194 k
+==> CRD1: Installing for dependencies:
+==> CRD1:  augeas-libs        x86_64   1.0.0-7.el6_6.1        updates               313 k
+==> CRD1:  compat-readline5   x86_64   5.2-17.1.el6           base                  130 k
+==> CRD1:  facter             x86_64   1:2.4.4-1.el6          puppetlabs-products    99 k
+==> CRD1:  hiera              noarch   1.3.4-1.el6            puppetlabs-products    23 k
+==> CRD1:  libselinux-ruby    x86_64   2.0.94-5.8.el6         base                  100 k
+==> CRD1:  ruby               x86_64   1.8.7.374-4.el6_6      updates               538 k
+==> CRD1:  ruby-augeas        x86_64   0.4.1-3.el6            puppetlabs-deps        21 k
+==> CRD1:  ruby-irb           x86_64   1.8.7.374-4.el6_6      updates               317 k
+==> CRD1:  ruby-libs          x86_64   1.8.7.374-4.el6_6      updates               1.7 M
+==> CRD1:  ruby-rdoc          x86_64   1.8.7.374-4.el6_6      updates               381 k
+==> CRD1:  ruby-shadow        x86_64   1:2.2.0-2.el6          puppetlabs-deps        13 k
+==> CRD1:  rubygem-json       x86_64   1.5.5-3.el6            puppetlabs-deps       763 k
+==> CRD1:  rubygems           noarch   1.3.7-5.el6            base                  207 k
+==> CRD1:  virt-what          x86_64   1.11-1.2.el6           base                   24 k
+==> CRD1: Updating for dependencies:
+==> CRD1:  libcurl            x86_64   7.19.7-40.el6_6.4      updates               166 k
+==> CRD1: 
+==> CRD1: Transaction Summary
+==> CRD1: ================================================================================
+==> CRD1: Install      16 Package(s)
+==> CRD1: Upgrade       2 Package(s)
+==> CRD1: 
+==> CRD1: Total download size: 6.6 M
+==> CRD1: Downloading Packages:
+==> CRD1: Setting up and reading Presto delta metadata
+==> CRD1: updates/prestodelta                                      | 424 kB     00:00     
+==> CRD1: Processing delta metadata
+==> CRD1: Download delta size: 145 k
+==> CRD1: (1/2): curl-7.19.7-40.el6_6.1_7.19.7-40.el6_6.4.x86_64.d |  99 kB     00:00     
+==> CRD1: (2/2): libcurl-7.19.7-40.el6_6.1_7.19.7-40.el6_6.4.x86_6 |  46 kB     00:00     
+==> CRD1: Finishing rebuild of rpms, from deltarpms
+==> CRD1: <delta rebuild>          100% [===============]  0.0 B/s | 361 kB     --:-- ETA <delta rebuild>                                          | 361 kB     00:01     
+==> CRD1: Presto reduced the update size by 60% (from 361 k to 145 k).
+==> CRD1: Package(s) data still to download: 6.2 M
+==> CRD1: (1/16): augeas-libs-1. (4%) 100% [============]  0.0 B/s | 313 kB     --:-- ETA (1/16): augeas-libs-1.0.0-7.el6_6.1.x86_64.rpm           | 313 kB     00:00     
+==> CRD1: (2/16): compat-readline5-5.2-17.1.el6.x86_64.rpm         | 130 kB     00:00     
+==> CRD1: (3/16): facter-2.4.4-1.el6.x86_64.rpm                    |  99 kB     00:00     
+==> CRD1: (4/16): hiera-1.3.4-1.el6.noarch.rpm                     |  23 kB     00:00     
+==> CRD1: (5/16): libselinux-ruby-2.0.94-5.8.el6.x86_64.rpm        | 100 kB     00:00     
+==> CRD1: (6/16): puppet-3.8.1-1.el6.noarch.rpm                    | 1.6 MB     00:00     
+==> CRD1: (7/16): ruby-1.8.7.37 (44%) 100% [============]  0.0 B/s | 538 kB     --:-- ETA (7/16): ruby-1.8.7.374-4.el6_6.x86_64.rpm                | 538 kB     00:00     
+==> CRD1: (8/16): ruby-augeas-0.4.1-3.el6.x86_64.rpm               |  21 kB     00:00     
+==> CRD1: (9/16): ruby-irb-1.8.7.374-4.el6_6.x86_64.rpm            | 317 kB     00:00     
+==> CRD1: (10/16): ruby-libs-1.8.7.374-4.el6_6.x86_64.rpm          | 1.7 MB     00:00     
+==> CRD1: (11/16): ruby-rdoc-1.8.7.374-4.el6_6.x86_64.rpm          | 381 kB     00:00     
+==> CRD1: (12/16): ruby-shadow-2.2.0-2.el6.x86_64.rpm              |  13 kB     00:00     
+==> CRD1: (13/16): rubygem-json-1.5.5-3.el6.x86_64.rpm             | 763 kB     00:00     
+==> CRD1: (14/16): rubygems-1.3.7-5.el6.noarch.rpm                 | 207 kB     00:00     
+==> CRD1: (15/16): unzip-6.0-2.el6_6.x86_64.rpm                    | 149 kB     00:00     
+==> CRD1: (16/16): virt-what-1.11-1.2.el6.x86_64.rpm               |  24 kB     00:00     
+==> CRD1: --------------------------------------------------------------------------------
+==> CRD1: Total                                           3.9 MB/s | 6.2 MB     00:01     
+==> CRD1: warning: rpmts_HdrFromFdno: Header V4 RSA/SHA512 Signature, key ID 4bd6ec30: NOKEY
+==> CRD1: Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-puppetlabs
+==> CRD1: Importing GPG key 0x4BD6EC30:
+==> CRD1:  Userid : Puppet Labs Release Key (Puppet Labs Release Key) <info@puppetlabs.com>
+==> CRD1:  Package: puppetlabs-release-6-11.noarch (@/puppetlabs-release-el-6.noarch)
+==> CRD1:  From   : /etc/pki/rpm-gpg/RPM-GPG-KEY-puppetlabs
+==> CRD1: Running rpm_check_debug
+==> CRD1: Running Transaction Test
+==> CRD1: Transaction Test Succeeded
+==> CRD1: Running Transaction
+==> CRD1:   Installing : libselinux-ruby-2.0.94-5.8. [########                    ]  1/20  Installing : libselinux-ruby-2.0.94-5.8. [#################           ]  1/20  Installing : libselinux-ruby-2.0.94-5.8. [##########################  ]  1/20  Installing : libselinux-ruby-2.0.94-5.8. [########################### ]  1/20  Installing : libselinux-ruby-2.0.94-5.8.el6.x86_64                       1/20 
+==> CRD1:   Installing : virt-what-1.11-1.2.el6.x86_ [###                         ]  2/20  Installing : virt-what-1.11-1.2.el6.x86_ [########                    ]  2/20  Installing : virt-what-1.11-1.2.el6.x86_ [#####################       ]  2/20  Installing : virt-what-1.11-1.2.el6.x86_ [#######################     ]  2/20  Installing : virt-what-1.11-1.2.el6.x86_ [########################### ]  2/20  Installing : virt-what-1.11-1.2.el6.x86_64                               2/20 
+==> CRD1:   Updating   : libcurl-7.19.7-40.el6_6.4.x [                            ]  3/20  Updating   : libcurl-7.19.7-40.el6_6.4.x [#####                       ]  3/20  Updating   : libcurl-7.19.7-40.el6_6.4.x [##########                  ]  3/20  Updating   : libcurl-7.19.7-40.el6_6.4.x [###############             ]  3/20  Updating   : libcurl-7.19.7-40.el6_6.4.x [#####################       ]  3/20  Updating   : libcurl-7.19.7-40.el6_6.4.x [##########################  ]  3/20  Updating   : libcurl-7.19.7-40.el6_6.4.x [########################### ]  3/20  Updating   : libcurl-7.19.7-40.el6_6.4.x86_64                            3/20 
+==> CRD1:   Installing : compat-readline5-5.2-17.1.e [                            ]  4/20  Installing : compat-readline5-5.2-17.1.e [#####                       ]  4/20  Installing : compat-readline5-5.2-17.1.e [#########                   ]  4/20  Installing : compat-readline5-5.2-17.1.e [##############              ]  4/20  Installing : compat-readline5-5.2-17.1.e [###################         ]  4/20  Installing : compat-readline5-5.2-17.1.e [######################      ]  4/20  Installing : compat-readline5-5.2-17.1.e [#########################   ]  4/20  Installing : compat-readline5-5.2-17.1.e [########################### ]  4/20  Installing : compat-readline5-5.2-17.1.el6.x86_64                        4/20 
+==> CRD1:   Installing : ruby-libs-1.8.7.374-4.el6_6 [                            ]  5/20  Installing : ruby-libs-1.8.7.374-4.el6_6 [#                           ]  5/20  Installing : ruby-libs-1.8.7.374-4.el6_6 [##                          ]  5/20  Installing : ruby-libs-1.8.7.374-4.el6_6 [###                         ]  5/20  Installing : ruby-libs-1.8.7.374-4.el6_6 [####                        ]  5/20  Installing : ruby-libs-1.8.7.374-4.el6_6 [#####                       ]  5/20  Installing : ruby-libs-1.8.7.374-4.el6_6 [######                      ]  5/20  Installing : ruby-libs-1.8.7.374-4.el6_6 [#######                     ]  5/20  Installing : ruby-libs-1.8.7.374-4.el6_6 [########                    ]  5/20  Installing : ruby-libs-1.8.7.374-4.el6_6 [#########                   ]  5/20  Installing : ruby-libs-1.8.7.374-4.el6_6 [##########                  ]  5/20  Installing : ruby-libs-1.8.7.374-4.el6_6 [###########                 ]  5/20  Installing : ruby-libs-1.8.7.374-4.el6_6 [############                ]  5/20  Installing : ruby-libs-1.8.7.374-4.el6_6 [#############               ]  5/20  Installing : ruby-libs-1.8.7.374-4.el6_6 [##############              ]  5/20  Installing : ruby-libs-1.8.7.374-4.el6_6 [###############             ]  5/20  Installing : ruby-libs-1.8.7.374-4.el6_6 [################            ]  5/20  Installing : ruby-libs-1.8.7.374-4.el6_6 [#################           ]  5/20  Installing : ruby-libs-1.8.7.374-4.el6_6 [##################          ]  5/20  Installing : ruby-libs-1.8.7.374-4.el6_6 [###################         ]  5/20  Installing : ruby-libs-1.8.7.374-4.el6_6 [####################        ]  5/20  Installing : ruby-libs-1.8.7.374-4.el6_6 [#####################       ]  5/20  Installing : ruby-libs-1.8.7.374-4.el6_6 [######################      ]  5/20  Installing : ruby-libs-1.8.7.374-4.el6_6 [#######################     ]  5/20  Installing : ruby-libs-1.8.7.374-4.el6_6 [########################    ]  5/20  Installing : ruby-libs-1.8.7.374-4.el6_6 [#########################   ]  5/20  Installing : ruby-libs-1.8.7.374-4.el6_6 [##########################  ]  5/20  Installing : ruby-libs-1.8.7.374-4.el6_6 [########################### ]  5/20  Installing : ruby-libs-1.8.7.374-4.el6_6.x86_64                          5/20 
+==> CRD1:   Installing : ruby-1.8.7.374-4.el6_6.x86_ [                            ]  6/20  Installing : ruby-1.8.7.374-4.el6_6.x86_ [#                           ]  6/20  Installing : ruby-1.8.7.374-4.el6_6.x86_ [##                          ]  6/20  Installing : ruby-1.8.7.374-4.el6_6.x86_ [###                         ]  6/20  Installing : ruby-1.8.7.374-4.el6_6.x86_ [####                        ]  6/20  Installing : ruby-1.8.7.374-4.el6_6.x86_ [#####                       ]  6/20  Installing : ruby-1.8.7.374-4.el6_6.x86_ [######                      ]  6/20  Installing : ruby-1.8.7.374-4.el6_6.x86_ [#######                     ]  6/20  Installing : ruby-1.8.7.374-4.el6_6.x86_ [########                    ]  6/20  Installing : ruby-1.8.7.374-4.el6_6.x86_ [#########                   ]  6/20  Installing : ruby-1.8.7.374-4.el6_6.x86_ [##########                  ]  6/20  Installing : ruby-1.8.7.374-4.el6_6.x86_ [###########                 ]  6/20  Installing : ruby-1.8.7.374-4.el6_6.x86_ [############                ]  6/20  Installing : ruby-1.8.7.374-4.el6_6.x86_ [#############               ]  6/20  Installing : ruby-1.8.7.374-4.el6_6.x86_ [##############              ]  6/20  Installing : ruby-1.8.7.374-4.el6_6.x86_ [###############             ]  6/20  Installing : ruby-1.8.7.374-4.el6_6.x86_ [################            ]  6/20  Installing : ruby-1.8.7.374-4.el6_6.x86_ [#################           ]  6/20  Installing : ruby-1.8.7.374-4.el6_6.x86_ [##################          ]  6/20  Installing : ruby-1.8.7.374-4.el6_6.x86_ [###################         ]  6/20  Installing : ruby-1.8.7.374-4.el6_6.x86_ [####################        ]  6/20  Installing : ruby-1.8.7.374-4.el6_6.x86_ [#####################       ]  6/20  Installing : ruby-1.8.7.374-4.el6_6.x86_ [######################      ]  6/20  Installing : ruby-1.8.7.374-4.el6_6.x86_ [#######################     ]  6/20  Installing : ruby-1.8.7.374-4.el6_6.x86_ [########################    ]  6/20  Installing : ruby-1.8.7.374-4.el6_6.x86_ [#########################   ]  6/20  Installing : ruby-1.8.7.374-4.el6_6.x86_ [##########################  ]  6/20  Installing : ruby-1.8.7.374-4.el6_6.x86_ [########################### ]  6/20  Installing : ruby-1.8.7.374-4.el6_6.x86_64                               6/20 
+==> CRD1:   Installing : 1:facter-2.4.4-1.el6.x86_64 [                            ]  7/20  Installing : 1:facter-2.4.4-1.el6.x86_64 [#                           ]  7/20  Installing : 1:facter-2.4.4-1.el6.x86_64 [##                          ]  7/20  Installing : 1:facter-2.4.4-1.el6.x86_64 [###                         ]  7/20  Installing : 1:facter-2.4.4-1.el6.x86_64 [####                        ]  7/20  Installing : 1:facter-2.4.4-1.el6.x86_64 [#####                       ]  7/20  Installing : 1:facter-2.4.4-1.el6.x86_64 [######                      ]  7/20  Installing : 1:facter-2.4.4-1.el6.x86_64 [#######                     ]  7/20  Installing : 1:facter-2.4.4-1.el6.x86_64 [########                    ]  7/20  Installing : 1:facter-2.4.4-1.el6.x86_64 [#########                   ]  7/20  Installing : 1:facter-2.4.4-1.el6.x86_64 [##########                  ]  7/20  Installing : 1:facter-2.4.4-1.el6.x86_64 [###########                 ]  7/20  Installing : 1:facter-2.4.4-1.el6.x86_64 [############                ]  7/20  Installing : 1:facter-2.4.4-1.el6.x86_64 [#############               ]  7/20  Installing : 1:facter-2.4.4-1.el6.x86_64 [##############              ]  7/20  Installing : 1:facter-2.4.4-1.el6.x86_64 [###############             ]  7/20  Installing : 1:facter-2.4.4-1.el6.x86_64 [################            ]  7/20  Installing : 1:facter-2.4.4-1.el6.x86_64 [#################           ]  7/20  Installing : 1:facter-2.4.4-1.el6.x86_64 [##################          ]  7/20  Installing : 1:facter-2.4.4-1.el6.x86_64 [###################         ]  7/20  Installing : 1:facter-2.4.4-1.el6.x86_64 [####################        ]  7/20  Installing : 1:facter-2.4.4-1.el6.x86_64 [#####################       ]  7/20  Installing : 1:facter-2.4.4-1.el6.x86_64 [######################      ]  7/20  Installing : 1:facter-2.4.4-1.el6.x86_64 [#######################     ]  7/20  Installing : 1:facter-2.4.4-1.el6.x86_64 [########################    ]  7/20  Installing : 1:facter-2.4.4-1.el6.x86_64 [#########################   ]  7/20  Installing : 1:facter-2.4.4-1.el6.x86_64 [##########################  ]  7/20  Installing : 1:facter-2.4.4-1.el6.x86_64 [########################### ]  7/20  Installing : 1:facter-2.4.4-1.el6.x86_64                                 7/20 
+==> CRD1:   Installing : ruby-irb-1.8.7.374-4.el6_6. [                            ]  8/20  Installing : ruby-irb-1.8.7.374-4.el6_6. [#                           ]  8/20  Installing : ruby-irb-1.8.7.374-4.el6_6. [##                          ]  8/20  Installing : ruby-irb-1.8.7.374-4.el6_6. [###                         ]  8/20  Installing : ruby-irb-1.8.7.374-4.el6_6. [####                        ]  8/20  Installing : ruby-irb-1.8.7.374-4.el6_6. [######                      ]  8/20  Installing : ruby-irb-1.8.7.374-4.el6_6. [########                    ]  8/20  Installing : ruby-irb-1.8.7.374-4.el6_6. [#########                   ]  8/20  Installing : ruby-irb-1.8.7.374-4.el6_6. [###########                 ]  8/20  Installing : ruby-irb-1.8.7.374-4.el6_6. [#############               ]  8/20  Installing : ruby-irb-1.8.7.374-4.el6_6. [##############              ]  8/20  Installing : ruby-irb-1.8.7.374-4.el6_6. [################            ]  8/20  Installing : ruby-irb-1.8.7.374-4.el6_6. [##################          ]  8/20  Installing : ruby-irb-1.8.7.374-4.el6_6. [###################         ]  8/20  Installing : ruby-irb-1.8.7.374-4.el6_6. [#####################       ]  8/20  Installing : ruby-irb-1.8.7.374-4.el6_6. [#######################     ]  8/20  Installing : ruby-irb-1.8.7.374-4.el6_6. [#########################   ]  8/20  Installing : ruby-irb-1.8.7.374-4.el6_6. [##########################  ]  8/20  Installing : ruby-irb-1.8.7.374-4.el6_6. [########################### ]  8/20  Installing : ruby-irb-1.8.7.374-4.el6_6.x86_64                           8/20 
+==> CRD1:   Installing : ruby-rdoc-1.8.7.374-4.el6_6 [                            ]  9/20  Installing : ruby-rdoc-1.8.7.374-4.el6_6 [#                           ]  9/20  Installing : ruby-rdoc-1.8.7.374-4.el6_6 [##                          ]  9/20  Installing : ruby-rdoc-1.8.7.374-4.el6_6 [###                         ]  9/20  Installing : ruby-rdoc-1.8.7.374-4.el6_6 [####                        ]  9/20  Installing : ruby-rdoc-1.8.7.374-4.el6_6 [#####                       ]  9/20  Installing : ruby-rdoc-1.8.7.374-4.el6_6 [######                      ]  9/20  Installing : ruby-rdoc-1.8.7.374-4.el6_6 [#######                     ]  9/20  Installing : ruby-rdoc-1.8.7.374-4.el6_6 [########                    ]  9/20  Installing : ruby-rdoc-1.8.7.374-4.el6_6 [#########                   ]  9/20  Installing : ruby-rdoc-1.8.7.374-4.el6_6 [##########                  ]  9/20  Installing : ruby-rdoc-1.8.7.374-4.el6_6 [############                ]  9/20  Installing : ruby-rdoc-1.8.7.374-4.el6_6 [#############               ]  9/20  Installing : ruby-rdoc-1.8.7.374-4.el6_6 [##############              ]  9/20  Installing : ruby-rdoc-1.8.7.374-4.el6_6 [###############             ]  9/20  Installing : ruby-rdoc-1.8.7.374-4.el6_6 [#################           ]  9/20  Installing : ruby-rdoc-1.8.7.374-4.el6_6 [##################          ]  9/20  Installing : ruby-rdoc-1.8.7.374-4.el6_6 [###################         ]  9/20  Installing : ruby-rdoc-1.8.7.374-4.el6_6 [#####################       ]  9/20  Installing : ruby-rdoc-1.8.7.374-4.el6_6 [######################      ]  9/20  Installing : ruby-rdoc-1.8.7.374-4.el6_6 [#######################     ]  9/20  Installing : ruby-rdoc-1.8.7.374-4.el6_6 [#########################   ]  9/20  Installing : ruby-rdoc-1.8.7.374-4.el6_6 [##########################  ]  9/20  Installing : ruby-rdoc-1.8.7.374-4.el6_6 [########################### ]  9/20  Installing : ruby-rdoc-1.8.7.374-4.el6_6.x86_64                          9/20 
+==> CRD1:   Installing : rubygems-1.3.7-5.el6.noarch [                            ] 10/20  Installing : rubygems-1.3.7-5.el6.noarch [#                           ] 10/20  Installing : rubygems-1.3.7-5.el6.noarch [##                          ] 10/20  Installing : rubygems-1.3.7-5.el6.noarch [###                         ] 10/20  Installing : rubygems-1.3.7-5.el6.noarch [####                        ] 10/20  Installing : rubygems-1.3.7-5.el6.noarch [#####                       ] 10/20  Installing : rubygems-1.3.7-5.el6.noarch [######                      ] 10/20  Installing : rubygems-1.3.7-5.el6.noarch [#######                     ] 10/20  Installing : rubygems-1.3.7-5.el6.noarch [########                    ] 10/20  Installing : rubygems-1.3.7-5.el6.noarch [#########                   ] 10/20  Installing : rubygems-1.3.7-5.el6.noarch [##########                  ] 10/20  Installing : rubygems-1.3.7-5.el6.noarch [###########                 ] 10/20  Installing : rubygems-1.3.7-5.el6.noarch [############                ] 10/20  Installing : rubygems-1.3.7-5.el6.noarch [#############               ] 10/20  Installing : rubygems-1.3.7-5.el6.noarch [##############              ] 10/20  Installing : rubygems-1.3.7-5.el6.noarch [################            ] 10/20  Installing : rubygems-1.3.7-5.el6.noarch [#################           ] 10/20  Installing : rubygems-1.3.7-5.el6.noarch [####################        ] 10/20  Installing : rubygems-1.3.7-5.el6.noarch [######################      ] 10/20  Installing : rubygems-1.3.7-5.el6.noarch [#########################   ] 10/20  Installing : rubygems-1.3.7-5.el6.noarch [##########################  ] 10/20  Installing : rubygems-1.3.7-5.el6.noarch [########################### ] 10/20  Installing : rubygems-1.3.7-5.el6.noarch                                10/20 
+==> CRD1:   Installing : rubygem-json-1.5.5-3.el6.x8 [                            ] 11/20  Installing : rubygem-json-1.5.5-3.el6.x8 [#                           ] 11/20  Installing : rubygem-json-1.5.5-3.el6.x8 [###                         ] 11/20  Installing : rubygem-json-1.5.5-3.el6.x8 [#####                       ] 11/20  Installing : rubygem-json-1.5.5-3.el6.x8 [#######                     ] 11/20  Installing : rubygem-json-1.5.5-3.el6.x8 [########                    ] 11/20  Installing : rubygem-json-1.5.5-3.el6.x8 [##########                  ] 11/20  Installing : rubygem-json-1.5.5-3.el6.x8 [############                ] 11/20  Installing : rubygem-json-1.5.5-3.el6.x8 [##############              ] 11/20  Installing : rubygem-json-1.5.5-3.el6.x8 [###############             ] 11/20  Installing : rubygem-json-1.5.5-3.el6.x8 [#################           ] 11/20  Installing : rubygem-json-1.5.5-3.el6.x8 [###################         ] 11/20  Installing : rubygem-json-1.5.5-3.el6.x8 [####################        ] 11/20  Installing : rubygem-json-1.5.5-3.el6.x8 [#####################       ] 11/20  Installing : rubygem-json-1.5.5-3.el6.x8 [######################      ] 11/20  Installing : rubygem-json-1.5.5-3.el6.x8 [#######################     ] 11/20  Installing : rubygem-json-1.5.5-3.el6.x8 [########################    ] 11/20  Installing : rubygem-json-1.5.5-3.el6.x8 [#########################   ] 11/20  Installing : rubygem-json-1.5.5-3.el6.x8 [##########################  ] 11/20  Installing : rubygem-json-1.5.5-3.el6.x8 [########################### ] 11/20  Installing : rubygem-json-1.5.5-3.el6.x86_64                            11/20 
+==> CRD1:   Installing : hiera-1.3.4-1.el6.noarch [                               ] 12/20  Installing : hiera-1.3.4-1.el6.noarch [###                            ] 12/20  Installing : hiera-1.3.4-1.el6.noarch [####                           ] 12/20  Installing : hiera-1.3.4-1.el6.noarch [#########                      ] 12/20  Installing : hiera-1.3.4-1.el6.noarch [##########                     ] 12/20  Installing : hiera-1.3.4-1.el6.noarch [###########                    ] 12/20  Installing : hiera-1.3.4-1.el6.noarch [#############                  ] 12/20  Installing : hiera-1.3.4-1.el6.noarch [###############                ] 12/20  Installing : hiera-1.3.4-1.el6.noarch [################               ] 12/20  Installing : hiera-1.3.4-1.el6.noarch [#################              ] 12/20  Installing : hiera-1.3.4-1.el6.noarch [###################            ] 12/20  Installing : hiera-1.3.4-1.el6.noarch [####################           ] 12/20  Installing : hiera-1.3.4-1.el6.noarch [##########################     ] 12/20  Installing : hiera-1.3.4-1.el6.noarch [############################## ] 12/20  Installing : hiera-1.3.4-1.el6.noarch                                   12/20 
+==> CRD1:   Installing : 1:ruby-shadow-2.2.0-2.el6.x [################            ] 13/20  Installing : 1:ruby-shadow-2.2.0-2.el6.x [###################         ] 13/20  Installing : 1:ruby-shadow-2.2.0-2.el6.x [#######################     ] 13/20  Installing : 1:ruby-shadow-2.2.0-2.el6.x [########################### ] 13/20  Installing : 1:ruby-shadow-2.2.0-2.el6.x86_64                           13/20 
+==> CRD1:   Installing : augeas-libs-1.0.0-7.el6_6.1 [                            ] 14/20  Installing : augeas-libs-1.0.0-7.el6_6.1 [#                           ] 14/20  Installing : augeas-libs-1.0.0-7.el6_6.1 [###                         ] 14/20  Installing : augeas-libs-1.0.0-7.el6_6.1 [#####                       ] 14/20  Installing : augeas-libs-1.0.0-7.el6_6.1 [#######                     ] 14/20  Installing : augeas-libs-1.0.0-7.el6_6.1 [########                    ] 14/20  Installing : augeas-libs-1.0.0-7.el6_6.1 [##########                  ] 14/20  Installing : augeas-libs-1.0.0-7.el6_6.1 [###########                 ] 14/20  Installing : augeas-libs-1.0.0-7.el6_6.1 [############                ] 14/20  Installing : augeas-libs-1.0.0-7.el6_6.1 [#############               ] 14/20  Installing : augeas-libs-1.0.0-7.el6_6.1 [##############              ] 14/20  Installing : augeas-libs-1.0.0-7.el6_6.1 [###############             ] 14/20  Installing : augeas-libs-1.0.0-7.el6_6.1 [################            ] 14/20  Installing : augeas-libs-1.0.0-7.el6_6.1 [#################           ] 14/20  Installing : augeas-libs-1.0.0-7.el6_6.1 [##################          ] 14/20  Installing : augeas-libs-1.0.0-7.el6_6.1 [###################         ] 14/20  Installing : augeas-libs-1.0.0-7.el6_6.1 [####################        ] 14/20  Installing : augeas-libs-1.0.0-7.el6_6.1 [#####################       ] 14/20  Installing : augeas-libs-1.0.0-7.el6_6.1 [######################      ] 14/20  Installing : augeas-libs-1.0.0-7.el6_6.1 [#######################     ] 14/20  Installing : augeas-libs-1.0.0-7.el6_6.1 [########################    ] 14/20  Installing : augeas-libs-1.0.0-7.el6_6.1 [#########################   ] 14/20  Installing : augeas-libs-1.0.0-7.el6_6.1 [##########################  ] 14/20  Installing : augeas-libs-1.0.0-7.el6_6.1 [########################### ] 14/20  Installing : augeas-libs-1.0.0-7.el6_6.1.x86_64                         14/20 
+==> CRD1:   Installing : ruby-augeas-0.4.1-3.el6.x86 [##                          ] 15/20  Installing : ruby-augeas-0.4.1-3.el6.x86 [##########                  ] 15/20  Installing : ruby-augeas-0.4.1-3.el6.x86 [##########################  ] 15/20  Installing : ruby-augeas-0.4.1-3.el6.x86 [########################### ] 15/20  Installing : ruby-augeas-0.4.1-3.el6.x86_64                             15/20 
+==> CRD1:   Installing : puppet-3.8.1-1.el6.noarch [                              ] 16/20  Installing : puppet-3.8.1-1.el6.noarch [#                             ] 16/20  Installing : puppet-3.8.1-1.el6.noarch [##                            ] 16/20  Installing : puppet-3.8.1-1.el6.noarch [###                           ] 16/20  Installing : puppet-3.8.1-1.el6.noarch [####                          ] 16/20  Installing : puppet-3.8.1-1.el6.noarch [#####                         ] 16/20  Installing : puppet-3.8.1-1.el6.noarch [######                        ] 16/20  Installing : puppet-3.8.1-1.el6.noarch [#######                       ] 16/20  Installing : puppet-3.8.1-1.el6.noarch [########                      ] 16/20  Installing : puppet-3.8.1-1.el6.noarch [#########                     ] 16/20  Installing : puppet-3.8.1-1.el6.noarch [##########                    ] 16/20  Installing : puppet-3.8.1-1.el6.noarch [###########                   ] 16/20  Installing : puppet-3.8.1-1.el6.noarch [############                  ] 16/20  Installing : puppet-3.8.1-1.el6.noarch [#############                 ] 16/20  Installing : puppet-3.8.1-1.el6.noarch [##############                ] 16/20  Installing : puppet-3.8.1-1.el6.noarch [###############               ] 16/20  Installing : puppet-3.8.1-1.el6.noarch [################              ] 16/20  Installing : puppet-3.8.1-1.el6.noarch [#################             ] 16/20  Installing : puppet-3.8.1-1.el6.noarch [##################            ] 16/20  Installing : puppet-3.8.1-1.el6.noarch [###################           ] 16/20  Installing : puppet-3.8.1-1.el6.noarch [####################          ] 16/20  Installing : puppet-3.8.1-1.el6.noarch [#####################         ] 16/20  Installing : puppet-3.8.1-1.el6.noarch [######################        ] 16/20  Installing : puppet-3.8.1-1.el6.noarch [#######################       ] 16/20  Installing : puppet-3.8.1-1.el6.noarch [########################      ] 16/20  Installing : puppet-3.8.1-1.el6.noarch [#########################     ] 16/20  Installing : puppet-3.8.1-1.el6.noarch [##########################    ] 16/20  Installing : puppet-3.8.1-1.el6.noarch [###########################   ] 16/20  Installing : puppet-3.8.1-1.el6.noarch [############################  ] 16/20  Installing : puppet-3.8.1-1.el6.noarch [############################# ] 16/20  Installing : puppet-3.8.1-1.el6.noarch                                  16/20 
+==> CRD1:   Updating   : curl-7.19.7-40.el6_6.4.x86_ [#####                       ] 17/20  Updating   : curl-7.19.7-40.el6_6.4.x86_ [#########                   ] 17/20  Updating   : curl-7.19.7-40.el6_6.4.x86_ [##############              ] 17/20  Updating   : curl-7.19.7-40.el6_6.4.x86_ [###############             ] 17/20  Updating   : curl-7.19.7-40.el6_6.4.x86_ [###################         ] 17/20  Updating   : curl-7.19.7-40.el6_6.4.x86_ [######################      ] 17/20  Updating   : curl-7.19.7-40.el6_6.4.x86_ [########################    ] 17/20  Updating   : curl-7.19.7-40.el6_6.4.x86_ [#########################   ] 17/20  Updating   : curl-7.19.7-40.el6_6.4.x86_ [########################### ] 17/20  Updating   : curl-7.19.7-40.el6_6.4.x86_64                              17/20 
+==> CRD1:   Installing : unzip-6.0-2.el6_6.x86_64 [#                              ] 18/20  Installing : unzip-6.0-2.el6_6.x86_64 [########                       ] 18/20  Installing : unzip-6.0-2.el6_6.x86_64 [#########                      ] 18/20  Installing : unzip-6.0-2.el6_6.x86_64 [##########                     ] 18/20  Installing : unzip-6.0-2.el6_6.x86_64 [###########                    ] 18/20  Installing : unzip-6.0-2.el6_6.x86_64 [############                   ] 18/20  Installing : unzip-6.0-2.el6_6.x86_64 [#############                  ] 18/20  Installing : unzip-6.0-2.el6_6.x86_64 [##############                 ] 18/20  Installing : unzip-6.0-2.el6_6.x86_64 [###############                ] 18/20  Installing : unzip-6.0-2.el6_6.x86_64 [#####################          ] 18/20  Installing : unzip-6.0-2.el6_6.x86_64 [###########################    ] 18/20  Installing : unzip-6.0-2.el6_6.x86_64 [############################## ] 18/20  Installing : unzip-6.0-2.el6_6.x86_64                                   18/20 
+==> CRD1:   Cleanup    : curl-7.19.7-40.el6_6.1.x86_64                              19/20 
+==> CRD1:   Cleanup    : libcurl-7.19.7-40.el6_6.1.x86_64                           20/20 
+==> CRD1:   Verifying  : ruby-rdoc-1.8.7.374-4.el6_6.x86_64                          1/20 
+==> CRD1:   Verifying  : augeas-libs-1.0.0-7.el6_6.1.x86_64                          2/20 
+==> CRD1:   Verifying  : 1:facter-2.4.4-1.el6.x86_64                                 3/20 
+==> CRD1:   Verifying  : ruby-irb-1.8.7.374-4.el6_6.x86_64                           4/20 
+==> CRD1:   Verifying  : compat-readline5-5.2-17.1.el6.x86_64                        5/20 
+==> CRD1:   Verifying  : rubygem-json-1.5.5-3.el6.x86_64                             6/20 
+==> CRD1:   Verifying  : ruby-1.8.7.374-4.el6_6.x86_64                               7/20 
+==> CRD1:   Verifying  : libcurl-7.19.7-40.el6_6.4.x86_64                            8/20 
+==> CRD1:   Verifying  : unzip-6.0-2.el6_6.x86_64                                    9/20 
+==> CRD1:   Verifying  : hiera-1.3.4-1.el6.noarch                                   10/20 
+==> CRD1:   Verifying  : rubygems-1.3.7-5.el6.noarch                                11/20 
+==> CRD1:   Verifying  : curl-7.19.7-40.el6_6.4.x86_64                              12/20 
+==> CRD1:   Verifying  : virt-what-1.11-1.2.el6.x86_64                              13/20 
+==> CRD1:   Verifying  : libselinux-ruby-2.0.94-5.8.el6.x86_64                      14/20 
+==> CRD1:   Verifying  : ruby-libs-1.8.7.374-4.el6_6.x86_64                         15/20 
+==> CRD1:   Verifying  : puppet-3.8.1-1.el6.noarch                                  16/20 
+==> CRD1:   Verifying  : ruby-augeas-0.4.1-3.el6.x86_64                             17/20 
+==> CRD1:   Verifying  : 1:ruby-shadow-2.2.0-2.el6.x86_64                           18/20 
+==> CRD1:   Verifying  : libcurl-7.19.7-40.el6_6.1.x86_64                           19/20 
+==> CRD1:   Verifying  : curl-7.19.7-40.el6_6.1.x86_64                              20/20 
+==> CRD1: 
+==> CRD1: Installed:
+==> CRD1:   puppet.noarch 0:3.8.1-1.el6             unzip.x86_64 0:6.0-2.el6_6            
+==> CRD1: 
+==> CRD1: Dependency Installed:
+==> CRD1:   augeas-libs.x86_64 0:1.0.0-7.el6_6.1                                          
+==> CRD1:   compat-readline5.x86_64 0:5.2-17.1.el6                                        
+==> CRD1:   facter.x86_64 1:2.4.4-1.el6                                                   
+==> CRD1:   hiera.noarch 0:1.3.4-1.el6                                                    
+==> CRD1:   libselinux-ruby.x86_64 0:2.0.94-5.8.el6                                       
+==> CRD1:   ruby.x86_64 0:1.8.7.374-4.el6_6                                               
+==> CRD1:   ruby-augeas.x86_64 0:0.4.1-3.el6                                              
+==> CRD1:   ruby-irb.x86_64 0:1.8.7.374-4.el6_6                                           
+==> CRD1:   ruby-libs.x86_64 0:1.8.7.374-4.el6_6                                          
+==> CRD1:   ruby-rdoc.x86_64 0:1.8.7.374-4.el6_6                                          
+==> CRD1:   ruby-shadow.x86_64 1:2.2.0-2.el6                                              
+==> CRD1:   rubygem-json.x86_64 0:1.5.5-3.el6                                             
+==> CRD1:   rubygems.noarch 0:1.3.7-5.el6                                                 
+==> CRD1:   virt-what.x86_64 0:1.11-1.2.el6                                               
+==> CRD1: 
+==> CRD1: Updated:
+==> CRD1:   curl.x86_64 0:7.19.7-40.el6_6.4                                               
+==> CRD1: 
+==> CRD1: Dependency Updated:
+==> CRD1:   libcurl.x86_64 0:7.19.7-40.el6_6.4                                            
+==> CRD1: 
+==> CRD1: Complete!
+==> CRD1: Loaded plugins: fastestmirror, presto
+==> CRD1: Setting up Install Process
+==> CRD1: Loading mirror speeds from cached hostfile
+==> CRD1:  * base: mirror.solarvps.com
+==> CRD1:  * extras: mirrors.syringanetworks.net
+==> CRD1:  * updates: cosmos.cites.illinois.edu
+==> CRD1: Resolving Dependencies
+==> CRD1: --> Running transaction check
+==> CRD1: ---> Package rng-tools.x86_64 0:2-13.el6_2 will be installed
+==> CRD1: --> Finished Dependency Resolution
+==> CRD1: 
+==> CRD1: Dependencies Resolved
+==> CRD1: 
+==> CRD1: ================================================================================
+==> CRD1:  Package             Arch             Version              Repository      Size
+==> CRD1: ================================================================================
+==> CRD1: Installing:
+==> CRD1:  rng-tools           x86_64           2-13.el6_2           base            29 k
+==> CRD1: 
+==> CRD1: Transaction Summary
+==> CRD1: ================================================================================
+==> CRD1: Install       1 Package(s)
+==> CRD1: 
+==> CRD1: Total download size: 29 k
+==> CRD1: Installed size: 54 k
+==> CRD1: Downloading Packages:
+==> CRD1: Setting up and reading Presto delta metadata
+==> CRD1: Processing delta metadata
+==> CRD1: Package(s) data still to download: 29 k
+==> CRD1: rng-tools-2-13.el6_2.x86_64.rpm                          |  29 kB     00:00     
+==> CRD1: Running rpm_check_debug
+==> CRD1: Running Transaction Test
+==> CRD1: Transaction Test Succeeded
+==> CRD1: Running Transaction
+==> CRD1:   Installing : rng-tools-2-13.el6_2.x86_64 [                              ] 1/1  Installing : rng-tools-2-13.el6_2.x86_64 [########                      ] 1/1  Installing : rng-tools-2-13.el6_2.x86_64 [###############               ] 1/1  Installing : rng-tools-2-13.el6_2.x86_64 [#########################     ] 1/1  Installing : rng-tools-2-13.el6_2.x86_64 [############################  ] 1/1  Installing : rng-tools-2-13.el6_2.x86_64 [############################# ] 1/1  Installing : rng-tools-2-13.el6_2.x86_64                                  1/1 
+==> CRD1:   Verifying  : rng-tools-2-13.el6_2.x86_64                                  1/1 
+==> CRD1: 
+==> CRD1: Installed:
+==> CRD1:   rng-tools.x86_64 0:2-13.el6_2                                                 
+==> CRD1: 
+==> CRD1: Complete!
+==> CRD1: Starting rngd: [60G[[0;32m  OK  [0;39m]
+==> CRD1: local yum = false ; NOT Enabling local yum.  Packages will be pulled from remote...
+==> CRD1: [mNotice: Compiled catalog for crd1.csail.mit.edu in environment production in 0.14 seconds[0m
+==> CRD1: [mNotice: /Stage[main]/Bigtop_toolchain::Puppet-modules/Exec[install-puppet-stdlib]/returns: executed successfully[0m
+==> CRD1: [mNotice: Finished catalog run in 3.26 seconds[0m
+==> CRD1: Running provisioner: shell...
+    CRD1: Running: inline script
+==> CRD1: iptables: Setting chains to policy ACCEPT: filter [60G[[0;32m  OK  [0;39m]
+==> CRD1: iptables: Flushing firewall rules: [60G[[0;32m  OK  [0;39m]
+==> CRD1: iptables: Unloading modules: [60G[[0;32m  OK  [0;39m]
+==> CRD1: Running provisioner: hostmanager...
+creating provisioner directive for running tests
+==> CRD1: Running provisioner: puppet...
+==> CRD1: Running Puppet with site.pp...
+==> CRD1: Debug: Runtime environment: ruby_version=1.8.7, puppet_version=3.8.1, run_mode=user
+==> CRD1: Debug: Loading external facts from /var/lib/puppet/facts.d
+==> CRD1: Info: Loading facts
+==> CRD1: Debug: Loading facts from /tmp/vagrant-puppet/modules-3e509359e947b7e6ef7ee7a41d8bd86d/hadoop/lib/facter/hadoop_storage_locations.rb
+==> CRD1: Debug: Loading facts from /tmp/vagrant-puppet/modules-3e509359e947b7e6ef7ee7a41d8bd86d/hadoop/lib/facter/hadoop_storage_dirs.rb
+==> CRD1: Info: Loading facts
+==> CRD1: Debug: Loading facts from /tmp/vagrant-puppet/modules-3e509359e947b7e6ef7ee7a41d8bd86d/kerberos/lib/facter/kadm_keytab.rb
+==> CRD1: Info: Loading facts
+==> CRD1: Debug: Loading facts from /etc/puppet/modules/stdlib/lib/facter/pe_version.rb
+==> CRD1: Debug: Loading facts from /etc/puppet/modules/stdlib/lib/facter/facter_dot_d.rb
+==> CRD1: Debug: Loading facts from /etc/puppet/modules/stdlib/lib/facter/puppet_vardir.rb
+==> CRD1: Debug: Loading facts from /etc/puppet/modules/stdlib/lib/facter/root_home.rb
+==> CRD1: Warning: The use of 'import' is deprecated at /tmp/vagrant-puppet/manifests-d4a7410ea2597e7ac321c7fdb251251f/site.pp:58. See http://links.puppetlabs.com/puppet-import-deprecation
+==> CRD1:    (at /usr/lib/ruby/site_ruby/1.8/puppet/parser/parser_support.rb:110:in `import')
+==> CRD1: Debug: importing '/tmp/vagrant-puppet/manifests-d4a7410ea2597e7ac321c7fdb251251f/cluster.pp' in environment production
+==> CRD1: Debug: hiera(): Hiera YAML backend starting
+==> CRD1: Debug: hiera(): Looking up bigtop::jdk_package_name in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Found bigtop::jdk_package_name in site
+==> CRD1: Debug: hiera(): Looking up bigtop::bigtop_repo_uri in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Found bigtop::bigtop_repo_uri in site
+==> CRD1: Debug: Executing '/bin/rpm --version'
+==> CRD1: Debug: Executing '/bin/rpm -ql rpm'
+==> CRD1: Debug: Executing '/bin/rpm --version'
+==> CRD1: Debug: hiera(): Looking up bigtop::allow_virtual_packages in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up bigtop::hadoop_head_node in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Found bigtop::hadoop_head_node in site
+==> CRD1: Debug: hiera(): Looking up bigtop::standby_head_node in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up bigtop::hadoop_gateway_node in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop_cluster_node::cluster_components in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Found hadoop_cluster_node::cluster_components in site
+==> CRD1: Debug: hiera(): Looking up hadoop_cluster_node::hadoop_security_authentication in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::hadoop_security_authentication in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop_worker_node::bigtop_real_users in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: importing '/tmp/vagrant-puppet/modules-3e509359e947b7e6ef7ee7a41d8bd86d/hadoop/manifests/init.pp' in environment production
+==> CRD1: Debug: Automatically imported hadoop::datanode from hadoop/datanode into production
+==> CRD1: Debug: hiera(): Looking up hadoop::zk in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Found hadoop::zk in bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up bigtop::hadoop_head_node in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Found bigtop::hadoop_head_node in site
+==> CRD1: Debug: hiera(): Looking up bigtop::hadoop_zookeeper_port in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Found bigtop::hadoop_zookeeper_port in bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::generate_secrets in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::hadoop_storage_dirs in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Found hadoop::hadoop_storage_dirs in site
+==> CRD1: Debug: hiera(): Looking up hadoop::kerberos_realm in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Found hadoop::kerberos_realm in bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up kerberos::site::realm in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::hadoop_security_authentication in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::proxyusers in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: importing '/etc/puppet/modules/stdlib/manifests/init.pp' in environment production
+==> CRD1: Debug: Automatically imported stdlib from stdlib into production
+==> CRD1: Debug: importing '/etc/puppet/modules/stdlib/manifests/stages.pp' in environment production
+==> CRD1: Debug: Automatically imported stdlib::stages from stdlib/stages into production
+==> CRD1: Debug: hiera(): Looking up hadoop::datanode::hadoop_security_authentication in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common_hdfs::hadoop_security_group_mapping in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common_hdfs::sshfence_user in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common_hdfs::journalnode_port in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common_hdfs::hdfs_data_dirs in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common_hdfs::hadoop_namenode_host in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Found hadoop::common_hdfs::hadoop_namenode_host in bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up bigtop::hadoop_head_node in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Found bigtop::hadoop_head_node in site
+==> CRD1: Debug: hiera(): Looking up hadoop::common_hdfs::journalnode_host in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common_hdfs::namenode_data_dirs in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common_hdfs::hdfs_shortcut_reader in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common_hdfs::hadoop_dfs_datanode_plugins in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common_hdfs::hadoop_config_dfs_block_size in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common_hdfs::hadoop_core_proxyusers in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common_hdfs::zk in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common_hdfs::journalnode_edits_dir in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common_hdfs::hdfs_datanode_fsdataset_volume_choosing_policy in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common_hdfs::generate_secrets in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common_hdfs::hdfs_replication in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common_hdfs::hadoop_namenode_port in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Found hadoop::common_hdfs::hadoop_namenode_port in bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common_hdfs::hadoop_http_authentication_signature_secret_file in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common_hdfs::hdfs_webhdfs_enabled in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common_hdfs::hadoop_config_namenode_handler_count in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common_hdfs::hadoop_http_authentication_cookie_domain in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common_hdfs::kerberos_realm in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common_hdfs::sshfence_pubkey in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common_hdfs::sshfence_privkey in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common_hdfs::hadoop_ha_sshfence_user_home in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common_hdfs::testonly_hdfs_sshkeys in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common_hdfs::hdfs_support_append in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common_hdfs::hadoop_dfs_namenode_plugins in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common_hdfs::ha in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common_hdfs::hadoop_http_authentication_type in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common_hdfs::journalnode_https_port in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common_hdfs::hadoop_security_authentication in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common_hdfs::hadoop_config_fs_inmemory_size_mb in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common_hdfs::hadoop_namenode_http_port in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common_hdfs::hadoop_snappy_codec in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common_hdfs::shared_edits_dir in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common_hdfs::nameservice_id in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common_hdfs::hadoop_http_authentication_signature_secret in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common_hdfs::journalnode_http_port in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common_hdfs::hadoop_namenode_https_port in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common::hadoop_pid_dir in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common::hadoop_jobtracker_opts in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common::hadoop_master in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common::hadoop_datanode_opts in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common::tez_conf_dir in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Found hadoop::common::tez_conf_dir in bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common::hadoop_java_home in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common::hadoop_log_dir in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common::hadoop_ssh_opts in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common::hadoop_heapsize in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common::hadoop_slave_sleep in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common::hadoop_classpath in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common::hadoop_ident_string in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common::hadoop_namenode_opts in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common::hadoop_balancer_opts in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common::hadoop_opts in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common::hadoop_slaves in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common::hadoop_client_opts in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common::hadoop_secondarynamenode_opts in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common::tez_jars in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Found hadoop::common::tez_jars in bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common::hadoop_niceness in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common::hadoop_tasktracker_opts in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: Scope(Class[Hadoop::Common]): Retrieving template hadoop/hadoop-env.sh
+==> CRD1: Debug: template[/tmp/vagrant-puppet/modules-3e509359e947b7e6ef7ee7a41d8bd86d/hadoop/templates/hadoop-env.sh]: Bound template variables for /tmp/vagrant-puppet/modules-3e509359e947b7e6ef7ee7a41d8bd86d/hadoop/templates/hadoop-env.sh in 0.00 seconds
+==> CRD1: Debug: template[/tmp/vagrant-puppet/modules-3e509359e947b7e6ef7ee7a41d8bd86d/hadoop/templates/hadoop-env.sh]: Interpolated template /tmp/vagrant-puppet/modules-3e509359e947b7e6ef7ee7a41d8bd86d/hadoop/templates/hadoop-env.sh in 0.01 seconds
+==> CRD1: Debug: Scope(Class[Hadoop::Common_hdfs]): Retrieving template hadoop/core-site.xml
+==> CRD1: Debug: template[/tmp/vagrant-puppet/modules-3e509359e947b7e6ef7ee7a41d8bd86d/hadoop/templates/core-site.xml]: Bound template variables for /tmp/vagrant-puppet/modules-3e509359e947b7e6ef7ee7a41d8bd86d/hadoop/templates/core-site.xml in 0.00 seconds
+==> CRD1: Debug: template[/tmp/vagrant-puppet/modules-3e509359e947b7e6ef7ee7a41d8bd86d/hadoop/templates/core-site.xml]: Interpolated template /tmp/vagrant-puppet/modules-3e509359e947b7e6ef7ee7a41d8bd86d/hadoop/templates/core-site.xml in 0.00 seconds
+==> CRD1: Debug: Scope(Class[Hadoop::Common_hdfs]): Retrieving template hadoop/hdfs-site.xml
+==> CRD1: Debug: template[/tmp/vagrant-puppet/modules-3e509359e947b7e6ef7ee7a41d8bd86d/hadoop/templates/hdfs-site.xml]: Bound template variables for /tmp/vagrant-puppet/modules-3e509359e947b7e6ef7ee7a41d8bd86d/hadoop/templates/hdfs-site.xml in 0.03 seconds
+==> CRD1: Debug: template[/tmp/vagrant-puppet/modules-3e509359e947b7e6ef7ee7a41d8bd86d/hadoop/templates/hdfs-site.xml]: Interpolated template /tmp/vagrant-puppet/modules-3e509359e947b7e6ef7ee7a41d8bd86d/hadoop/templates/hdfs-site.xml in 0.00 seconds
+==> CRD1: Debug: Scope(Class[Hadoop::Datanode]): Retrieving template hadoop/hadoop-hdfs
+==> CRD1: Debug: template[/tmp/vagrant-puppet/modules-3e509359e947b7e6ef7ee7a41d8bd86d/hadoop/templates/hadoop-hdfs]: Bound template variables for /tmp/vagrant-puppet/modules-3e509359e947b7e6ef7ee7a41d8bd86d/hadoop/templates/hadoop-hdfs in 0.00 seconds
+==> CRD1: Debug: template[/tmp/vagrant-puppet/modules-3e509359e947b7e6ef7ee7a41d8bd86d/hadoop/templates/hadoop-hdfs]: Interpolated template /tmp/vagrant-puppet/modules-3e509359e947b7e6ef7ee7a41d8bd86d/hadoop/templates/hadoop-hdfs in 0.00 seconds
+==> CRD1: Debug: importing '/tmp/vagrant-puppet/modules-3e509359e947b7e6ef7ee7a41d8bd86d/kerberos/manifests/init.pp' in environment production
+==> CRD1: Debug: Automatically imported kerberos::host_keytab from kerberos/host_keytab into production
+==> CRD1: Debug: hiera(): Looking up hadoop::common_yarn::container_executor_min_user_id in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common_yarn::yarn_resourcemanager_zk_address in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common_yarn::hadoop_ps_host in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Found hadoop::common_yarn::hadoop_ps_host in bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up bigtop::hadoop_head_node in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Found bigtop::hadoop_head_node in site
+==> CRD1: Debug: hiera(): Looking up hadoop::common_yarn::yarn_data_dirs in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common_yarn::yarn_scheduler_minimum_allocation_mb in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common_yarn::yarn_scheduler_maximum_allocation_mb in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common_yarn::hadoop_rm_port in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Found hadoop::common_yarn::hadoop_rm_port in bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common_yarn::hadoop_rt_port in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common_yarn::hadoop_rm_admin_port in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common_yarn::hadoop_sc_port in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common_yarn::hadoop_rm_webapp_port in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common_yarn::yarn_nodemanager_resource_memory_mb in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common_yarn::hadoop_rm_host in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Found hadoop::common_yarn::hadoop_rm_host in bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up bigtop::hadoop_head_node in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Found bigtop::hadoop_head_node in site
+==> CRD1: Debug: hiera(): Looking up hadoop::common_yarn::kerberos_realm in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common_yarn::yarn_resourcemanager_scheduler_class in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common_yarn::hadoop_security_authentication in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common_yarn::yarn_resourcemanager_cluster_id in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common_yarn::yarn_resourcemanager_ha_enabled in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common_yarn::container_executor_banned_users in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common_yarn::hadoop_ps_port in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: Scope(Class[Hadoop::Common_yarn]): Retrieving template hadoop/yarn-site.xml
+==> CRD1: Debug: template[/tmp/vagrant-puppet/modules-3e509359e947b7e6ef7ee7a41d8bd86d/hadoop/templates/yarn-site.xml]: Bound template variables for /tmp/vagrant-puppet/modules-3e509359e947b7e6ef7ee7a41d8bd86d/hadoop/templates/yarn-site.xml in 0.00 seconds
+==> CRD1: Debug: template[/tmp/vagrant-puppet/modules-3e509359e947b7e6ef7ee7a41d8bd86d/hadoop/templates/yarn-site.xml]: Interpolated template /tmp/vagrant-puppet/modules-3e509359e947b7e6ef7ee7a41d8bd86d/hadoop/templates/yarn-site.xml in 0.00 seconds
+==> CRD1: Debug: Scope(Class[Hadoop::Common_yarn]): Retrieving template hadoop/container-executor.cfg
+==> CRD1: Debug: template[/tmp/vagrant-puppet/modules-3e509359e947b7e6ef7ee7a41d8bd86d/hadoop/templates/container-executor.cfg]: Bound template variables for /tmp/vagrant-puppet/modules-3e509359e947b7e6ef7ee7a41d8bd86d/hadoop/templates/container-executor.cfg in 0.00 seconds
+==> CRD1: Debug: template[/tmp/vagrant-puppet/modules-3e509359e947b7e6ef7ee7a41d8bd86d/hadoop/templates/container-executor.cfg]: Interpolated template /tmp/vagrant-puppet/modules-3e509359e947b7e6ef7ee7a41d8bd86d/hadoop/templates/container-executor.cfg in 0.00 seconds
+==> CRD1: Debug: hiera(): Looking up hadoop::common_mapred_app::mapreduce_tasktracker_http_threads in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common_mapred_app::mapreduce_jobhistory_host in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Found hadoop::common_mapred_app::mapreduce_jobhistory_host in bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up bigtop::hadoop_head_node in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Found bigtop::hadoop_head_node in site
+==> CRD1: Debug: hiera(): Looking up hadoop::common_mapred_app::mapreduce_cluster_acls_enabled in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common_mapred_app::mapreduce_reduce_shuffle_parallelcopies in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common_mapred_app::mapreduce_task_io_sort_factor in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common_mapred_app::mapreduce_output_fileoutputformat_compress_type in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common_mapred_app::mapreduce_jobhistory_port in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common_mapred_app::mapreduce_job_reduce_slowstart_completedmaps in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common_mapred_app::mapreduce_jobhistory_webapp_port in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common_mapred_app::kerberos_realm in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common_mapred_app::mapreduce_task_io_sort_mb in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common_mapred_app::mapred_data_dirs in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common_mapred_app::mapreduce_map_output_compress in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common_mapred_app::hadoop_security_authentication in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common_mapred_app::yarn_app_mapreduce_am_staging_dir in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common_mapred_app::mapreduce_cluster_temp_dir in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::common_mapred_app::mapreduce_tasktracker_reduce_tasks_maximum in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: template[inline]: Bound template variables for inline template in 0.00 seconds
+==> CRD1: Debug: template[inline]: Interpolated template inline template in 0.00 seconds
+==> CRD1: Debug: hiera(): Looking up hadoop::common_mapred_app::mapreduce_tasktracker_map_tasks_maximum in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: template[inline]: Bound template variables for inline template in 0.00 seconds
+==> CRD1: Debug: template[inline]: Interpolated template inline template in 0.00 seconds
+==> CRD1: Debug: hiera(): Looking up hadoop::common_mapred_app::mapreduce_framework_name in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: Scope(Class[Hadoop::Common_mapred_app]): Retrieving template hadoop/mapred-site.xml
+==> CRD1: Debug: template[/tmp/vagrant-puppet/modules-3e509359e947b7e6ef7ee7a41d8bd86d/hadoop/templates/mapred-site.xml]: Bound template variables for /tmp/vagrant-puppet/modules-3e509359e947b7e6ef7ee7a41d8bd86d/hadoop/templates/mapred-site.xml in 0.00 seconds
+==> CRD1: Debug: template[/tmp/vagrant-puppet/modules-3e509359e947b7e6ef7ee7a41d8bd86d/hadoop/templates/mapred-site.xml]: Interpolated template /tmp/vagrant-puppet/modules-3e509359e947b7e6ef7ee7a41d8bd86d/hadoop/templates/mapred-site.xml in 0.00 seconds
+==> CRD1: Debug: Scope(Class[Hadoop::Common_mapred_app]): Retrieving template hadoop/taskcontroller.cfg
+==> CRD1: Debug: template[/tmp/vagrant-puppet/modules-3e509359e947b7e6ef7ee7a41d8bd86d/hadoop/templates/taskcontroller.cfg]: Bound template variables for /tmp/vagrant-puppet/modules-3e509359e947b7e6ef7ee7a41d8bd86d/hadoop/templates/taskcontroller.cfg in 0.00 seconds
+==> CRD1: Debug: template[/tmp/vagrant-puppet/modules-3e509359e947b7e6ef7ee7a41d8bd86d/hadoop/templates/taskcontroller.cfg]: Interpolated template /tmp/vagrant-puppet/modules-3e509359e947b7e6ef7ee7a41d8bd86d/hadoop/templates/taskcontroller.cfg in 0.00 seconds
+==> CRD1: Debug: hiera(): Looking up hadoop::namenode::nfs_path in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::namenode::standby_bootstrap_retry_interval in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::namenode::standby_bootstrap_retries in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop::namenode::nfs_server in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: Scope(Class[Hadoop::Namenode]): Retrieving template hadoop/hadoop-hdfs
+==> CRD1: Debug: template[/tmp/vagrant-puppet/modules-3e509359e947b7e6ef7ee7a41d8bd86d/hadoop/templates/hadoop-hdfs]: Bound template variables for /tmp/vagrant-puppet/modules-3e509359e947b7e6ef7ee7a41d8bd86d/hadoop/templates/hadoop-hdfs in 0.00 seconds
+==> CRD1: Debug: template[/tmp/vagrant-puppet/modules-3e509359e947b7e6ef7ee7a41d8bd86d/hadoop/templates/hadoop-hdfs]: Interpolated template /tmp/vagrant-puppet/modules-3e509359e947b7e6ef7ee7a41d8bd86d/hadoop/templates/hadoop-hdfs in 0.00 seconds
+==> CRD1: Debug: Scope(Class[Hadoop::Secondarynamenode]): Retrieving template hadoop/hadoop-hdfs
+==> CRD1: Debug: template[/tmp/vagrant-puppet/modules-3e509359e947b7e6ef7ee7a41d8bd86d/hadoop/templates/hadoop-hdfs]: Bound template variables for /tmp/vagrant-puppet/modules-3e509359e947b7e6ef7ee7a41d8bd86d/hadoop/templates/hadoop-hdfs in 0.00 seconds
+==> CRD1: Debug: template[/tmp/vagrant-puppet/modules-3e509359e947b7e6ef7ee7a41d8bd86d/hadoop/templates/hadoop-hdfs]: Interpolated template /tmp/vagrant-puppet/modules-3e509359e947b7e6ef7ee7a41d8bd86d/hadoop/templates/hadoop-hdfs in 0.00 seconds
+==> CRD1: Debug: importing '/tmp/vagrant-puppet/modules-3e509359e947b7e6ef7ee7a41d8bd86d/mahout/manifests/init.pp' in environment production
+==> CRD1: Debug: Automatically imported mahout::client from mahout/client into production
+==> CRD1: Debug: importing '/tmp/vagrant-puppet/modules-3e509359e947b7e6ef7ee7a41d8bd86d/hadoop-hive/manifests/init.pp' in environment production
+==> CRD1: Debug: Automatically imported hadoop-hive::client from hadoop-hive/client into production
+==> CRD1: Debug: hiera(): Looking up hadoop-hive::client::hbase_zookeeper_quorum in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Found hadoop-hive::client::hbase_zookeeper_quorum in bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up hadoop-hbase::common_config::zookeeper_quorum in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: hiera(): Found hadoop-hbase::common_config::zookeeper_quorum in bigtop/cluster
+==> CRD1: Debug: hiera(): Looking up bigtop::hadoop_head_node in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Found bigtop::hadoop_head_node in site
+==> CRD1: Debug: hiera(): Looking up hadoop-hive::client::hbase_master in YAML backend
+==> CRD1: Debug: hiera(): Looking for data source site
+==> CRD1: Debug: hiera(): Looking for data source bigtop/noha
+==> CRD1: Debug: hiera(): Looking for data source bigtop/cluster
+==> CRD1: Debug: Scope(Class[Hadoop-hive::Client]): Retrieving template hadoop-hive/hive-site.xml
+==> CRD1: Debug: template[/tmp/vagrant-puppet/modules-3e509359e947b7e6ef7ee7a41d8bd86d/hadoop-hive/templates/hive-site.xml]: Bound template variables for /tmp/vagrant-puppet/modules-3e509359e947b7e6ef7ee7a41d8bd86d/hadoop-hive/templates/hive-site.xml in 0.00 seconds
+==> CRD1: Debug: template[/tmp/vagrant-puppet/modules-3e509359e947b7e6ef7ee7a41d8bd86d/hadoop-hive/templates/hive-site.xml]: Interpolated template /tmp/vagrant-puppet/modules-3e509359e947b7e6ef7ee7a41d8bd86d/hadoop-hive/templates/hive-site.xml in 0.00 seconds
+==> CRD1: Debug: Adding relationship from Yumrepo[Bigtop] to Package[hadoop-yarn-proxyserver] with 'before'
+==> CRD1: Debug: Adding relationship from Yumrepo[Bigtop] to Package[hadoop-libhdfs] with 'before'
+==> CRD1: Debug: Adding relationship from Yumrepo[Bigtop] to Package[hadoop-doc] with 'before'
+==> CRD1: Debug: Adding relationship from Yumrepo[Bigtop] to Package[hadoop-hdfs-secondarynamenode] with 'before'
+==> CRD1: Debug: Adding relationship from Yumrepo[Bigtop] to Package[hadoop-client] with 'before'
+==> CRD1: Debug: Adding relationship from Yumrepo[Bigtop] to Package[hadoop-yarn-nodemanager] with 'before'
+==> CRD1: Debug: Adding relationship from Yumrepo[Bigtop] to Package[hadoop-hdfs-datanode] with 'before'
+==> CRD1: Debug: Adding relationship from Yumrepo[Bigtop] to Package[hadoop-hdfs] with 'before'
+==> CRD1: Debug: Adding relationship from Yumrepo[Bigtop] to Package[hadoop-yarn] with 'before'
+==> CRD1: Debug: Adding relationship from Yumrepo[Bigtop] to Package[hadoop-hdfs-fuse] with 'before'
+==> CRD1: Debug: Adding relationship from Yumrepo[Bigtop] to Package[java-1.7.0-openjdk-devel.x86_64] with 'before'
+==> CRD1: Debug: Adding relationship from Yumrepo[Bigtop] to Package[hadoop-yarn-resourcemanager] with 'before'
+==> CRD1: Debug: Adding relationship from Yumrepo[Bigtop] to Package[hive] with 'before'
+==> CRD1: Debug: Adding relationship from Yumrepo[Bigtop] to Package[hadoop-debuginfo] with 'before'
+==> CRD1: Debug: Adding relationship from Yumrepo[Bigtop] to Package[hadoop-mapreduce-historyserver] with 'before'
+==> CRD1: Debug: Adding relationship from Yumrepo[Bigtop] to Package[mahout] with 'before'
+==> CRD1: Debug: Adding relationship from Yumrepo[Bigtop] to Package[hadoop-mapreduce] with 'before'
+==> CRD1: Debug: Adding relationship from Yumrepo[Bigtop] to Package[hadoop] with 'before'
+==> CRD1: Debug: Adding relationship from Yumrepo[Bigtop] to Package[hadoop-hdfs-namenode] with 'before'
+==> CRD1: Debug: Adding relationship from Stage[runtime] to Stage[setup_infra] with 'before'
+==> CRD1: Debug: Adding relationship from Stage[setup_infra] to Stage[deploy_infra] with 'before'
+==> CRD1: Debug: Adding relationship from Stage[deploy_infra] to Stage[setup_app] with 'before'
+==> CRD1: Debug: Adding relationship from Stage[setup_app] to Stage[deploy_app] with 'before'
+==> CRD1: Debug: Adding relationship from Stage[deploy_app] to Stage[deploy] with 'before'
+==> CRD1: Debug: Adding relationship from Service[hadoop-hdfs-namenode] to Service[hadoop-hdfs-datanode] with 'before'
+==> CRD1: Debug: Adding relationship from Class[Hadoop::Namenode] to Class[Hadoop::Datanode] with 'before'
+==> CRD1: Debug: Adding relationship from Class[Hadoop::Datanode] to Exec[init hdfs] with 'before'
+==> CRD1: Debug: Adding relationship from Exec[namenode format] to Service[hadoop-hdfs-namenode] with 'before'
+==> CRD1: Debug: Adding relationship from Exec[init hdfs] to Class[Hadoop::Resourcemanager] with 'before'
+==> CRD1: Debug: Adding relationship from Class[Hadoop::Resourcemanager] to Class[Hadoop::Nodemanager] with 'before'
+==> CRD1: Debug: Adding relationship from Exec[init hdfs] to Class[Hadoop::Historyserver] with 'before'
+==> CRD1: Debug: Package[java-1.7.0-openjdk-devel.x86_64]: Adding default for allow_virtual
+==> CRD1: Debug: Package[hadoop]: Adding default for allow_virtual
+==> CRD1: Debug: Package[hadoop-hdfs]: Adding default for allow_virtual
+==> CRD1: Debug: Package[hadoop-hdfs-datanode]: Adding default for allow_virtual
+==> CRD1: Debug: Package[hadoop-yarn]: Adding default for allow_virtual
+==> CRD1: Debug: Package[hadoop-yarn-nodemanager]: Adding default for allow_virtual
+==> CRD1: Debug: Package[hadoop-mapreduce]: Adding default for allow_virtual
+==> CRD1: Debug: Package[hadoop-hdfs-namenode]: Adding default for allow_virtual
+==> CRD1: Debug: Package[hadoop-hdfs-secondarynamenode]: Adding default for allow_virtual
+==> CRD1: Debug: Package[hadoop-yarn-resourcemanager]: Adding default for allow_virtual
+==> CRD1: Debug: Package[hadoop-mapreduce-historyserver]: Adding default for allow_virtual
+==> CRD1: Debug: Package[hadoop-yarn-proxyserver]: Adding default for allow_virtual
+==> CRD1: Debug: Package[hadoop-doc]: Adding default for allow_virtual
+==> CRD1: Debug: Package[hadoop-hdfs-fuse]: Adding default for allow_virtual
+==> CRD1: Debug: Package[hadoop-client]: Adding default for allow_virtual
+==> CRD1: Debug: Package[hadoop-libhdfs]: Adding default for allow_virtual
+==> CRD1: Debug: Package[hadoop-debuginfo]: Adding default for allow_virtual
+==> CRD1: Debug: Package[mahout]: Adding default for allow_virtual
+==> CRD1: Debug: Package[hive]: Adding default for allow_virtual
+==> CRD1: Notice: Compiled catalog for crd1.csail.mit.edu in environment production in 2.41 seconds
+==> CRD1: Debug: Puppet::Type::Package::ProviderHpux: file /usr/sbin/swinstall does not exist
+==> CRD1: Debug: Puppet::Type::Package::ProviderPortage: file /usr/bin/emerge does not exist
+==> CRD1: Debug: Puppet::Type::Package::ProviderAptrpm: file apt-get does not exist
+==> CRD1: Debug: Puppet::Type::Package::ProviderPorts: file /usr/local/sbin/portversion does not exist
+==> CRD1: Debug: Puppet::Type::Package::ProviderFreebsd: file /usr/sbin/pkg_info does not exist
+==> CRD1: Debug: Puppet::Type::Package::ProviderFink: file /sw/bin/fink does not exist
+==> CRD1: Debug: Puppet::Type::Package::ProviderPkg: file /usr/bin/pkg does not exist
+==> CRD1: Debug: Puppet::Type::Package::ProviderNim: file /usr/bin/lslpp does not exist
+==> CRD1: Debug: Puppet::Type::Package::ProviderApt: file /usr/bin/apt-get does not exist
+==> CRD1: Debug: Puppet::Type::Package::ProviderSun: file /usr/bin/pkginfo does not exist
+==> CRD1: Debug: Puppet::Type::Package::ProviderPacman: file /usr/bin/pacman does not exist
+==> CRD1: Debug: Puppet::Type::Package::ProviderOpenbsd: file pkg_info does not exist
+==> CRD1: Debug: Puppet::Type::Package::ProviderRug: file /usr/bin/rug does not exist
+==> CRD1: Debug: Puppet::Type::Package::ProviderSunfreeware: file pkg-get does not exist
+==> CRD1: Debug: Puppet::Type::Package::ProviderDpkg: file /usr/bin/dpkg does not exist
+==> CRD1: Debug: Puppet::Type::Package::ProviderAix: file /usr/bin/lslpp does not exist
+==> CRD1: Debug: Puppet::Type::Package::ProviderPkgin: file pkgin does not exist
+==> CRD1: Debug: Puppet::Type::Package::ProviderAptitude: file /usr/bin/aptitude does not exist
+==> CRD1: Debug: Puppet::Type::Package::ProviderZypper: file /usr/bin/zypper does not exist
+==> CRD1: Debug: Puppet::Type::Package::ProviderPortupgrade: file /usr/local/sbin/portversion does not exist
+==> CRD1: Debug: Puppet::Type::Package::ProviderUrpmi: file urpmq does not exist
+==> CRD1: Debug: Puppet::Type::Package::ProviderUp2date: file /usr/sbin/up2date-nox does not exist
+==> CRD1: Debug: Puppet::Type::Package::ProviderOpkg: file opkg does not exist
+==> CRD1: Debug: Puppet::Type::User::ProviderDirectoryservice: file /usr/bin/dsimport does not exist
+==> CRD1: Debug: Puppet::Type::User::ProviderUser_role_add: file roledel does not exist
+==> CRD1: Debug: Puppet::Type::User::ProviderPw: file pw does not exist
+==> CRD1: Debug: Puppet::Type::User::ProviderLdap: true value when expecting false
+==> CRD1: Debug: /File[/etc/hadoop/conf/hadoop-env.sh]/seluser: Found seluser default 'system_u' for /etc/hadoop/conf/hadoop-env.sh
+==> CRD1: Debug: /File[/etc/hadoop/conf/hadoop-env.sh]/selrole: Found selrole default 'object_r' for /etc/hadoop/conf/hadoop-env.sh
+==> CRD1: Debug: /File[/etc/hadoop/conf/hadoop-env.sh]/seltype: Found seltype default 'etc_t' for /etc/hadoop/conf/hadoop-env.sh
+==> CRD1: Debug: /File[/etc/hadoop/conf/hadoop-env.sh]/selrange: Found selrange default 's0' for /etc/hadoop/conf/hadoop-env.sh
+==> CRD1: Debug: /File[/etc/hadoop/conf/core-site.xml]/seluser: Found seluser default 'system_u' for /etc/hadoop/conf/core-site.xml
+==> CRD1: Debug: /File[/etc/hadoop/conf/core-site.xml]/selrole: Found selrole default 'object_r' for /etc/hadoop/conf/core-site.xml
+==> CRD1: Debug: /File[/etc/hadoop/conf/core-site.xml]/seltype: Found seltype default 'etc_t' for /etc/hadoop/conf/core-site.xml
+==> CRD1: Debug: /File[/etc/hadoop/conf/core-site.xml]/selrange: Found selrange default 's0' for /etc/hadoop/conf/core-site.xml
+==> CRD1: Debug: /File[/etc/hadoop/conf/hdfs-site.xml]/seluser: Found seluser default 'system_u' for /etc/hadoop/conf/hdfs-site.xml
+==> CRD1: Debug: /File[/etc/hadoop/conf/hdfs-site.xml]/selrole: Found selrole default 'object_r' for /etc/hadoop/conf/hdfs-site.xml
+==> CRD1: Debug: /File[/etc/hadoop/conf/hdfs-site.xml]/seltype: Found seltype default 'etc_t' for /etc/hadoop/conf/hdfs-site.xml
+==> CRD1: Debug: /File[/etc/hadoop/conf/hdfs-site.xml]/selrange: Found selrange default 's0' for /etc/hadoop/conf/hdfs-site.xml
+==> CRD1: Debug: /File[/etc/default/hadoop-hdfs-datanode]/seluser: Found seluser default 'system_u' for /etc/default/hadoop-hdfs-datanode
+==> CRD1: Debug: /File[/etc/default/hadoop-hdfs-datanode]/selrole: Found selrole default 'object_r' for /etc/default/hadoop-hdfs-datanode
+==> CRD1: Debug: /File[/etc/default/hadoop-hdfs-datanode]/seltype: Found seltype default 'etc_t' for /etc/default/hadoop-hdfs-datanode
+==> CRD1: Debug: /File[/etc/default/hadoop-hdfs-datanode]/selrange: Found selrange default 's0' for /etc/default/hadoop-hdfs-datanode
+==> CRD1: Debug: Puppet::Type::Service::ProviderOpenrc: file /bin/rc-status does not exist
+==> CRD1: Debug: Puppet::Type::Service::ProviderRunit: file /usr/bin/sv does not exist
+==> CRD1: Debug: Puppet::Type::Service::ProviderDaemontools: file /usr/bin/svc does not exist
+==> CRD1: Debug: Puppet::Type::Service::ProviderLaunchd: file /bin/launchctl does not exist
+==> CRD1: Debug: Puppet::Type::Service::ProviderDebian: file /usr/sbin/update-rc.d does not exist
+==> CRD1: Debug: Puppet::Type::Service::ProviderGentoo: file /sbin/rc-update does not exist
+==> CRD1: Debug: Puppet::Type::Service::ProviderSystemd: file systemctl does not exist
+==> CRD1: Debug: /File[/data/1/hdfs]/seluser: Found seluser default 'system_u' for /data/1/hdfs
+==> CRD1: Debug: /File[/data/1/hdfs]/selrole: Found selrole default 'object_r' for /data/1/hdfs
+==> CRD1: Debug: /File[/data/1/hdfs]/seltype: Found seltype default 'default_t' for /data/1/hdfs
+==> CRD1: Debug: /File[/data/1/hdfs]/selrange: Found selrange default 's0' for /data/1/hdfs
+==> CRD1: Debug: /File[/data/2/hdfs]/seluser: Found seluser default 'system_u' for /data/2/hdfs
+==> CRD1: Debug: /File[/data/2/hdfs]/selrole: Found selrole default 'object_r' for /data/2/hdfs
+==> CRD1: Debug: /File[/data/2/hdfs]/seltype: Found seltype default 'default_t' for /data/2/hdfs
+==> CRD1: Debug: /File[/data/2/hdfs]/selrange: Found selrange default 's0' for /data/2/hdfs
+==> CRD1: Debug: /File[/etc/hadoop/conf/yarn-site.xml]/seluser: Found seluser default 'system_u' for /etc/hadoop/conf/yarn-site.xml
+==> CRD1: Debug: /File[/etc/hadoop/conf/yarn-site.xml]/selrole: Found selrole default 'object_r' for /etc/hadoop/conf/yarn-site.xml
+==> CRD1: Debug: /File[/etc/hadoop/conf/yarn-site.xml]/seltype: Found seltype default 'etc_t' for /etc/hadoop/conf/yarn-site.xml
+==> CRD1: Debug: /File[/etc/hadoop/conf/yarn-site.xml]/selrange: Found selrange default 's0' for /etc/hadoop/conf/yarn-site.xml
+==> CRD1: Debug: /File[/etc/hadoop/conf/container-executor.cfg]/seluser: Found seluser default 'system_u' for /etc/hadoop/conf/container-executor.cfg
+==> CRD1: Debug: /File[/etc/hadoop/conf/container-executor.cfg]/selrole: Found selrole default 'object_r' for /etc/hadoop/conf/container-executor.cfg
+==> CRD1: Debug: /File[/etc/hadoop/conf/container-executor.cfg]/seltype: Found seltype default 'etc_t' for /etc/hadoop/conf/container-executor.cfg
+==> CRD1: Debug: /File[/etc/hadoop/conf/container-executor.cfg]/selrange: Found selrange default 's0' for /etc/hadoop/conf/container-executor.cfg
+==> CRD1: Debug: /File[/data/1/yarn]/seluser: Found seluser default 'system_u' for /data/1/yarn
+==> CRD1: Debug: /File[/data/1/yarn]/selrole: Found selrole default 'object_r' for /data/1/yarn
+==> CRD1: Debug: /File[/data/1/yarn]/seltype: Found seltype default 'default_t' for /data/1/yarn
+==> CRD1: Debug: /File[/data/1/yarn]/selrange: Found selrange default 's0' for /data/1/yarn
+==> CRD1: Debug: /File[/data/2/yarn]/seluser: Found seluser default 'system_u' for /data/2/yarn
+==> CRD1: Debug: /File[/data/2/yarn]/selrole: Found selrole default 'object_r' for /data/2/yarn
+==> CRD1: Debug: /File[/data/2/yarn]/seltype: Found seltype default 'default_t' for /data/2/yarn
+==> CRD1: Debug: /File[/data/2/yarn]/selrange: Found selrange default 's0' for /data/2/yarn
+==> CRD1: Debug: /File[/etc/hadoop/conf/mapred-site.xml]/seluser: Found seluser default 'system_u' for /etc/hadoop/conf/mapred-site.xml
+==> CRD1: Debug: /File[/etc/hadoop/conf/mapred-site.xml]/selrole: Found selrole default 'object_r' for /etc/hadoop/conf/mapred-site.xml
+==> CRD1: Debug: /File[/etc/hadoop/conf/mapred-site.xml]/seltype: Found seltype default 'etc_t' for /etc/hadoop/conf/mapred-site.xml
+==> CRD1: Debug: /File[/etc/hadoop/conf/mapred-site.xml]/selrange: Found selrange default 's0' for /etc/hadoop/conf/mapred-site.xml
+==> CRD1: Debug: /File[/etc/hadoop/conf/taskcontroller.cfg]/seluser: Found seluser default 'system_u' for /etc/hadoop/conf/taskcontroller.cfg
+==> CRD1: Debug: /File[/etc/hadoop/conf/taskcontroller.cfg]/selrole: Found selrole default 'object_r' for /etc/hadoop/conf/taskcontroller.cfg
+==> CRD1: Debug: /File[/etc/hadoop/conf/taskcontroller.cfg]/seltype: Found seltype default 'etc_t' for /etc/hadoop/conf/taskcontroller.cfg
+==> CRD1: Debug: /File[/etc/hadoop/conf/taskcontroller.cfg]/selrange: Found selrange default 's0' for /etc/hadoop/conf/taskcontroller.cfg
+==> CRD1: Debug: /File[/data/1/mapred]/seluser: Found seluser default 'system_u' for /data/1/mapred
+==> CRD1: Debug: /File[/data/1/mapred]/selrole: Found selrole default 'object_r' for /data/1/mapred
+==> CRD1: Debug: /File[/data/1/mapred]/seltype: Found seltype default 'default_t' for /data/1/mapred
+==> CRD1: Debug: /File[/data/1/mapred]/selrange: Found selrange default 's0' for /data/1/mapred
+==> CRD1: Debug: /File[/data/2/mapred]/seluser: Found seluser default 'system_u' for /data/2/mapred
+==> CRD1: Debug: /File[/data/2/mapred]/selrole: Found selrole default 'object_r' for /data/2/mapred
+==> CRD1: Debug: /File[/data/2/mapred]/seltype: Found seltype default 'default_t' for /data/2/mapred
+==> CRD1: Debug: /File[/data/2/mapred]/selrange: Found selrange default 's0' for /data/2/mapred
+==> CRD1: Debug: /File[/etc/default/hadoop-hdfs-namenode]/seluser: Found seluser default 'system_u' for /etc/default/hadoop-hdfs-namenode
+==> CRD1: Debug: /File[/etc/default/hadoop-hdfs-namenode]/selrole: Found selrole default 'object_r' for /etc/default/hadoop-hdfs-namenode
+==> CRD1: Debug: /File[/etc/default/hadoop-hdfs-namenode]/seltype: Found seltype default 'etc_t' for /etc/default/hadoop-hdfs-namenode
+==> CRD1: Debug: /File[/etc/default/hadoop-hdfs-namenode]/selrange: Found selrange default 's0' for /etc/default/hadoop-hdfs-namenode
+==> CRD1: Debug: /File[/data/1/namenode]/seluser: Found seluser default 'system_u' for /data/1/namenode
+==> CRD1: Debug: /File[/data/1/namenode]/selrole: Found selrole default 'object_r' for /data/1/namenode
+==> CRD1: Debug: /File[/data/1/namenode]/seltype: Found seltype default 'default_t' for /data/1/namenode
+==> CRD1: Debug: /File[/data/1/namenode]/selrange: Found selrange default 's0' for /data/1/namenode
+==> CRD1: Debug: /File[/data/2/namenode]/seluser: Found seluser default 'system_u' for /data/2/namenode
+==> CRD1: Debug: /File[/data/2/namenode]/selrole: Found selrole default 'object_r' for /data/2/namenode
+==> CRD1: Debug: /File[/data/2/namenode]/seltype: Found seltype default 'default_t' for /data/2/namenode
+==> CRD1: Debug: /File[/data/2/namenode]/selrange: Found selrange default 's0' for /data/2/namenode
+==> CRD1: Debug: /File[/etc/default/hadoop-hdfs-secondarynamenode]/seluser: Found seluser default 'system_u' for /etc/default/hadoop-hdfs-secondarynamenode
+==> CRD1: Debug: /File[/etc/default/hadoop-hdfs-secondarynamenode]/selrole: Found selrole default 'object_r' for /etc/default/hadoop-hdfs-secondarynamenode
+==> CRD1: Debug: /File[/etc/default/hadoop-hdfs-secondarynamenode]/seltype: Found seltype default 'etc_t' for /etc/default/hadoop-hdfs-secondarynamenode
+==> CRD1: Debug: /File[/etc/default/hadoop-hdfs-secondarynamenode]/selrange: Found selrange default 's0' for /etc/default/hadoop-hdfs-secondarynamenode
+==> CRD1: Debug: /File[/etc/hive/conf/hive-site.xml]/seluser: Found seluser default 'system_u' for /etc/hive/conf/hive-site.xml
+==> CRD1: Debug: /File[/etc/hive/conf/hive-site.xml]/selrole: Found selrole default 'object_r' for /etc/hive/conf/hive-site.xml
+==> CRD1: Debug: /File[/etc/hive/conf/hive-site.xml]/seltype: Found seltype default 'etc_t' for /etc/hive/conf/hive-site.xml
+==> CRD1: Debug: /File[/etc/hive/conf/hive-site.xml]/selrange: Found selrange default 's0' for /etc/hive/conf/hive-site.xml
+==> CRD1: Debug: Creating default schedules
+==> CRD1: Debug: Using settings: adding file resource 'graphdir': 'File[/var/lib/puppet/state/graphs]{:loglevel=>:debug, :ensure=>:directory, :links=>:follow, :backup=>false, :path=>"/var/lib/puppet/state/graphs"}'
+==> CRD1: Debug: Puppet::Type::Group::ProviderDirectoryservice: file /usr/bin/dscl does not exist
+==> CRD1: Debug: Puppet::Type::Group::ProviderPw: file pw does not exist
+==> CRD1: Debug: Puppet::Type::Group::ProviderLdap: true value when expecting false
+==> CRD1: Debug: Using settings: adding file resource 'preview_outputdir': 'File[/var/lib/puppet/preview]{:loglevel=>:debug, :ensure=>:directory, :links=>:follow, :group=>"puppet", :backup=>false, :owner=>"puppet", :mode=>"750", :path=>"/var/lib/puppet/preview"}'
+==> CRD1: Debug: Using settings: adding file resource 'logdir': 'File[/var/log/puppet]{:loglevel=>:debug, :ensure=>:directory, :links=>:follow, :group=>"puppet", :backup=>false, :owner=>"puppet", :mode=>"750", :path=>"/var/log/puppet"}'
+==> CRD1: Debug: Using settings: adding file resource 'statefile': 'File[/var/lib/puppet/state/state.yaml]{:loglevel=>:debug, :ensure=>:file, :links=>:follow, :backup=>false, :mode=>"660", :path=>"/var/lib/puppet/state/state.yaml"}'
+==> CRD1: Debug: Using settings: adding file resource 'vardir': 'File[/var/lib/puppet]{:loglevel=>:debug, :ensure=>:directory, :links=>:follow, :group=>"puppet", :backup=>false, :owner=>"puppet", :path=>"/var/lib/puppet"}'
+==> CRD1: Debug: Using settings: adding file resource 'ssldir': 'File[/var/lib/puppet/ssl]{:loglevel=>:debug, :ensure=>:directory, :links=>:follow, :group=>"puppet", :backup=>false, :owner=>"puppet", :mode=>"771", :path=>"/var/lib/puppet/ssl"}'
+==> CRD1: Debug: Using settings: adding file resource 'client_datadir': 'File[/var/lib/puppet/client_data]{:loglevel=>:debug, :ensure=>:directory, :links=>:follow, :backup=>false, :mode=>"750", :path=>"/var/lib/puppet/client_data"}'
+==> CRD1: Debug: Using settings: adding file resource 'lastrunfile': 'File[/var/lib/puppet/state/last_run_summary.yaml]{:loglevel=>:debug, :ensure=>:file, :links=>:follow, :backup=>false, :mode=>"644", :path=>"/var/lib/puppet/state/last_run_summary.yaml"}'
+==> CRD1: Debug: Using settings: adding file resource 'requestdir': 'File[/var/lib/puppet/ssl/certificate_requests]{:loglevel=>:debug, :ensure=>:directory, :links=>:follow, :group=>"puppet", :backup=>false, :owner=>"puppet", :mode=>"755", :path=>"/var/lib/puppet/ssl/certificate_requests"}'
+==> CRD1: Debug: Using settings: adding file resource 'libdir': 'File[/var/lib/puppet/lib]{:loglevel=>:debug, :ensure=>:directory, :links=>:follow, :backup=>false, :path=>"/var/lib/puppet/lib"}'
+==> CRD1: Debug: Using settings: adding file resource 'privatedir': 'File[/var/lib/puppet/ssl/private]{:loglevel=>:debug, :ensure=>:directory, :links=>:follow, :group=>"puppet", :backup=>false, :owner=>"puppet", :mode=>"750", :path=>"/var/lib/puppet/ssl/private"}'
+==> CRD1: Debug: Using settings: adding file resource 'hiera_config': 'File[/etc/puppet/hiera.yaml]{:loglevel=>:debug, :ensure=>:file, :links=>:follow, :backup=>false, :path=>"/etc/puppet/hiera.yaml"}'
+==> CRD1: Debug: Using settings: adding file resource 'confdir': 'File[/etc/puppet]{:loglevel=>:debug, :ensure=>:directory, :links=>:follow, :backup=>false, :path=>"/etc/puppet"}'
+==> CRD1: Debug: Using settings: adding file resource 'certdir': 'File[/var/lib/puppet/ssl/certs]{:loglevel=>:debug, :ensure=>:directory, :links=>:follow, :group=>"puppet", :backup=>false, :owner=>"puppet", :mode=>"755", :path=>"/var/lib/puppet/ssl/certs"}'
+==> CRD1: Debug: Using settings: adding file resource 'clientyamldir': 'File[/var/lib/puppet/client_yaml]{:loglevel=>:debug, :ensure=>:directory, :links=>:follow, :backup=>false, :mode=>"750", :path=>"/var/lib/puppet/client_yaml"}'
+==> CRD1: Debug: Using settings: adding file resource 'publickeydir': 'File[/var/lib/puppet/ssl/public_keys]{:loglevel=>:debug, :ensure=>:directory, :links=>:follow, :group=>"puppet", :backup=>false, :owner=>"puppet", :mode=>"755", :path=>"/var/lib/puppet/ssl/public_keys"}'
+==> CRD1: Debug: Using settings: adding file resource 'lastrunreport': 'File[/var/lib/puppet/state/last_run_report.yaml]{:loglevel=>:debug, :ensure=>:file, :links=>:follow, :backup=>false, :mode=>"640", :path=>"/var/lib/puppet/state/last_run_report.yaml"}'
+==> CRD1: Debug: Using settings: adding file resource 'rundir': 'File[/var/run/puppet]{:loglevel=>:debug, :ensure=>:directory, :links=>:follow, :group=>"puppet", :backup=>false, :owner=>"puppet", :mode=>"755", :path=>"/var/run/puppet"}'
+==> CRD1: Debug: Using settings: adding file resource 'clientbucketdir': 'File[/var/lib/puppet/clientbucket]{:loglevel=>:debug, :ensure=>:directory, :links=>:follow, :backup=>false, :mode=>"750", :path=>"/var/lib/puppet/clientbucket"}'
+==> CRD1: Debug: Using settings: adding file resource 'statedir': 'File[/var/lib/puppet/state]{:loglevel=>:debug, :ensure=>:directory, :links=>:follow, :backup=>false, :mode=>"1755", :path=>"/var/lib/puppet/state"}'
+==> CRD1: Debug: Using settings: adding file resource 'privatekeydir': 'File[/var/lib/puppet/ssl/private_keys]{:loglevel=>:debug, :ensure=>:directory, :links=>:follow, :group=>"puppet", :backup=>false, :owner=>"puppet", :mode=>"750", :path=>"/var/lib/puppet/ssl/private_keys"}'
+==> CRD1: Debug: Using settings: adding file resource 'pluginfactdest': 'File[/var/lib/puppet/facts.d]{:loglevel=>:debug, :ensure=>:directory, :links=>:follow, :backup=>false, :path=>"/var/lib/puppet/facts.d"}'
+==> CRD1: Debug: /File[/var/lib/puppet/state/graphs]/seluser: Found seluser default 'system_u' for /var/lib/puppet/state/graphs
+==> CRD1: Debug: /File[/var/lib/puppet/state/graphs]/selrole: Found selrole default 'object_r' for /var/lib/puppet/state/graphs
+==> CRD1: Debug: /File[/var/lib/puppet/state/graphs]/seltype: Found seltype default 'puppet_var_lib_t' for /var/lib/puppet/state/graphs
+==> CRD1: Debug: /File[/var/lib/puppet/state/graphs]/selrange: Found selrange default 's0' for /var/lib/puppet/state/graphs
+==> CRD1: Debug: /File[/var/lib/puppet/preview]/seluser: Found seluser default 'system_u' for /var/lib/puppet/preview
+==> CRD1: Debug: /File[/var/lib/puppet/preview]/selrole: Found selrole default 'object_r' for /var/lib/puppet/preview
+==> CRD1: Debug: /File[/var/lib/puppet/preview]/seltype: Found seltype default 'puppet_var_lib_t' for /var/lib/puppet/preview
+==> CRD1: Debug: /File[/var/lib/puppet/preview]/selrange: Found selrange default 's0' for /var/lib/puppet/preview
+==> CRD1: Debug: /File[/var/log/puppet]/seluser: Found seluser default 'system_u' for /var/log/puppet
+==> CRD1: Debug: /File[/var/log/puppet]/selrole: Found selrole default 'object_r' for /var/log/puppet
+==> CRD1: Debug: /File[/var/log/puppet]/seltype: Found seltype default 'puppet_log_t' for /var/log/puppet
+==> CRD1: Debug: /File[/var/log/puppet]/selrange: Found selrange default 's0' for /var/log/puppet
+==> CRD1: Debug: /File[/var/lib/puppet/state/state.yaml]/seluser: Found seluser default 'system_u' for /var/lib/puppet/state/state.yaml
+==> CRD1: Debug: /File[/var/lib/puppet/state/state.yaml]/selrole: Found selrole default 'object_r' for /var/lib/puppet/state/state.yaml
+==> CRD1: Debug: /File[/var/lib/puppet/state/state.yaml]/seltype: Found seltype default 'puppet_var_lib_t' for /var/lib/puppet/state/state.yaml
+==> CRD1: Debug: /File[/var/lib/puppet/state/state.yaml]/selrange: Found selrange default 's0' for /var/lib/puppet/state/state.yaml
+==> CRD1: Debug: /File[/var/lib/puppet]/seluser: Found seluser default 'system_u' for /var/lib/puppet
+==> CRD1: Debug: /File[/var/lib/puppet]/selrole: Found selrole default 'object_r' for /var/lib/puppet
+==> CRD1: Debug: /File[/var/lib/puppet]/seltype: Found seltype default 'puppet_var_lib_t' for /var/lib/puppet
+==> CRD1: Debug: /File[/var/lib/puppet]/selrange: Found selrange default 's0' for /var/lib/puppet
+==> CRD1: Debug: /File[/var/lib/puppet/ssl]/seluser: Found seluser default 'system_u' for /var/lib/puppet/ssl
+==> CRD1: Debug: /File[/var/lib/puppet/ssl]/selrole: Found selrole default 'object_r' for /var/lib/puppet/ssl
+==> CRD1: Debug: /File[/var/lib/puppet/ssl]/seltype: Found seltype default 'puppet_var_lib_t' for /var/lib/puppet/ssl
+==> CRD1: Debug: /File[/var/lib/puppet/ssl]/selrange: Found selrange default 's0' for /var/lib/puppet/ssl
+==> CRD1: Debug: /File[/var/lib/puppet/client_data]/seluser: Found seluser default 'system_u' for /var/lib/puppet/client_data
+==> CRD1: Debug: /File[/var/lib/puppet/client_data]/selrole: Found selrole default 'object_r' for /var/lib/puppet/client_data
+==> CRD1: Debug: /File[/var/lib/puppet/client_data]/seltype: Found seltype default 'puppet_var_lib_t' for /var/lib/puppet/client_data
+==> CRD1: Debug: /File[/var/lib/puppet/client_data]/selrange: Found selrange default 's0' for /var/lib/puppet/client_data
+==> CRD1: Debug: /File[/var/lib/puppet/state/last_run_summary.yaml]/seluser: Found seluser default 'system_u' for /var/lib/puppet/state/last_run_summary.yaml
+==> CRD1: Debug: /File[/var/lib/puppet/state/last_run_summary.yaml]/selrole: Found selrole default 'object_r' for /var/lib/puppet/state/last_run_summary.yaml
+==> CRD1: Debug: /File[/var/lib/puppet/state/last_run_summary.yaml]/seltype: Found seltype default 'puppet_var_lib_t' for /var/lib/puppet/state/last_run_summary.yaml
+==> CRD1: Debug: /File[/var/lib/puppet/state/last_run_summary.yaml]/selrange: Found selrange default 's0' for /var/lib/puppet/state/last_run_summary.yaml
+==> CRD1: Debug: /File[/var/lib/puppet/ssl/certificate_requests]/seluser: Found seluser default 'system_u' for /var/lib/puppet/ssl/certificate_requests
+==> CRD1: Debug: /File[/var/lib/puppet/ssl/certificate_requests]/selrole: Found selrole default 'object_r' for /var/lib/puppet/ssl/certificate_requests
+==> CRD1: Debug: /File[/var/lib/puppet/ssl/certificate_requests]/seltype: Found seltype default 'puppet_var_lib_t' for /var/lib/puppet/ssl/certificate_requests
+==> CRD1: Debug: /File[/var/lib/puppet/ssl/certificate_requests]/selrange: Found selrange default 's0' for /var/lib/puppet/ssl/certificate_requests
+==> CRD1: Debug: /File[/var/lib/puppet/lib]/seluser: Found seluser default 'system_u' for /var/lib/puppet/lib
+==> CRD1: Debug: /File[/var/lib/puppet/lib]/selrole: Found selrole default 'object_r' for /var/lib/puppet/lib
+==> CRD1: Debug: /File[/var/lib/puppet/lib]/seltype: Found seltype default 'puppet_var_lib_t' for /var/lib/puppet/lib
+==> CRD1: Debug: /File[/var/lib/puppet/lib]/selrange: Found selrange default 's0' for /var/lib/puppet/lib
+==> CRD1: Debug: /File[/var/lib/puppet/ssl/private]/seluser: Found seluser default 'system_u' for /var/lib/puppet/ssl/private
+==> CRD1: Debug: /File[/var/lib/puppet/ssl/private]/selrole: Found selrole default 'object_r' for /var/lib/puppet/ssl/private
+==> CRD1: Debug: /File[/var/lib/puppet/ssl/private]/seltype: Found seltype default 'puppet_var_lib_t' for /var/lib/puppet/ssl/private
+==> CRD1: Debug: /File[/var/lib/puppet/ssl/private]/selrange: Found selrange default 's0' for /var/lib/puppet/ssl/private
+==> CRD1: Debug: /File[/etc/puppet/hiera.yaml]/seluser: Found seluser default 'system_u' for /etc/puppet/hiera.yaml
+==> CRD1: Debug: /File[/etc/puppet/hiera.yaml]/selrole: Found selrole default 'object_r' for /etc/puppet/hiera.yaml
+==> CRD1: Debug: /File[/etc/puppet/hiera.yaml]/seltype: Found seltype default 'puppet_etc_t' for /etc/puppet/hiera.yaml
+==> CRD1: Debug: /File[/etc/puppet/hiera.yaml]/selrange: Found selrange default 's0' for /etc/puppet/hiera.yaml
+==> CRD1: Debug: /File[/etc/puppet]/seluser: Found seluser default 'system_u' for /etc/puppet
+==> CRD1: Debug: /File[/etc/puppet]/selrole: Found selrole default 'object_r' for /etc/puppet
+==> CRD1: Debug: /File[/etc/puppet]/seltype: Found seltype default 'puppet_etc_t' for /etc/puppet
+==> CRD1: Debug: /File[/etc/puppet]/selrange: Found selrange default 's0' for /etc/puppet
+==> CRD1: Debug: /File[/var/lib/puppet/ssl/certs]/seluser: Found seluser default 'system_u' for /var/lib/puppet/ssl/certs
+==> CRD1: Debug: /File[/var/lib/puppet/ssl/certs]/selrole: Found selrole default 'object_r' for /var/lib/puppet/ssl/certs
+==> CRD1: Debug: /File[/var/lib/puppet/ssl/certs]/seltype: Found seltype default 'puppet_var_lib_t' for /var/lib/puppet/ssl/certs
+==> CRD1: Debug: /File[/var/lib/puppet/ssl/certs]/selrange: Found selrange default 's0' for /var/lib/puppet/ssl/certs
+==> CRD1: Debug: /File[/var/lib/puppet/client_yaml]/seluser: Found seluser default 'system_u' for /var/lib/puppet/client_yaml
+==> CRD1: Debug: /File[/var/lib/puppet/client_yaml]/selrole: Found selrole default 'object_r' for /var/lib/puppet/client_yaml
+==> CRD1: Debug: /File[/var/lib/puppet/client_yaml]/seltype: Found seltype default 'puppet_var_lib_t' for /var/lib/puppet/client_yaml
+==> CRD1: Debug: /File[/var/lib/puppet/client_yaml]/selrange: Found selrange default 's0' for /var/lib/puppet/client_yaml
+==> CRD1: Debug: /File[/var/lib/puppet/ssl/public_keys]/seluser: Found seluser default 'system_u' for /var/lib/puppet/ssl/public_keys
+==> CRD1: Debug: /File[/var/lib/puppet/ssl/public_keys]/selrole: Found selrole default 'object_r' for /var/lib/puppet/ssl/public_keys
+==> CRD1: Debug: /File[/var/lib/puppet/ssl/public_keys]/seltype: Found seltype default 'puppet_var_lib_t' for /var/lib/puppet/ssl/public_keys
+==> CRD1: Debug: /File[/var/lib/puppet/ssl/public_keys]/selrange: Found selrange default 's0' for /var/lib/puppet/ssl/public_keys
+==> CRD1: Debug: /File[/var/lib/puppet/state/last_run_report.yaml]/seluser: Found seluser default 'system_u' for /var/lib/puppet/state/last_run_report.yaml
+==> CRD1: Debug: /File[/var/lib/puppet/state/last_run_report.yaml]/selrole: Found selrole default 'object_r' for /var/lib/puppet/state/last_run_report.yaml
+==> CRD1: Debug: /File[/var/lib/puppet/state/last_run_report.yaml]/seltype: Found seltype default 'puppet_var_lib_t' for /var/lib/puppet/state/last_run_report.yaml
+==> CRD1: Debug: /File[/var/lib/puppet/state/last_run_report.yaml]/selrange: Found selrange default 's0' for /var/lib/puppet/state/last_run_report.yaml
+==> CRD1: Debug: /File[/var/run/puppet]/seluser: Found seluser default 'system_u' for /var/run/puppet
+==> CRD1: Debug: /File[/var/run/puppet]/selrole: Found selrole default 'object_r' for /var/run/puppet
+==> CRD1: Debug: /File[/var/run/puppet]/seltype: Found seltype default 'puppet_var_run_t' for /var/run/puppet
+==> CRD1: Debug: /File[/var/run/puppet]/selrange: Found selrange default 's0' for /var/run/puppet
+==> CRD1: Debug: /File[/var/lib/puppet/clientbucket]/seluser: Found seluser default 'system_u' for /var/lib/puppet/clientbucket
+==> CRD1: Debug: /File[/var/lib/puppet/clientbucket]/selrole: Found selrole default 'object_r' for /var/lib/puppet/clientbucket
+==> CRD1: Debug: /File[/var/lib/puppet/clientbucket]/seltype: Found seltype default 'puppet_var_lib_t' for /var/lib/puppet/clientbucket
+==> CRD1: Debug: /File[/var/lib/puppet/clientbucket]/selrange: Found selrange default 's0' for /var/lib/puppet/clientbucket
+==> CRD1: Debug: /File[/var/lib/puppet/state]/seluser: Found seluser default 'system_u' for /var/lib/puppet/state
+==> CRD1: Debug: /File[/var/lib/puppet/state]/selrole: Found selrole default 'object_r' for /var/lib/puppet/state
+==> CRD1: Debug: /File[/var/lib/puppet/state]/seltype: Found seltype default 'puppet_var_lib_t' for /var/lib/puppet/state
+==> CRD1: Debug: /File[/var/lib/puppet/state]/selrange: Found selrange default 's0' for /var/lib/puppet/state
+==> CRD1: Debug: /File[/var/lib/puppet/ssl/private_keys]/seluser: Found seluser default 'system_u' for /var/lib/puppet/ssl/private_keys
+==> CRD1: Debug: /File[/var/lib/puppet/ssl/private_keys]/selrole: Found selrole default 'object_r' for /var/lib/puppet/ssl/private_keys
+==> CRD1: Debug: /File[/var/lib/puppet/ssl/private_keys]/seltype: Found seltype default 'puppet_var_lib_t' for /var/lib/puppet/ssl/private_keys
+==> CRD1: Debug: /File[/var/lib/puppet/ssl/private_keys]/selrange: Found selrange default 's0' for /var/lib/puppet/ssl/private_keys
+==> CRD1: Debug: /File[/var/lib/puppet/facts.d]/seluser: Found seluser default 'system_u' for /var/lib/puppet/facts.d
+==> CRD1: Debug: /File[/var/lib/puppet/facts.d]/selrole: Found selrole default 'object_r' for /var/lib/puppet/facts.d
+==> CRD1: Debug: /File[/var/lib/puppet/facts.d]/seltype: Found seltype default 'puppet_var_lib_t' for /var/lib/puppet/facts.d
+==> CRD1: Debug: /File[/var/lib/puppet/facts.d]/selrange: Found selrange default 's0' for /var/lib/puppet/facts.d
+==> CRD1: Debug: /File[/var/lib/puppet/state]: Autorequiring File[/var/lib/puppet]
+==> CRD1: Debug: /File[/var/lib/puppet/state/last_run_report.yaml]: Autorequiring File[/var/lib/puppet/state]
+==> CRD1: Debug: /File[/var/lib/puppet/ssl/certificate_requests]: Autorequiring File[/var/lib/puppet/ssl]
+==> CRD1: Debug: /File[/var/lib/puppet/preview]: Autorequiring File[/var/lib/puppet]
+==> CRD1: Debug: /File[/var/lib/puppet/ssl/private_keys]: Autorequiring File[/var/lib/puppet/ssl]
+==> CRD1: Debug: /File[/var/lib/puppet/ssl/public_keys]: Autorequiring File[/var/lib/puppet/ssl]
+==> CRD1: Debug: /File[/var/lib/puppet/state/state.yaml]: Autorequiring File[/var/lib/puppet/state]
+==> CRD1: Debug: /File[/var/lib/puppet/lib]: Autorequiring File[/var/lib/puppet]
+==> CRD1: Debug: /File[/var/lib/puppet/state/last_run_summary.yaml]: Autorequiring File[/var/lib/puppet/state]
+==> CRD1: Debug: /File[/var/lib/puppet/state/graphs]: Autorequiring File[/var/lib/puppet/state]
+==> CRD1: Debug: /File[/etc/puppet/hiera.yaml]: Autorequiring File[/etc/puppet]
+==> CRD1: Debug: /File[/var/lib/puppet/client_yaml]: Autorequiring File[/var/lib/puppet]
+==> CRD1: Debug: /File[/var/lib/puppet/facts.d]: Autorequiring File[/var/lib/puppet]
+==> CRD1: Debug: /File[/var/lib/puppet/clientbucket]: Autorequiring File[/var/lib/puppet]
+==> CRD1: Debug: /File[/var/lib/puppet/ssl/certs]: Autorequiring File[/var/lib/puppet/ssl]
+==> CRD1: Debug: /File[/var/lib/puppet/ssl/private]: Autorequiring File[/var/lib/puppet/ssl]
+==> CRD1: Debug: /File[/var/lib/puppet/client_data]: Autorequiring File[/var/lib/puppet]
+==> CRD1: Debug: /File[/var/lib/puppet/ssl]: Autorequiring File[/var/lib/puppet]
+==> CRD1: Debug: /File[/var/lib/puppet/state/last_run_report.yaml]/mode: mode changed '0660' to '0640'
+==> CRD1: Debug: /File[/var/lib/puppet/state/last_run_report.yaml]/seluser: seluser changed 'unconfined_u' to 'system_u'
+==> CRD1: Debug: /File[/var/lib/puppet/state/state.yaml]/seluser: seluser changed 'unconfined_u' to 'system_u'
+==> CRD1: Debug: /File[/etc/puppet/hiera.yaml]/seluser: seluser changed 'unconfined_u' to 'system_u'
+==> CRD1: Debug: /File[/var/lib/puppet/state/last_run_summary.yaml]/seluser: seluser changed 'unconfined_u' to 'system_u'
+==> CRD1: Debug: Finishing transaction 70117536822960
+==> CRD1: Debug: Loaded state in 0.00 seconds
+==> CRD1: Debug: Loaded state in 0.00 seconds
+==> CRD1: Debug: /Stage[main]/Hadoop::Client/Package[hadoop-client]/require: requires Package[java-1.7.0-openjdk-devel.x86_64]
+==> CRD1: Debug: /Stage[main]/Hadoop::Client/Package[hadoop-client]/require: requires Package[hadoop]
+==> CRD1: Debug: /Stage[main]/Hadoop::Client/Package[hadoop-client]/require: requires Package[hadoop-hdfs]
+==> CRD1: Debug: /Stage[main]/Hadoop::Client/Package[hadoop-client]/require: requires Package[hadoop-mapreduce]
+==> CRD1: Debug: /Stage[main]/Hadoop::Client/Package[hadoop-doc]/require: requires Package[java-1.7.0-openjdk-devel.x86_64]
+==> CRD1: Debug: /Stage[main]/Hadoop::Client/Package[hadoop-doc]/require: requires Package[hadoop]
+==> CRD1: Debug: /Stage[main]/Hadoop::Client/Package[hadoop-doc]/require: requires Package[hadoop-hdfs]
+==> CRD1: Debug: /Stage[main]/Hadoop::Client/Package[hadoop-doc]/require: requires Package[hadoop-mapreduce]
+==> CRD1: Debug: /Stage[main]/Hadoop::Common_yarn/File[/etc/hadoop/conf/yarn-site.xml]/require: requires Package[hadoop]
+==> CRD1: Debug: /Stage[main]/Hadoop::Secondarynamenode/Service[hadoop-hdfs-secondarynamenode]/require: requires Package[hadoop-hdfs-secondarynamenode]
+==> CRD1: Debug: /Stage[main]/Hadoop::Secondarynamenode/Service[hadoop-hdfs-secondarynamenode]/subscribe: subscribes to Package[hadoop-hdfs-secondarynamenode]
+==> CRD1: Debug: /Stage[main]/Hadoop::Secondarynamenode/Service[hadoop-hdfs-secondarynamenode]/subscribe: subscribes to File[/etc/hadoop/conf/core-site.xml]
+==> CRD1: Debug: /Stage[main]/Hadoop::Secondarynamenode/Service[hadoop-hdfs-secondarynamenode]/subscribe: subscribes to File[/etc/hadoop/conf/hdfs-site.xml]
+==> CRD1: Debug: /Stage[main]/Hadoop::Secondarynamenode/Service[hadoop-hdfs-secondarynamenode]/subscribe: subscribes to File[/etc/hadoop/conf/hadoop-env.sh]
+==> CRD1: Debug: /Stage[deploy_app]/before: requires Stage[deploy]
+==> CRD1: Debug: /Stage[main]/Hadoop::Datanode/Service[hadoop-hdfs-datanode]/require: requires Package[hadoop-hdfs-datanode]
+==> CRD1: Debug: /Stage[main]/Hadoop::Datanode/Service[hadoop-hdfs-datanode]/require: requires File[/etc/default/hadoop-hdfs-datanode]
+==> CRD1: Debug: /Stage[main]/Hadoop::Datanode/Service[hadoop-hdfs-datanode]/require: requires File[/data/1/hdfs]
+==> CRD1: Debug: /Stage[main]/Hadoop::Datanode/Service[hadoop-hdfs-datanode]/require: requires File[/data/2/hdfs]
+==> CRD1: Debug: /Stage[main]/Hadoop::Datanode/Service[hadoop-hdfs-datanode]/subscribe: subscribes to Package[hadoop-hdfs-datanode]
+==> CRD1: Debug: /Stage[main]/Hadoop::Datanode/Service[hadoop-hdfs-datanode]/subscribe: subscribes to File[/etc/hadoop/conf/core-site.xml]
+==> CRD1: Debug: /Stage[main]/Hadoop::Datanode/Service[hadoop-hdfs-datanode]/subscribe: subscribes to File[/etc/hadoop/conf/hdfs-site.xml]
+==> CRD1: Debug: /Stage[main]/Hadoop::Datanode/Service[hadoop-hdfs-datanode]/subscribe: subscribes to File[/etc/hadoop/conf/hadoop-env.sh]
+==> CRD1: Debug: /Stage[main]/Hadoop::Nodemanager/Service[hadoop-yarn-nodemanager]/require: requires Package[hadoop-yarn-nodemanager]
+==> CRD1: Debug: /Stage[main]/Hadoop::Nodemanager/Service[hadoop-yarn-nodemanager]/require: requires File[/data/1/yarn]
+==> CRD1: Debug: /Stage[main]/Hadoop::Nodemanager/Service[hadoop-yarn-nodemanager]/require: requires File[/data/2/yarn]
+==> CRD1: Debug: /Stage[main]/Hadoop::Nodemanager/Service[hadoop-yarn-nodemanager]/subscribe: subscribes to Package[hadoop-yarn-nodemanager]
+==> CRD1: Debug: /Stage[main]/Hadoop::Nodemanager/Service[hadoop-yarn-nodemanager]/subscribe: subscribes to File[/etc/hadoop/conf/hadoop-env.sh]
+==> CRD1: Debug: /Stage[main]/Hadoop::Nodemanager/Service[hadoop-yarn-nodemanager]/subscribe: subscribes to File[/etc/hadoop/conf/yarn-site.xml]
+==> CRD1: Debug: /Stage[main]/Hadoop::Nodemanager/Service[hadoop-yarn-nodemanager]/subscribe: subscribes to File[/etc/hadoop/conf/core-site.xml]
+==> CRD1: Debug: /Stage[main]/Hadoop::Resourcemanager/Package[hadoop-yarn-resourcemanager]/require: requires Package[java-1.7.0-openjdk-devel.x86_64]
+==> CRD1: Debug: /Stage[main]/Hadoop_head_node/Exec[init hdfs]/require: requires Package[hadoop-hdfs]
+==> CRD1: Debug: /Stage[main]/Hadoop_head_node/Exec[init hdfs]/before: requires Class[Hadoop::Resourcemanager]
+==> CRD1: Debug: /Stage[main]/Hadoop_head_node/Exec[init hdfs]/before: requires Class[Hadoop::Historyserver]
+==> CRD1: Debug: /Stage[main]/Hadoop::Common/File[/etc/hadoop/conf/hadoop-env.sh]/require: requires Package[hadoop]
+==> CRD1: Debug: /Stage[main]/Hadoop::Namenode/Package[hadoop-hdfs-namenode]/require: requires Package[java-1.7.0-openjdk-devel.x86_64]
+==> CRD1: Debug: /Stage[main]/Hadoop::Datanode/File[/etc/default/hadoop-hdfs-datanode]/require: requires Package[hadoop-hdfs-datanode]
+==> CRD1: Debug: /Stage[main]/Hadoop-hive::Client/File[/etc/hive/conf/hive-site.xml]/require: requires Package[hive]
+==> CRD1: Debug: /Stage[main]/Hadoop::Client/Package[hadoop-libhdfs]/require: requires Package[java-1.7.0-openjdk-devel.x86_64]
+==> CRD1: Debug: /Stage[main]/Hadoop::Client/Package[hadoop-libhdfs]/require: requires Package[hadoop]
+==> CRD1: Debug: /Stage[main]/Hadoop::Client/Package[hadoop-libhdfs]/require: requires Package[hadoop-hdfs]
+==> CRD1: Debug: /Stage[main]/Hadoop::Client/Package[hadoop-libhdfs]/require: requires Package[hadoop-mapreduce]
+==> CRD1: Debug: /Stage[main]/Hadoop::Secondarynamenode/Package[hadoop-hdfs-secondarynamenode]/require: requires Package[java-1.7.0-openjdk-devel.x86_64]
+==> CRD1: Debug: /Stage[main]/Hadoop::Namenode/Service[hadoop-hdfs-namenode]/require: requires Package[hadoop-hdfs-namenode]
+==> CRD1: Debug: /Stage[main]/Hadoop::Namenode/Service[hadoop-hdfs-namenode]/subscribe: subscribes to Package[hadoop-hdfs-namenode]
+==> CRD1: Debug: /Stage[main]/Hadoop::Namenode/Service[hadoop-hdfs-namenode]/subscribe: subscribes to File[/etc/hadoop/conf/core-site.xml]
+==> CRD1: Debug: /Stage[main]/Hadoop::Namenode/Service[hadoop-hdfs-namenode]/subscribe: subscribes to File[/etc/hadoop/conf/hdfs-site.xml]
+==> CRD1: Debug: /Stage[main]/Hadoop::Namenode/Service[hadoop-hdfs-namenode]/subscribe: subscribes to File[/etc/hadoop/conf/hadoop-env.sh]
+==> CRD1: Debug: /Stage[main]/Hadoop::Namenode/Service[hadoop-hdfs-namenode]/before: requires Service[hadoop-hdfs-datanode]
+==> CRD1: Debug: /Stage[main]/Hadoop::Proxyserver/Package[hadoop-yarn-proxyserver]/require: requires Package[java-1.7.0-openjdk-devel.x86_64]
+==> CRD1: Debug: /Stage[main]/Hadoop::Common_mapred_app/File[/etc/hadoop/conf/taskcontroller.cfg]/require: requires Package[hadoop]
+==> CRD1: Debug: /Stage[main]/Hadoop::Namenode/Exec[namenode format]/require: requires Package[hadoop-hdfs-namenode]
+==> CRD1: Debug: /Stage[main]/Hadoop::Namenode/Exec[namenode format]/require: requires File[/data/1/namenode]
+==> CRD1: Debug: /Stage[main]/Hadoop::Namenode/Exec[namenode format]/require: requires File[/data/2/namenode]
+==> CRD1: Debug: /Stage[main]/Hadoop::Namenode/Exec[namenode format]/require: requires File[/etc/hadoop/conf/hdfs-site.xml]
+==> CRD1: Debug: /Stage[main]/Hadoop::Namenode/Exec[namenode format]/before: requires Service[hadoop-hdfs-namenode]
+==> CRD1: Debug: /Stage[main]/Hadoop::Mapred-app/File[/data/2/mapred]/require: requires Package[hadoop-mapreduce]
+==> CRD1: Debug: /Stage[main]/Hadoop::Secondarynamenode/File[/etc/default/hadoop-hdfs-secondarynamenode]/require: requires Package[hadoop-hdfs-secondarynamenode]
+==> CRD1: Debug: /Stage[deploy_infra]/before: requires Stage[setup_app]
+==> CRD1: Debug: /Stage[main]/Mahout::Client/Package[mahout]/require: requires Package[hadoop]
+==> CRD1: Debug: /Stage[main]/Hadoop::Client/Package[hadoop-hdfs-fuse]/require: requires Package[java-1.7.0-openjdk-devel.x86_64]
+==> CRD1: Debug: /Stage[main]/Hadoop::Client/Package[hadoop-hdfs-fuse]/require: requires Package[hadoop]
+==> CRD1: Debug: /Stage[main]/Hadoop::Client/Package[hadoop-hdfs-fuse]/require: requires Package[hadoop-hdfs]
+==> CRD1: Debug: /Stage[main]/Hadoop::Client/Package[hadoop-hdfs-fuse]/require: requires Package[hadoop-mapreduce]
+==> CRD1: Debug: /Stage[main]/Hadoop::Namenode/File[/data/1/namenode]/require: requires Package[hadoop-hdfs]
+==> CRD1: Debug: /Stage[setup]/before: requires Stage[main]
+==> CRD1: Debug: /Stage[setup_app]/before: requires Stage[deploy_app]
+==> CRD1: Debug: /Stage[main]/Hadoop::Namenode/File[/etc/default/hadoop-hdfs-namenode]/require: requires Package[hadoop-hdfs-namenode]
+==> CRD1: Debug: /Stage[main]/Hadoop::Common_hdfs/Package[hadoop-hdfs]/require: requires Package[java-1.7.0-openjdk-devel.x86_64]
+==> CRD1: Debug: /Stage[main]/Hadoop::Common_hdfs/Package[hadoop-hdfs]/require: requires Package[hadoop]
+==> CRD1: Debug: /Stage[main]/Hadoop::Common_hdfs/File[/etc/hadoop/conf/hdfs-site.xml]/require: requires Package[hadoop]
+==> CRD1: Debug: /Stage[main]/Hadoop::Proxyserver/Service[hadoop-yarn-proxyserver]/require: requires Package[hadoop-yarn-proxyserver]
+==> CRD1: Debug: /Stage[main]/Hadoop::Proxyserver/Service[hadoop-yarn-proxyserver]/subscribe: subscribes to Package[hadoop-yarn-proxyserver]
+==> CRD1: Debug: /Stage[main]/Hadoop::Proxyserver/Service[hadoop-yarn-proxyserver]/subscribe: subscribes to File[/etc/hadoop/conf/hadoop-env.sh]
+==> CRD1: Debug: /Stage[main]/Hadoop::Proxyserver/Service[hadoop-yarn-proxyserver]/subscribe: subscribes to File[/etc/hadoop/conf/yarn-site.xml]
+==> CRD1: Debug: /Stage[main]/Hadoop::Proxyserver/Service[hadoop-yarn-proxyserver]/subscribe: subscribes to File[/etc/hadoop/conf/core-site.xml]
+==> CRD1: Debug: /Stage[main]/Hadoop::Resourcemanager/before: requires Class[Hadoop::Nodemanager]
+==> CRD1: Debug: /Stage[main]/Hadoop::Mapred-app/File[/data/1/mapred]/require: requires Package[hadoop-mapreduce]
+==> CRD1: Debug: /Stage[main]/Hadoop::Datanode/File[/data/1/hdfs]/require: requires Package[hadoop-hdfs]
+==> CRD1: Debug: /Stage[main]/Hadoop::Datanode/before: requires Exec[init hdfs]
+==> CRD1: Debug: /Stage[main]/Hadoop::Resourcemanager/Service[hadoop-yarn-resourcemanager]/require: requires Package[hadoop-yarn-resourcemanager]
+==> CRD1: Debug: /Stage[main]/Hadoop::Resourcemanager/Service[hadoop-yarn-resourcemanager]/subscribe: subscribes to Package[hadoop-yarn-resourcemanager]
+==> CRD1: Debug: /Stage[main]/Hadoop::Resourcemanager/Service[hadoop-yarn-resourcemanager]/subscribe: subscribes to File[/etc/hadoop/conf/hadoop-env.sh]
+==> CRD1: Debug: /Stage[main]/Hadoop::Resourcemanager/Service[hadoop-yarn-resourcemanager]/subscribe: subscribes to File[/etc/hadoop/conf/yarn-site.xml]
+==> CRD1: Debug: /Stage[main]/Hadoop::Resourcemanager/Service[hadoop-yarn-resourcemanager]/subscribe: subscribes to File[/etc/hadoop/conf/core-site.xml]
+==> CRD1: Debug: /Stage[main]/Hadoop::Common_mapred_app/Package[hadoop-mapreduce]/require: requires Package[java-1.7.0-openjdk-devel.x86_64]
+==> CRD1: Debug: /Stage[main]/Hadoop::Common_mapred_app/Package[hadoop-mapreduce]/require: requires Package[hadoop]
+==> CRD1: Debug: /Stage[setup_infra]/before: requires Stage[deploy_infra]
+==> CRD1: Debug: /Stage[main]/Hadoop::Common_hdfs/File[/etc/hadoop/conf/core-site.xml]/require: requires Package[hadoop]
+==> CRD1: Debug: /Stage[main]/Hadoop::Common_yarn/Package[hadoop-yarn]/require: requires Package[java-1.7.0-openjdk-devel.x86_64]
+==> CRD1: Debug: /Stage[main]/Hadoop::Common_yarn/Package[hadoop-yarn]/require: requires Package[hadoop]
+==> CRD1: Debug: /Stage[main]/Hadoop::Nodemanager/File[/data/1/yarn]/require: requires Package[hadoop-yarn]
+==> CRD1: Debug: /Stage[runtime]/require: requires Stage[main]
+==> CRD1: Debug: /Stage[runtime]/before: requires Stage[setup_infra]
+==> CRD1: Debug: /Stage[main]/Hadoop::Historyserver/Package[hadoop-mapreduce-historyserver]/require: requires Package[java-1.7.0-openjdk-devel.x86_64]
+==> CRD1: Debug: /Stage[main]/Hadoop::Nodemanager/File[/data/2/yarn]/require: requires Package[hadoop-yarn]
+==> CRD1: Debug: /Stage[main]/Hadoop::Common_mapred_app/File[/etc/hadoop/conf/mapred-site.xml]/require: requires Package[hadoop]
+==> CRD1: Debug: /Stage[main]/Hadoop::Datanode/Package[hadoop-hdfs-datanode]/require: requires Package[java-1.7.0-openjdk-devel.x86_64]
+==> CRD1: Debug: /Stage[main]/Hadoop::Common_yarn/File[/etc/hadoop/conf/container-executor.cfg]/require: requires Package[hadoop]
+==> CRD1: Debug: /Stage[pre]/before: requires Stage[main]
+==> CRD1: Debug: /Stage[main]/Hadoop::Namenode/before: requires Class[Hadoop::Datanode]
+==> CRD1: Debug: /Stage[main]/Hadoop::Namenode/File[/data/2/namenode]/require: requires Package[hadoop-hdfs]
+==> CRD1: Debug: /Stage[main]/Hadoop::Client/Package[hadoop-debuginfo]/require: requires Package[java-1.7.0-openjdk-devel.x86_64]
+==> CRD1: Debug: /Stage[main]/Hadoop::Client/Package[hadoop-debuginfo]/require: requires Package[hadoop]
+==> CRD1: Debug: /Stage[main]/Hadoop::Client/Package[hadoop-debuginfo]/require: requires Package[hadoop-hdfs]
+==> CRD1: Debug: /Stage[main]/Hadoop::Client/Package[hadoop-debuginfo]/require: requires Package[hadoop-mapreduce]
+==> CRD1: Debug: /Stage[main]/Main/Yumrepo[Bigtop]/before: requires Package[hadoop-yarn-proxyserver]
+==> CRD1: Debug: /Stage[main]/Main/Yumrepo[Bigtop]/before: requires Package[hadoop-libhdfs]
+==> CRD1: Debug: /Stage[main]/Main/Yumrepo[Bigtop]/before: requires Package[hadoop-doc]
+==> CRD1: Debug: /Stage[main]/Main/Yumrepo[Bigtop]/before: requires Package[hadoop-hdfs-secondarynamenode]
+==> CRD1: Debug: /Stage[main]/Main/Yumrepo[Bigtop]/before: requires Package[hadoop-client]
+==> CRD1: Debug: /Stage[main]/Main/Yumrepo[Bigtop]/before: requires Package[hadoop-yarn-nodemanager]
+==> CRD1: Debug: /Stage[main]/Main/Yumrepo[Bigtop]/before: requires Package[hadoop-hdfs-datanode]
+==> CRD1: Debug: /Stage[main]/Main/Yumrepo[Bigtop]/before: requires Package[hadoop-hdfs]
+==> CRD1: Debug: /Stage[main]/Main/Yumrepo[Bigtop]/before: requires Package[hadoop-yarn]
+==> CRD1: Debug: /Stage[main]/Main/Yumrepo[Bigtop]/before: requires Package[hadoop-hdfs-fuse]
+==> CRD1: Debug: /Stage[main]/Main/Yumrepo[Bigtop]/before: requires Package[java-1.7.0-openjdk-devel.x86_64]
+==> CRD1: Debug: /Stage[main]/Main/Yumrepo[Bigtop]/before: requires Package[hadoop-yarn-resourcemanager]
+==> CRD1: Debug: /Stage[main]/Main/Yumrepo[Bigtop]/before: requires Package[hive]
+==> CRD1: Debug: /Stage[main]/Main/Yumrepo[Bigtop]/before: requires Package[hadoop-debuginfo]
+==> CRD1: Debug: /Stage[main]/Main/Yumrepo[Bigtop]/before: requires Package[hadoop-mapreduce-historyserver]
+==> CRD1: Debug: /Stage[main]/Main/Yumrepo[Bigtop]/before: requires Package[mahout]
+==> CRD1: Debug: /Stage[main]/Main/Yumrepo[Bigtop]/before: requires Package[hadoop-mapreduce]
+==> CRD1: Debug: /Stage[main]/Main/Yumrepo[Bigtop]/before: requires Package[hadoop]
+==> CRD1: Debug: /Stage[main]/Main/Yumrepo[Bigtop]/before: requires Package[hadoop-hdfs-namenode]
+==> CRD1: Debug: /Stage[main]/Hadoop::Historyserver/Service[hadoop-mapreduce-historyserver]/require: requires Package[hadoop-mapreduce-historyserver]
+==> CRD1: Debug: /Stage[main]/Hadoop::Historyserver/Service[hadoop-mapreduce-historyserver]/subscribe: subscribes to Package[hadoop-mapreduce-historyserver]
+==> CRD1: Debug: /Stage[main]/Hadoop::Historyserver/Service[hadoop-mapreduce-historyserver]/subscribe: subscribes to File[/etc/hadoop/conf/hadoop-env.sh]
+==> CRD1: Debug: /Stage[main]/Hadoop::Historyserver/Service[hadoop-mapreduce-historyserver]/subscribe: subscribes to File[/etc/hadoop/conf/yarn-site.xml]
+==> CRD1: Debug: /Stage[main]/Hadoop::Historyserver/Service[hadoop-mapreduce-historyserver]/subscribe: subscribes to File[/etc/hadoop/conf/core-site.xml]
+==> CRD1: Debug: /Stage[main]/Hadoop::Common/Package[hadoop]/require: requires Package[java-1.7.0-openjdk-devel.x86_64]
+==> CRD1: Debug: /Stage[main]/Hadoop::Datanode/File[/data/2/hdfs]/require: requires Package[hadoop-hdfs]
+==> CRD1: Debug: /Stage[main]/Hadoop::Nodemanager/Package[hadoop-yarn-nodemanager]/require: requires Package[java-1.7.0-openjdk-devel.x86_64]
+==> CRD1: Info: Applying configuration version '1437403690'
+==> CRD1: Debug: Executing '/usr/sbin/useradd -m testuser'
+==> CRD1: Notice: /Stage[main]/Hadoop_worker_node/User[testuser]/ensure: created
+==> CRD1: Debug: /Stage[main]/Hadoop_worker_node/User[testuser]: The container Class[Hadoop_worker_node] will propagate my refresh event
+==> CRD1: Debug: Executing '/usr/sbin/useradd -m jenkins'
+==> CRD1: Notice: /Stage[main]/Hadoop_worker_node/User[jenkins]/ensure: created
+==> CRD1: Debug: /Stage[main]/Hadoop_worker_node/User[jenkins]: The container Class[Hadoop_worker_node] will propagate my refresh event
+==> CRD1: Debug: Executing '/usr/sbin/useradd -m hudson'
+==> CRD1: Notice: /Stage[main]/Hadoop_worker_node/User[hudson]/ensure: created
+==> CRD1: Debug: /Stage[main]/Hadoop_worker_node/User[hudson]: The container Class[Hadoop_worker_node] will propagate my refresh event
+==> CRD1: Debug: Class[Hadoop_worker_node]: The container Stage[main] will propagate my refresh event
+==> CRD1: Debug: Prefetching inifile resources for yumrepo
+==> CRD1: Notice: /Stage[main]/Main/Yumrepo[Bigtop]/ensure: created
+==> CRD1: Info: changing mode of /etc/yum.repos.d/Bigtop.repo from 600 to 644
+==> CRD1: Debug: /Stage[main]/Main/Yumrepo[Bigtop]: The container Class[Main] will propagate my refresh event
+==> CRD1: Debug: Prefetching yum resources for package
+==> CRD1: Debug: Executing '/bin/rpm --version'
+==> CRD1: Debug: Executing '/bin/rpm -qa --nosignature --nodigest --qf '%{NAME} %|EPOCH?{%{EPOCH}}:{0}| %{VERSION} %{RELEASE} %{ARCH}\n''
+==> CRD1: Debug: Executing '/bin/rpm -q java-1.7.0-openjdk-devel.x86_64 --nosignature --nodigest --qf %{NAME} %|EPOCH?{%{EPOCH}}:{0}| %{VERSION} %{RELEASE} %{ARCH}\n'
+==> CRD1: Debug: Executing '/usr/bin/yum -d 0 -e 0 -y list java-1.7.0-openjdk-devel.x86_64'
+==> CRD1: Debug: Package[java-1.7.0-openjdk-devel.x86_64](provider=yum): Ensuring => present
+==> CRD1: Debug: Executing '/usr/bin/yum -d 0 -e 0 -y install java-1.7.0-openjdk-devel.x86_64'
+==> CRD1: Notice: /Stage[main]/Main/Package[java-1.7.0-openjdk-devel.x86_64]/ensure: created
+==> CRD1: Debug: /Stage[main]/Main/Package[java-1.7.0-openjdk-devel.x86_64]: The container Class[Main] will propagate my refresh event
+==> CRD1: Debug: Executing '/bin/rpm -q hadoop-hdfs-namenode --nosignature --nodigest --qf %{NAME} %|EPOCH?{%{EPOCH}}:{0}| %{VERSION} %{RELEASE} %{ARCH}\n'
+==> CRD1: Debug: Executing '/usr/bin/yum -d 0 -e 0 -y list hadoop-hdfs-namenode'
+==> CRD1: Debug: Package[hadoop-hdfs-namenode](provider=yum): Ensuring => latest
+==> CRD1: Debug: Executing '/usr/bin/yum -d 0 -e 0 -y install hadoop-hdfs-namenode'
+==> CRD1: Notice: /Stage[main]/Hadoop::Namenode/Package[hadoop-hdfs-namenode]/ensure: created
+==> CRD1: Info: /Stage[main]/Hadoop::Namenode/Package[hadoop-hdfs-namenode]: Scheduling refresh of Service[hadoop-hdfs-namenode]
+==> CRD1: Debug: /Stage[main]/Hadoop::Namenode/Package[hadoop-hdfs-namenode]: The container Class[Hadoop::Namenode] will propagate my refresh event
+==> CRD1: Debug: Executing '/bin/rpm -q hadoop-hdfs-secondarynamenode --nosignature --nodigest --qf %{NAME} %|EPOCH?{%{EPOCH}}:{0}| %{VERSION} %{RELEASE} %{ARCH}\n'
+==> CRD1: Debug: Executing '/usr/bin/yum -d 0 -e 0 -y list hadoop-hdfs-secondarynamenode'
+==> CRD1: Debug: Package[hadoop-hdfs-secondarynamenode](provider=yum): Ensuring => latest
+==> CRD1: Debug: Executing '/usr/bin/yum -d 0 -e 0 -y install hadoop-hdfs-secondarynamenode'
+==> CRD1: Notice: /Stage[main]/Hadoop::Secondarynamenode/Package[hadoop-hdfs-secondarynamenode]/ensure: created
+==> CRD1: Info: /Stage[main]/Hadoop::Secondarynamenode/Package[hadoop-hdfs-secondarynamenode]: Scheduling refresh of Service[hadoop-hdfs-secondarynamenode]
+==> CRD1: Debug: /Stage[main]/Hadoop::Secondarynamenode/Package[hadoop-hdfs-secondarynamenode]: The container Class[Hadoop::Secondarynamenode] will propagate my refresh event
+==> CRD1: Info: Computing checksum on file /etc/default/hadoop-hdfs-namenode
+==> CRD1: Info: /Stage[main]/Hadoop::Namenode/File[/etc/default/hadoop-hdfs-namenode]: Filebucketed /etc/default/hadoop-hdfs-namenode to puppet with sum 0c3a4aff527c8fb16d826bf59c9bb985
+==> CRD1: Notice: /Stage[main]/Hadoop::Namenode/File[/etc/default/hadoop-hdfs-namenode]/content: content changed '{md5}0c3a4aff527c8fb16d826bf59c9bb985' to '{md5}8aaf7169ae9f4cf6863f2e8c96e8ecb8'
+==> CRD1: Debug: /Stage[main]/Hadoop::Namenode/File[/etc/default/hadoop-hdfs-namenode]: The container Class[Hadoop::Namenode] will propagate my refresh event
+==> CRD1: Debug: Executing '/bin/rpm -q hive --nosignature --nodigest --qf %{NAME} %|EPOCH?{%{EPOCH}}:{0}| %{VERSION} %{RELEASE} %{ARCH}\n'
+==> CRD1: Debug: Executing '/usr/bin/yum -d 0 -e 0 -y list hive'
+==> CRD1: Debug: Package[hive](provider=yum): Ensuring => latest
+==> CRD1: Debug: Executing '/usr/bin/yum -d 0 -e 0 -y install hive'
+==> CRD1: Notice: /Stage[main]/Hadoop-hive::Client/Package[hive]/ensure: created
+==> CRD1: Debug: /Stage[main]/Hadoop-hive::Client/Package[hive]: The container Class[Hadoop-hive::Client] will propagate my refresh event
+==> CRD1: Info: Computing checksum on file /etc/default/hadoop-hdfs-secondarynamenode
+==> CRD1: Info: FileBucket got a duplicate file {md5}0c3a4aff527c8fb16d826bf59c9bb985
+==> CRD1: Info: /Stage[main]/Hadoop::Secondarynamenode/File[/etc/default/hadoop-hdfs-secondarynamenode]: Filebucketed /etc/default/hadoop-hdfs-secondarynamenode to puppet with sum 0c3a4aff527c8fb16d826bf59c9bb985
+==> CRD1: Notice: /Stage[main]/Hadoop::Secondarynamenode/File[/etc/default/hadoop-hdfs-secondarynamenode]/content: content changed '{md5}0c3a4aff527c8fb16d826bf59c9bb985' to '{md5}8aaf7169ae9f4cf6863f2e8c96e8ecb8'
+==> CRD1: Debug: /Stage[main]/Hadoop::Secondarynamenode/File[/etc/default/hadoop-hdfs-secondarynamenode]: The container Class[Hadoop::Secondarynamenode] will propagate my refresh event
+==> CRD1: Debug: Executing '/bin/rpm -q hadoop-yarn-proxyserver --nosignature --nodigest --qf %{NAME} %|EPOCH?{%{EPOCH}}:{0}| %{VERSION} %{RELEASE} %{ARCH}\n'
+==> CRD1: Debug: Executing '/usr/bin/yum -d 0 -e 0 -y list hadoop-yarn-proxyserver'
+==> CRD1: Debug: Package[hadoop-yarn-proxyserver](provider=yum): Ensuring => latest
+==> CRD1: Debug: Executing '/usr/bin/yum -d 0 -e 0 -y install hadoop-yarn-proxyserver'
+==> CRD1: Notice: /Stage[main]/Hadoop::Proxyserver/Package[hadoop-yarn-proxyserver]/ensure: created
+==> CRD1: Info: /Stage[main]/Hadoop::Proxyserver/Package[hadoop-yarn-proxyserver]: Scheduling refresh of Service[hadoop-yarn-proxyserver]
+==> CRD1: Debug: /Stage[main]/Hadoop::Proxyserver/Package[hadoop-yarn-proxyserver]: The container Class[Hadoop::Proxyserver] will propagate my refresh event
+==> CRD1: Info: Computing checksum on file /etc/hive/conf/hive-site.xml
+==> CRD1: Info: /Stage[main]/Hadoop-hive::Client/File[/etc/hive/conf/hive-site.xml]: Filebucketed /etc/hive/conf/hive-site.xml to puppet with sum d7fa11aad67a155ebc0a44df6eb66211
+==> CRD1: Notice: /Stage[main]/Hadoop-hive::Client/File[/etc/hive/conf/hive-site.xml]/content: content changed '{md5}d7fa11aad67a155ebc0a44df6eb66211' to '{md5}aea54cecaea1e8c806accf8ea1a34927'
+==> CRD1: Debug: /Stage[main]/Hadoop-hive::Client/File[/etc/hive/conf/hive-site.xml]: The container Class[Hadoop-hive::Client] will propagate my refresh event
+==> CRD1: Debug: Class[Hadoop-hive::Client]: The container Stage[main] will propagate my refresh event
+==> CRD1: Debug: Executing '/bin/rpm -q hadoop --nosignature --nodigest --qf %{NAME} %|EPOCH?{%{EPOCH}}:{0}| %{VERSION} %{RELEASE} %{ARCH}\n'
+==> CRD1: Debug: Executing '/usr/bin/python /usr/lib/ruby/site_ruby/1.8/puppet/provider/package/yumhelper.py'
+==> CRD1: Debug: Executing '/bin/rpm -q hadoop-mapreduce --nosignature --nodigest --qf %{NAME} %|EPOCH?{%{EPOCH}}:{0}| %{VERSION} %{RELEASE} %{ARCH}\n'
+==> CRD1: Debug: Executing '/bin/rpm -q hadoop-yarn --nosignature --nodigest --qf %{NAME} %|EPOCH?{%{EPOCH}}:{0}| %{VERSION} %{RELEASE} %{ARCH}\n'
+==> CRD1: Info: Computing checksum on file /etc/hadoop/conf/hadoop-env.sh
+==> CRD1: Info: /Stage[main]/Hadoop::Common/File[/etc/hadoop/conf/hadoop-env.sh]: Filebucketed /etc/hadoop/conf/hadoop-env.sh to puppet with sum ff8454cd0fbc8fef613c1cc54320803e
+==> CRD1: Notice: /Stage[main]/Hadoop::Common/File[/etc/hadoop/conf/hadoop-env.sh]/content: content changed '{md5}ff8454cd0fbc8fef613c1cc54320803e' to '{md5}9b299552079f2a6d742de700e5f8ced1'
+==> CRD1: Info: /Stage[main]/Hadoop::Common/File[/etc/hadoop/conf/hadoop-env.sh]: Scheduling refresh of Service[hadoop-mapreduce-historyserver]
+==> CRD1: Info: /Stage[main]/Hadoop::Common/File[/etc/hadoop/conf/hadoop-env.sh]: Scheduling refresh of Service[hadoop-yarn-proxyserver]
+==> CRD1: Info: /Stage[main]/Hadoop::Common/File[/etc/hadoop/conf/hadoop-env.sh]: Scheduling refresh of Service[hadoop-hdfs-namenode]
+==> CRD1: Info: /Stage[main]/Hadoop::Common/File[/etc/hadoop/conf/hadoop-env.sh]: Scheduling refresh of Service[hadoop-hdfs-secondarynamenode]
+==> CRD1: Debug: /Stage[main]/Hadoop::Common/File[/etc/hadoop/conf/hadoop-env.sh]: The container Class[Hadoop::Common] will propagate my refresh event
+==> CRD1: Info: /Stage[main]/Hadoop::Common/File[/etc/hadoop/conf/hadoop-env.sh]: Scheduling refresh of Service[hadoop-yarn-resourcemanager]
+==> CRD1: Info: /Stage[main]/Hadoop::Common/File[/etc/hadoop/conf/hadoop-env.sh]: Scheduling refresh of Service[hadoop-yarn-nodemanager]
+==> CRD1: Info: /Stage[main]/Hadoop::Common/File[/etc/hadoop/conf/hadoop-env.sh]: Scheduling refresh of Service[hadoop-hdfs-datanode]
+==> CRD1: Notice: /Stage[main]/Hadoop::Mapred-app/File[/data/2/mapred]/ensure: created
+==> CRD1: Debug: /Stage[main]/Hadoop::Mapred-app/File[/data/2/mapred]: The container Class[Hadoop::Mapred-app] will propagate my refresh event
+==> CRD1: Debug: Executing '/bin/rpm -q hadoop-hdfs --nosignature --nodigest --qf %{NAME} %|EPOCH?{%{EPOCH}}:{0}| %{VERSION} %{RELEASE} %{ARCH}\n'
+==> CRD1: Debug: Executing '/bin/rpm -q hadoop-doc --nosignature --nodigest --qf %{NAME} %|EPOCH?{%{EPOCH}}:{0}| %{VERSION} %{RELEASE} %{ARCH}\n'
+==> CRD1: Debug: Executing '/usr/bin/yum -d 0 -e 0 -y list hadoop-doc'
+==> CRD1: Debug: Package[hadoop-doc](provider=yum): Ensuring => latest
+==> CRD1: Debug: Executing '/usr/bin/yum -d 0 -e 0 -y install hadoop-doc'
+==> CRD1: Notice: /Stage[main]/Hadoop::Client/Package[hadoop-doc]/ensure: created
+==> CRD1: Debug: /Stage[main]/Hadoop::Client/Package[hadoop-doc]: The container Class[Hadoop::Client] will propagate my refresh event
+==> CRD1: Debug: Executing '/bin/rpm -q hadoop-client --nosignature --nodigest --qf %{NAME} %|EPOCH?{%{EPOCH}}:{0}| %{VERSION} %{RELEASE} %{ARCH}\n'
+==> CRD1: Notice: /Stage[main]/Hadoop::Namenode/File[/data/1/namenode]/ensure: created
+==> CRD1: Debug: /Stage[main]/Hadoop::Namenode/File[/data/1/namenode]: The container Class[Hadoop::Namenode] will propagate my refresh event
+==> CRD1: Notice: /Stage[main]/Hadoop::Namenode/File[/data/2/namenode]/ensure: created
+==> CRD1: Debug: /Stage[main]/Hadoop::Namenode/File[/data/2/namenode]: The container Class[Hadoop::Namenode] will propagate my refresh event
+==> CRD1: Debug: Executing '/bin/rpm -q hadoop-debuginfo --nosignature --nodigest --qf %{NAME} %|EPOCH?{%{EPOCH}}:{0}| %{VERSION} %{RELEASE} %{ARCH}\n'
+==> CRD1: Debug: Executing '/usr/bin/yum -d 0 -e 0 -y list hadoop-debuginfo'
+==> CRD1: Debug: Package[hadoop-debuginfo](provider=yum): Ensuring => latest
+==> CRD1: Debug: Executing '/usr/bin/yum -d 0 -e 0 -y install hadoop-debuginfo'
+==> CRD1: Notice: /Stage[main]/Hadoop::Client/Package[hadoop-debuginfo]/ensure: created
+==> CRD1: Debug: /Stage[main]/Hadoop::Client/Package[hadoop-debuginfo]: The container Class[Hadoop::Client] will propagate my refresh event
+==> CRD1: Debug: Executing '/bin/rpm -q hadoop-libhdfs --nosignature --nodigest --qf %{NAME} %|EPOCH?{%{EPOCH}}:{0}| %{VERSION} %{RELEASE} %{ARCH}\n'
+==> CRD1: Debug: Executing '/usr/bin/yum -d 0 -e 0 -y list hadoop-libhdfs'
+==> CRD1: Debug: Package[hadoop-libhdfs](provider=yum): Ensuring => latest
+==> CRD1: Debug: Executing '/usr/bin/yum -d 0 -e 0 -y install hadoop-libhdfs'
+==> CRD1: Notice: /Stage[main]/Hadoop::Client/Package[hadoop-libhdfs]/ensure: created
+==> CRD1: Debug: /Stage[main]/Hadoop::Client/Package[hadoop-libhdfs]: The container Class[Hadoop::Client] will propagate my refresh event
+==> CRD1: Debug: Executing '/bin/rpm -q hadoop-hdfs-fuse --nosignature --nodigest --qf %{NAME} %|EPOCH?{%{EPOCH}}:{0}| %{VERSION} %{RELEASE} %{ARCH}\n'
+==> CRD1: Debug: Executing '/usr/bin/yum -d 0 -e 0 -y list hadoop-hdfs-fuse'
+==> CRD1: Debug: Package[hadoop-hdfs-fuse](provider=yum): Ensuring => latest
+==> CRD1: Debug: Executing '/usr/bin/yum -d 0 -e 0 -y install hadoop-hdfs-fuse'
+==> CRD1: Notice: /Stage[main]/Hadoop::Client/Package[hadoop-hdfs-fuse]/ensure: created
+==> CRD1: Debug: /Stage[main]/Hadoop::Client/Package[hadoop-hdfs-fuse]: The container Class[Hadoop::Client] will propagate my refresh event
+==> CRD1: Debug: Class[Hadoop::Client]: The container Stage[main] will propagate my refresh event
+==> CRD1: Info: Computing checksum on file /etc/hadoop/conf/core-site.xml
+==> CRD1: Info: /Stage[main]/Hadoop::Common_hdfs/File[/etc/hadoop/conf/core-site.xml]: Filebucketed /etc/hadoop/conf/core-site.xml to puppet with sum 315d2770c60bc9a0b3c7dc04e41fda76
+==> CRD1: Notice: /Stage[main]/Hadoop::Common_hdfs/File[/etc/hadoop/conf/core-site.xml]/content: content changed '{md5}315d2770c60bc9a0b3c7dc04e41fda76' to '{md5}d09148d92993fb22ca7c11b774163a7d'
+==> CRD1: Debug: /Stage[main]/Hadoop::Common_hdfs/File[/etc/hadoop/conf/core-site.xml]: The container Class[Hadoop::Common_hdfs] will propagate my refresh event
+==> CRD1: Info: /Stage[main]/Hadoop::Common_hdfs/File[/etc/hadoop/conf/core-site.xml]: Scheduling refresh of Service[hadoop-mapreduce-historyserver]
+==> CRD1: Info: /Stage[main]/Hadoop::Common_hdfs/File[/etc/hadoop/conf/core-site.xml]: Scheduling refresh of Service[hadoop-yarn-proxyserver]
+==> CRD1: Info: /Stage[main]/Hadoop::Common_hdfs/File[/etc/hadoop/conf/core-site.xml]: Scheduling refresh of Service[hadoop-hdfs-namenode]
+==> CRD1: Info: /Stage[main]/Hadoop::Common_hdfs/File[/etc/hadoop/conf/core-site.xml]: Scheduling refresh of Service[hadoop-hdfs-secondarynamenode]
+==> CRD1: Info: /Stage[main]/Hadoop::Common_hdfs/File[/etc/hadoop/conf/core-site.xml]: Scheduling refresh of Service[hadoop-yarn-resourcemanager]
+==> CRD1: Info: /Stage[main]/Hadoop::Common_hdfs/File[/etc/hadoop/conf/core-site.xml]: Scheduling refresh of Service[hadoop-yarn-nodemanager]
+==> CRD1: Info: /Stage[main]/Hadoop::Common_hdfs/File[/etc/hadoop/conf/core-site.xml]: Scheduling refresh of Service[hadoop-hdfs-datanode]
+==> CRD1: Notice: /Stage[main]/Hadoop::Common_mapred_app/File[/etc/hadoop/conf/taskcontroller.cfg]/ensure: defined content as '{md5}fa9d342175e04ccf0fa1aba8291bedba'
+==> CRD1: Debug: /Stage[main]/Hadoop::Common_mapred_app/File[/etc/hadoop/conf/taskcontroller.cfg]: The container Class[Hadoop::Common_mapred_app] will propagate my refresh event
+==> CRD1: Debug: Class[Hadoop::Common]: The container Stage[main] will propagate my refresh event
+==> CRD1: Info: Computing checksum on file /etc/hadoop/conf/container-executor.cfg
+==> CRD1: Info: /Stage[main]/Hadoop::Common_yarn/File[/etc/hadoop/conf/container-executor.cfg]: Filebucketed /etc/hadoop/conf/container-executor.cfg to puppet with sum 8afd041c79a90945ebfdd10ccbc43d9d
+==> CRD1: Notice: /Stage[main]/Hadoop::Common_yarn/File[/etc/hadoop/conf/container-executor.cfg]/content: content changed '{md5}8afd041c79a90945ebfdd10ccbc43d9d' to '{md5}6aa9a3efa8965dfee06966b8fcb22e19'
+==> CRD1: Debug: /Stage[main]/Hadoop::Common_yarn/File[/etc/hadoop/conf/container-executor.cfg]: The container Class[Hadoop::Common_yarn] will propagate my refresh event
+==> CRD1: Info: Computing checksum on file /etc/hadoop/conf/hdfs-site.xml
+==> CRD1: Info: /Stage[main]/Hadoop::Common_hdfs/File[/etc/hadoop/conf/hdfs-site.xml]: Filebucketed /etc/hadoop/conf/hdfs-site.xml to puppet with sum 06f0cc5cad0018c16ef3dcb404efb74e
+==> CRD1: Notice: /Stage[main]/Hadoop::Common_hdfs/File[/etc/hadoop/conf/hdfs-site.xml]/content: content changed '{md5}06f0cc5cad0018c16ef3dcb404efb74e' to '{md5}30606a8df7547e6a9dcf9878c9f38e2f'
+==> CRD1: Debug: /Stage[main]/Hadoop::Common_hdfs/File[/etc/hadoop/conf/hdfs-site.xml]: The container Class[Hadoop::Common_hdfs] will propagate my refresh event
+==> CRD1: Info: /Stage[main]/Hadoop::Common_hdfs/File[/etc/hadoop/conf/hdfs-site.xml]: Scheduling refresh of Service[hadoop-hdfs-namenode]
+==> CRD1: Info: /Stage[main]/Hadoop::Common_hdfs/File[/etc/hadoop/conf/hdfs-site.xml]: Scheduling refresh of Service[hadoop-hdfs-secondarynamenode]
+==> CRD1: Info: /Stage[main]/Hadoop::Common_hdfs/File[/etc/hadoop/conf/hdfs-site.xml]: Scheduling refresh of Service[hadoop-hdfs-datanode]
+==> CRD1: Debug: Class[Hadoop::Common_hdfs]: The container Stage[main] will propagate my refresh event
+==> CRD1: Debug: Executing '/sbin/service hadoop-hdfs-secondarynamenode status'
+==> CRD1: Debug: Executing '/sbin/service hadoop-hdfs-secondarynamenode start'
+==> CRD1: Notice: /Stage[main]/Hadoop::Secondarynamenode/Service[hadoop-hdfs-secondarynamenode]/ensure: ensure changed 'stopped' to 'running'
+==> CRD1: Debug: /Stage[main]/Hadoop::Secondarynamenode/Service[hadoop-hdfs-secondarynamenode]: The container Class[Hadoop::Secondarynamenode] will propagate my refresh event
+==> CRD1: Info: /Stage[main]/Hadoop::Secondarynamenode/Service[hadoop-hdfs-secondarynamenode]: Unscheduling refresh on Service[hadoop-hdfs-secondarynamenode]
+==> CRD1: Debug: Class[Hadoop::Secondarynamenode]: The container Stage[main] will propagate my refresh event
+==> CRD1: Debug: Exec[namenode format](provider=posix): Executing '/bin/bash -c 'hdfs namenode -format -nonInteractive >> /var/lib/hadoop-hdfs/nn.format.log 2>&1''
+==> CRD1: Debug: Executing '/bin/bash -c 'hdfs namenode -format -nonInteractive >> /var/lib/hadoop-hdfs/nn.format.log 2>&1''
+==> CRD1: Notice: /Stage[main]/Hadoop::Namenode/Exec[namenode format]/returns: executed successfully
+==> CRD1: Debug: /Stage[main]/Hadoop::Namenode/Exec[namenode format]: The container Class[Hadoop::Namenode] will propagate my refresh event
+==> CRD1: Debug: Executing '/bin/rpm -q mahout --nosignature --nodigest --qf %{NAME} %|EPOCH?{%{EPOCH}}:{0}| %{VERSION} %{RELEASE} %{ARCH}\n'
+==> CRD1: Debug: Executing '/usr/bin/yum -d 0 -e 0 -y list mahout'
+==> CRD1: Debug: Package[mahout](provider=yum): Ensuring => latest
+==> CRD1: Debug: Executing '/usr/bin/yum -d 0 -e 0 -y install mahout'
+==> CRD1: Notice: /Stage[main]/Mahout::Client/Package[mahout]/ensure: created
+==> CRD1: Debug: /Stage[main]/Mahout::Client/Package[mahout]: The container Class[Mahout::Client] will propagate my refresh event
+==> CRD1: Info: Computing checksum on file /etc/hadoop/conf/mapred-site.xml
+==> CRD1: Info: /Stage[main]/Hadoop::Common_mapred_app/File[/etc/hadoop/conf/mapred-site.xml]: Filebucketed /etc/hadoop/conf/mapred-site.xml to puppet with sum 1b058ae210b2e2dafd3407b6bf7dad43
+==> CRD1: Notice: /Stage[main]/Hadoop::Common_mapred_app/File[/etc/hadoop/conf/mapred-site.xml]/content: content changed '{md5}1b058ae210b2e2dafd3407b6bf7dad43' to '{md5}dacd83a4483ac55f95e448da19de27df'
+==> CRD1: Debug: /Stage[main]/Hadoop::Common_mapred_app/File[/etc/hadoop/conf/mapred-site.xml]: The container Class[Hadoop::Common_mapred_app] will propagate my refresh event
+==> CRD1: Debug: Class[Hadoop::Common_mapred_app]: The container Stage[main] will propagate my refresh event
+==> CRD1: Debug: Class[Mahout::Client]: The container Stage[main] will propagate my refresh event
+==> CRD1: Info: Computing checksum on file /etc/hadoop/conf/yarn-site.xml
+==> CRD1: Info: /Stage[main]/Hadoop::Common_yarn/File[/etc/hadoop/conf/yarn-site.xml]: Filebucketed /etc/hadoop/conf/yarn-site.xml to puppet with sum f679a7750b76612f7468f61a7c6b75e7
+==> CRD1: Notice: /Stage[main]/Hadoop::Common_yarn/File[/etc/hadoop/conf/yarn-site.xml]/content: content changed '{md5}f679a7750b76612f7468f61a7c6b75e7' to '{md5}2154b981f89f0cb1890bfc1bd337bd67'
+==> CRD1: Info: /Stage[main]/Hadoop::Common_yarn/File[/etc/hadoop/conf/yarn-site.xml]: Scheduling refresh of Service[hadoop-mapreduce-historyserver]
+==> CRD1: Info: /Stage[main]/Hadoop::Common_yarn/File[/etc/hadoop/conf/yarn-site.xml]: Scheduling refresh of Service[hadoop-yarn-proxyserver]
+==> CRD1: Info: /Stage[main]/Hadoop::Common_yarn/File[/etc/hadoop/conf/yarn-site.xml]: Scheduling refresh of Service[hadoop-yarn-resourcemanager]
+==> CRD1: Info: /Stage[main]/Hadoop::Common_yarn/File[/etc/hadoop/conf/yarn-site.xml]: Scheduling refresh of Service[hadoop-yarn-nodemanager]
+==> CRD1: Debug: /Stage[main]/Hadoop::Common_yarn/File[/etc/hadoop/conf/yarn-site.xml]: The container Class[Hadoop::Common_yarn] will propagate my refresh event
+==> CRD1: Debug: Executing '/sbin/service hadoop-yarn-proxyserver status'
+==> CRD1: Debug: Executing '/sbin/service hadoop-yarn-proxyserver start'
+==> CRD1: Notice: /Stage[main]/Hadoop::Proxyserver/Service[hadoop-yarn-proxyserver]/ensure: ensure changed 'stopped' to 'running'
+==> CRD1: Debug: /Stage[main]/Hadoop::Proxyserver/Service[hadoop-yarn-proxyserver]: The container Class[Hadoop::Proxyserver] will propagate my refresh event
+==> CRD1: Info: /Stage[main]/Hadoop::Proxyserver/Service[hadoop-yarn-proxyserver]: Unscheduling refresh on Service[hadoop-yarn-proxyserver]
+==> CRD1: Debug: Class[Hadoop::Common_yarn]: The container Stage[main] will propagate my refresh event
+==> CRD1: Debug: Class[Hadoop::Proxyserver]: The container Stage[main] will propagate my refresh event
+==> CRD1: Debug: Executing '/sbin/service hadoop-hdfs-namenode status'
+==> CRD1: Debug: Executing '/sbin/service hadoop-hdfs-namenode start'
+==> CRD1: Notice: /Stage[main]/Hadoop::Namenode/Service[hadoop-hdfs-namenode]/ensure: ensure changed 'stopped' to 'running'
+==> CRD1: Debug: /Stage[main]/Hadoop::Namenode/Service[hadoop-hdfs-namenode]: The container Class[Hadoop::Namenode] will propagate my refresh event
+==> CRD1: Info: /Stage[main]/Hadoop::Namenode/Service[hadoop-hdfs-namenode]: Unscheduling refresh on Service[hadoop-hdfs-namenode]
+==> CRD1: Debug: Class[Hadoop::Namenode]: The container Stage[main] will propagate my refresh event
+==> CRD1: Debug: Executing '/bin/rpm -q hadoop-hdfs-datanode --nosignature --nodigest --qf %{NAME} %|EPOCH?{%{EPOCH}}:{0}| %{VERSION} %{RELEASE} %{ARCH}\n'
+==> CRD1: Debug: Executing '/usr/bin/yum -d 0 -e 0 -y list hadoop-hdfs-datanode'
+==> CRD1: Debug: Package[hadoop-hdfs-datanode](provider=yum): Ensuring => latest
+==> CRD1: Debug: Executing '/usr/bin/yum -d 0 -e 0 -y install hadoop-hdfs-datanode'
+==> CRD1: Notice: /Stage[main]/Hadoop::Datanode/Package[hadoop-hdfs-datanode]/ensure: created
+==> CRD1: Debug: /Stage[main]/Hadoop::Datanode/Package[hadoop-hdfs-datanode]: The container Class[Hadoop::Datanode] will propagate my refresh event
+==> CRD1: Info: /Stage[main]/Hadoop::Datanode/Package[hadoop-hdfs-datanode]: Scheduling refresh of Service[hadoop-hdfs-datanode]
+==> CRD1: Notice: /Stage[main]/Hadoop::Datanode/File[/data/1/hdfs]/ensure: created
+==> CRD1: Debug: /Stage[main]/Hadoop::Datanode/File[/data/1/hdfs]: The container Class[Hadoop::Datanode] will propagate my refresh event
+==> CRD1: Notice: /Stage[main]/Hadoop::Datanode/File[/data/2/hdfs]/ensure: created
+==> CRD1: Debug: /Stage[main]/Hadoop::Datanode/File[/data/2/hdfs]: The container Class[Hadoop::Datanode] will propagate my refresh event
+==> CRD1: Debug: Class[Main]: The container Stage[main] will propagate my refresh event
+==> CRD1: Info: Computing checksum on file /etc/default/hadoop-hdfs-datanode
+==> CRD1: Info: FileBucket got a duplicate file {md5}0c3a4aff527c8fb16d826bf59c9bb985
+==> CRD1: Info: /Stage[main]/Hadoop::Datanode/File[/etc/default/hadoop-hdfs-datanode]: Filebucketed /etc/default/hadoop-hdfs-datanode to puppet with sum 0c3a4aff527c8fb16d826bf59c9bb985
+==> CRD1: Notice: /Stage[main]/Hadoop::Datanode/File[/etc/default/hadoop-hdfs-datanode]/content: content changed '{md5}0c3a4aff527c8fb16d826bf59c9bb985' to '{md5}8aaf7169ae9f4cf6863f2e8c96e8ecb8'
+==> CRD1: Debug: /Stage[main]/Hadoop::Datanode/File[/etc/default/hadoop-hdfs-datanode]: The container Class[Hadoop::Datanode] will propagate my refresh event
+==> CRD1: Debug: Executing '/sbin/service hadoop-hdfs-datanode status'
+==> CRD1: Debug: Executing '/sbin/service hadoop-hdfs-datanode start'
+==> CRD1: Notice: /Stage[main]/Hadoop::Datanode/Service[hadoop-hdfs-datanode]/ensure: ensure changed 'stopped' to 'running'
+==> CRD1: Debug: /Stage[main]/Hadoop::Datanode/Service[hadoop-hdfs-datanode]: The container Class[Hadoop::Datanode] will propagate my refresh event
+==> CRD1: Info: /Stage[main]/Hadoop::Datanode/Service[hadoop-hdfs-datanode]: Unscheduling refresh on Service[hadoop-hdfs-datanode]
+==> CRD1: Debug: Class[Hadoop::Datanode]: The container Stage[main] will propagate my refresh event
+==> CRD1: Debug: Exec[init hdfs](provider=posix): Executing 'bash -x /usr/lib/hadoop/libexec/init-hdfs.sh'
+==> CRD1: Debug: Executing 'bash -x /usr/lib/hadoop/libexec/init-hdfs.sh'
+==> CRD1: Notice: /Stage[main]/Hadoop_head_node/Exec[init hdfs]/returns: executed successfully
+==> CRD1: Debug: /Stage[main]/Hadoop_head_node/Exec[init hdfs]: The container Class[Hadoop_head_node] will propagate my refresh event
+==> CRD1: Debug: Executing '/bin/rpm -q hadoop-yarn-resourcemanager --nosignature --nodigest --qf %{NAME} %|EPOCH?{%{EPOCH}}:{0}| %{VERSION} %{RELEASE} %{ARCH}\n'
+==> CRD1: Debug: Executing '/usr/bin/yum -d 0 -e 0 -y list hadoop-yarn-resourcemanager'
+==> CRD1: Debug: Package[hadoop-yarn-resourcemanager](provider=yum): Ensuring => latest
+==> CRD1: Debug: Executing '/usr/bin/yum -d 0 -e 0 -y install hadoop-yarn-resourcemanager'
+==> CRD1: Notice: /Stage[main]/Hadoop::Resourcemanager/Package[hadoop-yarn-resourcemanager]/ensure: created
+==> CRD1: Info: /Stage[main]/Hadoop::Resourcemanager/Package[hadoop-yarn-resourcemanager]: Scheduling refresh of Service[hadoop-yarn-resourcemanager]
+==> CRD1: Debug: /Stage[main]/Hadoop::Resourcemanager/Package[hadoop-yarn-resourcemanager]: The container Class[Hadoop::Resourcemanager] will propagate my refresh event
+==> CRD1: Debug: Executing '/sbin/service hadoop-yarn-resourcemanager status'
+==> CRD1: Debug: Executing '/sbin/service hadoop-yarn-resourcemanager start'
+==> CRD1: Notice: /Stage[main]/Hadoop::Resourcemanager/Service[hadoop-yarn-resourcemanager]/ensure: ensure changed 'stopped' to 'running'
+==> CRD1: Debug: /Stage[main]/Hadoop::Resourcemanager/Service[hadoop-yarn-resourcemanager]: The container Class[Hadoop::Resourcemanager] will propagate my refresh event
+==> CRD1: Info: /Stage[main]/Hadoop::Resourcemanager/Service[hadoop-yarn-resourcemanager]: Unscheduling refresh on Service[hadoop-yarn-resourcemanager]
+==> CRD1: Debug: Class[Hadoop::Resourcemanager]: The container Stage[main] will propagate my refresh event
+==> CRD1: Notice: /Stage[main]/Hadoop::Nodemanager/File[/data/2/yarn]/ensure: created
+==> CRD1: Debug: /Stage[main]/Hadoop::Nodemanager/File[/data/2/yarn]: The container Class[Hadoop::Nodemanager] will propagate my refresh event
+==> CRD1: Debug: Executing '/bin/rpm -q hadoop-yarn-nodemanager --nosignature --nodigest --qf %{NAME} %|EPOCH?{%{EPOCH}}:{0}| %{VERSION} %{RELEASE} %{ARCH}\n'
+==> CRD1: Debug: Executing '/usr/bin/yum -d 0 -e 0 -y list hadoop-yarn-nodemanager'
+==> CRD1: Debug: Package[hadoop-yarn-nodemanager](provider=yum): Ensuring => latest
+==> CRD1: Debug: Executing '/usr/bin/yum -d 0 -e 0 -y install hadoop-yarn-nodemanager'
+==> CRD1: Notice: /Stage[main]/Hadoop::Nodemanager/Package[hadoop-yarn-nodemanager]/ensure: created
+==> CRD1: Debug: /Stage[main]/Hadoop::Nodemanager/Package[hadoop-yarn-nodemanager]: The container Class[Hadoop::Nodemanager] will propagate my refresh event
+==> CRD1: Info: /Stage[main]/Hadoop::Nodemanager/Package[hadoop-yarn-nodemanager]: Scheduling refresh of Service[hadoop-yarn-nodemanager]
+==> CRD1: Notice: /Stage[main]/Hadoop::Nodemanager/File[/data/1/yarn]/ensure: created
+==> CRD1: Debug: /Stage[main]/Hadoop::Nodemanager/File[/data/1/yarn]: The container Class[Hadoop::Nodemanager] will propagate my refresh event
+==> CRD1: Debug: Executing '/sbin/service hadoop-yarn-nodemanager status'
+==> CRD1: Debug: Executing '/sbin/service hadoop-yarn-nodemanager start'
+==> CRD1: Notice: /Stage[main]/Hadoop::Nodemanager/Service[hadoop-yarn-nodemanager]/ensure: ensure changed 'stopped' to 'running'
+==> CRD1: Debug: /Stage[main]/Hadoop::Nodemanager/Service[hadoop-yarn-nodemanager]: The container Class[Hadoop::Nodemanager] will propagate my refresh event
+==> CRD1: Info: /Stage[main]/Hadoop::Nodemanager/Service[hadoop-yarn-nodemanager]: Unscheduling refresh on Service[hadoop-yarn-nodemanager]
+==> CRD1: Debug: Class[Hadoop::Nodemanager]: The container Stage[main] will propagate my refresh event
+==> CRD1: Debug: Executing '/bin/rpm -q hadoop-mapreduce-historyserver --nosignature --nodigest --qf %{NAME} %|EPOCH?{%{EPOCH}}:{0}| %{VERSION} %{RELEASE} %{ARCH}\n'
+==> CRD1: Debug: Executing '/usr/bin/yum -d 0 -e 0 -y list hadoop-mapreduce-historyserver'
+==> CRD1: Debug: Package[hadoop-mapreduce-historyserver](provider=yum): Ensuring => latest
+==> CRD1: Debug: Executing '/usr/bin/yum -d 0 -e 0 -y install hadoop-mapreduce-historyserver'
+==> CRD1: Notice: /Stage[main]/Hadoop::Historyserver/Package[hadoop-mapreduce-historyserver]/ensure: created
+==> CRD1: Info: /Stage[main]/Hadoop::Historyserver/Package[hadoop-mapreduce-historyserver]: Scheduling refresh of Service[hadoop-mapreduce-historyserver]
+==> CRD1: Debug: /Stage[main]/Hadoop::Historyserver/Package[hadoop-mapreduce-historyserver]: The container Class[Hadoop::Historyserver] will propagate my refresh event
+==> CRD1: Debug: Executing '/sbin/service hadoop-mapreduce-historyserver status'
+==> CRD1: Debug: Executing '/sbin/service hadoop-mapreduce-historyserver start'
+==> CRD1: Notice: /Stage[main]/Hadoop::Historyserver/Service[hadoop-mapreduce-historyserver]/ensure: ensure changed 'stopped' to 'running'
+==> CRD1: Debug: /Stage[main]/Hadoop::Historyserver/Service[hadoop-mapreduce-historyserver]: The container Class[Hadoop::Historyserver] will propagate my refresh event
+==> CRD1: Info: /Stage[main]/Hadoop::Historyserver/Service[hadoop-mapreduce-historyserver]: Unscheduling refresh on Service[hadoop-mapreduce-historyserver]
+==> CRD1: Debug: Class[Hadoop::Historyserver]: The container Stage[main] will propagate my refresh event
+==> CRD1: Debug: Class[Hadoop_head_node]: The container Stage[main] will propagate my refresh event
+==> CRD1: Notice: /Stage[main]/Hadoop::Mapred-app/File[/data/1/mapred]/ensure: created
+==> CRD1: Debug: /Stage[main]/Hadoop::Mapred-app/File[/data/1/mapred]: The container Class[Hadoop::Mapred-app] will propagate my refresh event
+==> CRD1: Debug: Class[Hadoop::Mapred-app]: The container Stage[main] will propagate my refresh event
+==> CRD1: Debug: Finishing transaction 70117537773480
+==> CRD1: Debug: Storing state
+==> CRD1: Debug: Stored state in 0.04 seconds
+==> CRD1: Notice: Finished catalog run in 451.70 seconds
+==> CRD1: Debug: Using settings: adding file resource 'rrddir': 'File[/var/lib/puppet/rrd]{:loglevel=>:debug, :ensure=>:directory, :links=>:follow, :group=>"puppet", :backup=>false, :owner=>"puppet", :mode=>"750", :path=>"/var/lib/puppet/rrd"}'
+==> CRD1: Debug: /File[/var/lib/puppet/rrd]/seluser: Found seluser default 'system_u' for /var/lib/puppet/rrd
+==> CRD1: Debug: /File[/var/lib/puppet/rrd]/selrole: Found selrole default 'object_r' for /var/lib/puppet/rrd
+==> CRD1: Debug: /File[/var/lib/puppet/rrd]/seltype: Found seltype default 'puppet_var_lib_t' for /var/lib/puppet/rrd
+==> CRD1: Debug: /File[/var/lib/puppet/rrd]/selrange: Found selrange default 's0' for /var/lib/puppet/rrd
+==> CRD1: Debug: Finishing transaction 70117536078800
+==> CRD1: Debug: Received report to process from crd1.csail.mit.edu
+==> CRD1: Debug: Processing report from crd1.csail.mit.edu with processor Puppet::Reports::Store
+SUCCESS

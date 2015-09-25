@@ -1,0 +1,381 @@
+vagrant conf local repo enabled:  false
+creating provisioner directive for running tests
+==> CRD2: Rsyncing folder: /Users/Minying/MOC/hadoop/cloudrank-d/ => /tmp/cloudrank-d
+==> CRD2: Rsyncing folder: /Users/Minying/MOC/hadoop/bigtop-home/ => /bigtop-home
+==> CRD2: Rsyncing folder: /Users/Minying/MOC/hadoop/bigtop-home/bigtop-deploy/vm/vagrant-puppet-os/ => /vagrant
+==> CRD2: Rsyncing folder: /Users/Minying/MOC/hadoop/bigtop-home/bigtop-deploy/puppet/manifests/ => /tmp/vagrant-puppet/manifests-d4a7410ea2597e7ac321c7fdb251251f
+==> CRD2: Rsyncing folder: /Users/Minying/MOC/hadoop/bigtop-home/bigtop-deploy/puppet/modules/ => /tmp/vagrant-puppet/modules-3e509359e947b7e6ef7ee7a41d8bd86d
+==> CRD2: Running provisioner: shell...
+    CRD2: Running: inline script
+==> CRD2: Loaded plugins: fastestmirror, presto
+==> CRD2: Setting up Install Process
+==> CRD2: base                                                     | 3.7 kB     00:00     
+==> CRD2: base/primary_db           21% [===            ]  0.0 B/s | 983 kB     --:-- ETA base/primary_db                                          | 4.6 MB     00:00     
+==> CRD2: extras                                                   | 3.4 kB     00:00     
+==> CRD2: extras/primary_db                                        |  31 kB     00:00     
+==> CRD2: updates                                                  | 3.4 kB     00:00     
+==> CRD2: updates/primary_db        14% [==             ]  0.0 B/s | 642 kB     --:-- ETA updates/primary_db        77% [===========-   ] 4.3 MB/s | 3.4 MB     00:00 ETA updates/primary_db                                       | 4.4 MB     00:00     
+==> CRD2: Resolving Dependencies
+==> CRD2: --> Running transaction check
+==> CRD2: ---> Package words.noarch 0:3.0-17.el6 will be installed
+==> CRD2: --> Finished Dependency Resolution
+==> CRD2: 
+==> CRD2: Dependencies Resolved
+==> CRD2: 
+==> CRD2: ================================================================================
+==> CRD2:  Package          Arch              Version               Repository       Size
+==> CRD2: ================================================================================
+==> CRD2: Installing:
+==> CRD2:  words            noarch            3.0-17.el6            base            1.4 M
+==> CRD2: 
+==> CRD2: Transaction Summary
+==> CRD2: ================================================================================
+==> CRD2: Install       1 Package(s)
+==> CRD2: 
+==> CRD2: Total download size: 1.4 M
+==> CRD2: Installed size: 4.7 M
+==> CRD2: Downloading Packages:
+==> CRD2: Setting up and reading Presto delta metadata
+==> CRD2: Processing delta metadata
+==> CRD2: Package(s) data still to download: 1.4 M
+==> CRD2: words-3.0-17.el6.noarch.r 85% [============-  ]  0.0 B/s | 1.2 MB     --:-- ETA words-3.0-17.el6.noarch.rpm                              | 1.4 MB     00:00     
+==> CRD2: warning: rpmts_HdrFromFdno: Header V3 RSA/SHA256 Signature, key ID c105b9de: NOKEY
+==> CRD2: Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-6
+==> CRD2: Importing GPG key 0xC105B9DE:
+==> CRD2:  Userid : CentOS-6 Key (CentOS 6 Official Signing Key) <centos-6-key@centos.org>
+==> CRD2:  Package: centos-release-6-6.el6.centos.12.2.x86_64 (@anaconda-CentOS-201410241409.x86_64/6.6)
+==> CRD2:  From   : /etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-6
+==> CRD2: Running rpm_check_debug
+==> CRD2: Running Transaction Test
+==> CRD2: Transaction Test Succeeded
+==> CRD2: Running Transaction
+==> CRD2:   Installing : words-3.0-17.el6.noarch [                                  ] 1/1  Installing : words-3.0-17.el6.noarch [#                                 ] 1/1  Installing : words-3.0-17.el6.noarch [##                                ] 1/1  Installing : words-3.0-17.el6.noarch [###                               ] 1/1  Installing : words-3.0-17.el6.noarch [####                              ] 1/1  Installing : words-3.0-17.el6.noarch [#####                             ] 1/1  Installing : words-3.0-17.el6.noarch [######                            ] 1/1  Installing : words-3.0-17.el6.noarch [#######                           ] 1/1  Installing : words-3.0-17.el6.noarch [########                          ] 1/1  Installing : words-3.0-17.el6.noarch [#########                         ] 1/1  Installing : words-3.0-17.el6.noarch [##########                        ] 1/1  Installing : words-3.0-17.el6.noarch [###########                       ] 1/1  Installing : words-3.0-17.el6.noarch [############                      ] 1/1  Installing : words-3.0-17.el6.noarch [#############                     ] 1/1  Installing : words-3.0-17.el6.noarch [##############                    ] 1/1  Installing : words-3.0-17.el6.noarch [###############                   ] 1/1  Installing : words-3.0-17.el6.noarch [################                  ] 1/1  Installing : words-3.0-17.el6.noarch [#################                 ] 1/1  Installing : words-3.0-17.el6.noarch [##################                ] 1/1  Installing : words-3.0-17.el6.noarch [###################               ] 1/1  Installing : words-3.0-17.el6.noarch [####################              ] 1/1  Installing : words-3.0-17.el6.noarch [#####################             ] 1/1  Installing : words-3.0-17.el6.noarch [######################            ] 1/1  Installing : words-3.0-17.el6.noarch [#######################           ] 1/1  Installing : words-3.0-17.el6.noarch [########################          ] 1/1  Installing : words-3.0-17.el6.noarch [#########################         ] 1/1  Installing : words-3.0-17.el6.noarch [##########################        ] 1/1  Installing : words-3.0-17.el6.noarch [###########################       ] 1/1  Installing : words-3.0-17.el6.noarch [############################      ] 1/1  Installing : words-3.0-17.el6.noarch [#############################     ] 1/1  Installing : words-3.0-17.el6.noarch [##############################    ] 1/1  Installing : words-3.0-17.el6.noarch [###############################   ] 1/1  Installing : words-3.0-17.el6.noarch [################################  ] 1/1  Installing : words-3.0-17.el6.noarch [################################# ] 1/1  Installing : words-3.0-17.el6.noarch                                      1/1 
+==> CRD2:   Verifying  : words-3.0-17.el6.noarch                                      1/1 
+==> CRD2: 
+==> CRD2: Installed:
+==> CRD2:   words.noarch 0:3.0-17.el6                                                     
+==> CRD2: 
+==> CRD2: Complete!
+==> CRD2: Running provisioner: shell...
+    CRD2: Running: /var/folders/kg/r24kcf9d3dsf1n149zsl8s1m0000gp/T/vagrant-shell20150720-43422-19iq3o.sh
+==> CRD2: false
+==> CRD2: Loaded plugins: fastestmirror, presto
+==> CRD2: Setting up Install Process
+==> CRD2: puppetlabs-release-el-6.noarch.rpm                       | 9.9 kB     00:00     
+==> CRD2: Examining /var/tmp/yum-root-NxQXHc/puppetlabs-release-el-6.noarch.rpm: puppetlabs-release-6-11.noarch
+==> CRD2: Marking /var/tmp/yum-root-NxQXHc/puppetlabs-release-el-6.noarch.rpm to be installed
+==> CRD2: Determining fastest mirrors
+==> CRD2:  * base: mirror.solarvps.com
+==> CRD2:  * extras: mirror.metrocast.net
+==> CRD2:  * updates: mirrors.greenmountainaccess.net
+==> CRD2: Resolving Dependencies
+==> CRD2: --> Running transaction check
+==> CRD2: ---> Package puppetlabs-release.noarch 0:6-11 will be installed
+==> CRD2: --> Finished Dependency Resolution
+==> CRD2: 
+==> CRD2: Dependencies Resolved
+==> CRD2: 
+==> CRD2: ================================================================================
+==> CRD2:  Package              Arch     Version  Repository                         Size
+==> CRD2: ================================================================================
+==> CRD2: Installing:
+==> CRD2:  [1mpuppetlabs-release  [m noarch   6-11     /puppetlabs-release-el-6.noarch   8.3 k
+==> CRD2: 
+==> CRD2: Transaction Summary
+==> CRD2: ================================================================================
+==> CRD2: Install       1 Package(s)
+==> CRD2: 
+==> CRD2: Total size: 8.3 k
+==> CRD2: Installed size: 8.3 k
+==> CRD2: Downloading Packages:
+==> CRD2: Running rpm_check_debug
+==> CRD2: Running Transaction Test
+==> CRD2: Transaction Test Succeeded
+==> CRD2: Running Transaction
+==> CRD2:   Installing : puppetlabs-release-6-11.noar [#################            ] 1/1  Installing : puppetlabs-release-6-11.noar [########################     ] 1/1  Installing : puppetlabs-release-6-11.noar [############################ ] 1/1  Installing : puppetlabs-release-6-11.noarch                               1/1 
+==> CRD2:   Verifying  : puppetlabs-release-6-11.noarch                               1/1 
+==> CRD2: 
+==> CRD2: Installed:
+==> CRD2:   puppetlabs-release.noarch 0:6-11                                              
+==> CRD2: 
+==> CRD2: Complete!
+==> CRD2: Loaded plugins: fastestmirror, presto
+==> CRD2: Setting up Install Process
+==> CRD2: Loading mirror speeds from cached hostfile
+==> CRD2:  * base: mirror.solarvps.com
+==> CRD2:  * extras: mirror.metrocast.net
+==> CRD2:  * updates: mirrors.greenmountainaccess.net
+==> CRD2: puppetlabs-deps                                          | 2.5 kB     00:00     
+==> CRD2: puppetlabs-deps/primary_db                               |  27 kB     00:00     
+==> CRD2: puppetlabs-products                                      | 2.5 kB     00:00     
+==> CRD2: puppetlabs-products/primary_db                           | 156 kB     00:00     
+==> CRD2: Package sudo-1.8.6p3-15.el6.x86_64 already installed and latest version
+==> CRD2: Resolving Dependencies
+==> CRD2: --> Running transaction check
+==> CRD2: ---> Package curl.x86_64 0:7.19.7-40.el6_6.1 will be updated
+==> CRD2: ---> Package curl.x86_64 0:7.19.7-40.el6_6.4 will be an update
+==> CRD2: --> Processing Dependency: libcurl = 7.19.7-40.el6_6.4 for package: curl-7.19.7-40.el6_6.4.x86_64
+==> CRD2: ---> Package puppet.noarch 0:3.8.1-1.el6 will be installed
+==> CRD2: --> Processing Dependency: ruby >= 1.8 for package: puppet-3.8.1-1.el6.noarch
+==> CRD2: --> Processing Dependency: hiera >= 1.0.0 for package: puppet-3.8.1-1.el6.noarch
+==> CRD2: --> Processing Dependency: ruby >= 1.8.7 for package: puppet-3.8.1-1.el6.noarch
+==> CRD2: --> Processing Dependency: facter >= 1:1.7.0 for package: puppet-3.8.1-1.el6.noarch
+==> CRD2: --> Processing Dependency: ruby-augeas for package: puppet-3.8.1-1.el6.noarch
+==> CRD2: --> Processing Dependency: ruby-shadow for package: puppet-3.8.1-1.el6.noarch
+==> CRD2: --> Processing Dependency: rubygem-json for package: puppet-3.8.1-1.el6.noarch
+==> CRD2: --> Processing Dependency: /usr/bin/ruby for package: puppet-3.8.1-1.el6.noarch
+==> CRD2: --> Processing Dependency: ruby(selinux) for package: puppet-3.8.1-1.el6.noarch
+==> CRD2: ---> Package unzip.x86_64 0:6.0-2.el6_6 will be installed
+==> CRD2: --> Running transaction check
+==> CRD2: ---> Package facter.x86_64 1:2.4.4-1.el6 will be installed
+==> CRD2: --> Processing Dependency: virt-what for package: 1:facter-2.4.4-1.el6.x86_64
+==> CRD2: ---> Package hiera.noarch 0:1.3.4-1.el6 will be installed
+==> CRD2: ---> Package libcurl.x86_64 0:7.19.7-40.el6_6.1 will be updated
+==> CRD2: ---> Package libcurl.x86_64 0:7.19.7-40.el6_6.4 will be an update
+==> CRD2: ---> Package libselinux-ruby.x86_64 0:2.0.94-5.8.el6 will be installed
+==> CRD2: ---> Package ruby.x86_64 0:1.8.7.374-4.el6_6 will be installed
+==> CRD2: --> Processing Dependency: ruby-libs = 1.8.7.374-4.el6_6 for package: ruby-1.8.7.374-4.el6_6.x86_64
+==> CRD2: --> Processing Dependency: libruby.so.1.8()(64bit) for package: ruby-1.8.7.374-4.el6_6.x86_64
+==> CRD2: ---> Package ruby-augeas.x86_64 0:0.4.1-3.el6 will be installed
+==> CRD2: --> Processing Dependency: augeas-libs >= 0.8.0 for package: ruby-augeas-0.4.1-3.el6.x86_64
+==> CRD2: --> Processing Dependency: libaugeas.so.0(AUGEAS_0.10.0)(64bit) for package: ruby-augeas-0.4.1-3.el6.x86_64
+==> CRD2: --> Processing Dependency: libaugeas.so.0(AUGEAS_0.1.0)(64bit) for package: ruby-augeas-0.4.1-3.el6.x86_64
+==> CRD2: --> Processing Dependency: libaugeas.so.0(AUGEAS_0.11.0)(64bit) for package: ruby-augeas-0.4.1-3.el6.x86_64
+==> CRD2: --> Processing Dependency: libaugeas.so.0(AUGEAS_0.8.0)(64bit) for package: ruby-augeas-0.4.1-3.el6.x86_64
+==> CRD2: --> Processing Dependency: libaugeas.so.0(AUGEAS_0.12.0)(64bit) for package: ruby-augeas-0.4.1-3.el6.x86_64
+==> CRD2: --> Processing Dependency: libaugeas.so.0()(64bit) for package: ruby-augeas-0.4.1-3.el6.x86_64
+==> CRD2: ---> Package ruby-shadow.x86_64 1:2.2.0-2.el6 will be installed
+==> CRD2: ---> Package rubygem-json.x86_64 0:1.5.5-3.el6 will be installed
+==> CRD2: --> Processing Dependency: rubygems >= 1.3.7 for package: rubygem-json-1.5.5-3.el6.x86_64
+==> CRD2: --> Running transaction check
+==> CRD2: ---> Package augeas-libs.x86_64 0:1.0.0-7.el6_6.1 will be installed
+==> CRD2: ---> Package ruby-libs.x86_64 0:1.8.7.374-4.el6_6 will be installed
+==> CRD2: --> Processing Dependency: libreadline.so.5()(64bit) for package: ruby-libs-1.8.7.374-4.el6_6.x86_64
+==> CRD2: ---> Package rubygems.noarch 0:1.3.7-5.el6 will be installed
+==> CRD2: --> Processing Dependency: ruby-rdoc for package: rubygems-1.3.7-5.el6.noarch
+==> CRD2: ---> Package virt-what.x86_64 0:1.11-1.2.el6 will be installed
+==> CRD2: --> Running transaction check
+==> CRD2: ---> Package compat-readline5.x86_64 0:5.2-17.1.el6 will be installed
+==> CRD2: ---> Package ruby-rdoc.x86_64 0:1.8.7.374-4.el6_6 will be installed
+==> CRD2: --> Processing Dependency: ruby-irb = 1.8.7.374-4.el6_6 for package: ruby-rdoc-1.8.7.374-4.el6_6.x86_64
+==> CRD2: --> Running transaction check
+==> CRD2: ---> Package ruby-irb.x86_64 0:1.8.7.374-4.el6_6 will be installed
+==> CRD2: --> Finished Dependency Resolution
+==> CRD2: 
+==> CRD2: Dependencies Resolved
+==> CRD2: 
+==> CRD2: ================================================================================
+==> CRD2:  Package            Arch     Version                Repository             Size
+==> CRD2: ================================================================================
+==> CRD2: Installing:
+==> CRD2:  puppet             noarch   3.8.1-1.el6            puppetlabs-products   1.6 M
+==> CRD2:  unzip              x86_64   6.0-2.el6_6            updates               149 k
+==> CRD2: Updating:
+==> CRD2:  curl               x86_64   7.19.7-40.el6_6.4      updates               194 k
+==> CRD2: Installing for dependencies:
+==> CRD2:  augeas-libs        x86_64   1.0.0-7.el6_6.1        updates               313 k
+==> CRD2:  compat-readline5   x86_64   5.2-17.1.el6           base                  130 k
+==> CRD2:  facter             x86_64   1:2.4.4-1.el6          puppetlabs-products    99 k
+==> CRD2:  hiera              noarch   1.3.4-1.el6            puppetlabs-products    23 k
+==> CRD2:  libselinux-ruby    x86_64   2.0.94-5.8.el6         base                  100 k
+==> CRD2:  ruby               x86_64   1.8.7.374-4.el6_6      updates               538 k
+==> CRD2:  ruby-augeas        x86_64   0.4.1-3.el6            puppetlabs-deps        21 k
+==> CRD2:  ruby-irb           x86_64   1.8.7.374-4.el6_6      updates               317 k
+==> CRD2:  ruby-libs          x86_64   1.8.7.374-4.el6_6      updates               1.7 M
+==> CRD2:  ruby-rdoc          x86_64   1.8.7.374-4.el6_6      updates               381 k
+==> CRD2:  ruby-shadow        x86_64   1:2.2.0-2.el6          puppetlabs-deps        13 k
+==> CRD2:  rubygem-json       x86_64   1.5.5-3.el6            puppetlabs-deps       763 k
+==> CRD2:  rubygems           noarch   1.3.7-5.el6            base                  207 k
+==> CRD2:  virt-what          x86_64   1.11-1.2.el6           base                   24 k
+==> CRD2: Updating for dependencies:
+==> CRD2:  libcurl            x86_64   7.19.7-40.el6_6.4      updates               166 k
+==> CRD2: 
+==> CRD2: Transaction Summary
+==> CRD2: ================================================================================
+==> CRD2: Install      16 Package(s)
+==> CRD2: Upgrade       2 Package(s)
+==> CRD2: 
+==> CRD2: Total download size: 6.6 M
+==> CRD2: Downloading Packages:
+==> CRD2: Setting up and reading Presto delta metadata
+==> CRD2: updates/prestodelta                                      | 424 kB     00:00     
+==> CRD2: Processing delta metadata
+==> CRD2: Download delta size: 145 k
+==> CRD2: (1/2): curl-7.19.7-40.el6_6.1_7.19.7-40.el6_6.4.x86_64.d |  99 kB     00:00     
+==> CRD2: (2/2): libcurl-7.19.7-40.el6_6.1_7.19.7-40.el6_6.4.x86_6 |  46 kB     00:00     
+==> CRD2: Finishing rebuild of rpms, from deltarpms
+==> CRD2: <delta rebuild>          100% [===============]  0.0 B/s | 361 kB     --:-- ETA <delta rebuild>                                          | 361 kB     00:01     
+==> CRD2: Presto reduced the update size by 60% (from 361 k to 145 k).
+==> CRD2: Package(s) data still to download: 6.2 M
+==> CRD2: (1/16): augeas-libs-1.0.0-7.el6_6.1.x86_64.rpm           | 313 kB     00:00     
+==> CRD2: (2/16): compat-readline5-5.2-17.1.el6.x86_64.rpm         | 130 kB     00:00     
+==> CRD2: (3/16): facter-2.4.4-1.el6.x86_64.rpm                    |  99 kB     00:00     
+==> CRD2: (4/16): hiera-1.3.4-1.el6.noarch.rpm                     |  23 kB     00:00     
+==> CRD2: (5/16): libselinux-ruby-2.0.94-5.8.el6.x86_64.rpm        | 100 kB     00:00     
+==> CRD2: (6/16): puppet-3.8.1-1.el6.noarch.rpm                    | 1.6 MB     00:00     
+==> CRD2: (7/16): ruby-1.8.7.374-4.el6_6.x86_64.rpm                | 538 kB     00:00     
+==> CRD2: (8/16): ruby-augeas-0.4.1-3.el6.x86_64.rpm               |  21 kB     00:00     
+==> CRD2: (9/16): ruby-irb-1.8.7.374-4.el6_6.x86_64.rpm            | 317 kB     00:00     
+==> CRD2: (10/16): ruby-libs-1.8 (63%) 54% [======      ]  0.0 B/s | 916 kB     --:-- ETA (10/16): ruby-libs-1.8.7.374-4.el6_6.x86_64.rpm          | 1.7 MB     00:00     
+==> CRD2: (11/16): ruby-rdoc-1.8.7.374-4.el6_6.x86_64.rpm          | 381 kB     00:00     
+==> CRD2: (12/16): ruby-shadow-2.2.0-2.el6.x86_64.rpm              |  13 kB     00:00     
+==> CRD2: (13/16): rubygem-json-1.5.5-3.el6.x86_64.rpm             | 763 kB     00:00     
+==> CRD2: (14/16): rubygems-1.3.7-5.el6.noarch.rpm                 | 207 kB     00:00     
+==> CRD2: (15/16): unzip-6.0-2.el6_6.x86_64.rpm                    | 149 kB     00:00     
+==> CRD2: (16/16): virt-what-1.11-1.2.el6.x86_64.rpm               |  24 kB     00:00     
+==> CRD2: --------------------------------------------------------------------------------
+==> CRD2: Total                                           3.6 MB/s | 6.2 MB     00:01     
+==> CRD2: warning: rpmts_HdrFromFdno: Header V4 RSA/SHA512 Signature, key ID 4bd6ec30: NOKEY
+==> CRD2: Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-puppetlabs
+==> CRD2: Importing GPG key 0x4BD6EC30:
+==> CRD2:  Userid : Puppet Labs Release Key (Puppet Labs Release Key) <info@puppetlabs.com>
+==> CRD2:  Package: puppetlabs-release-6-11.noarch (@/puppetlabs-release-el-6.noarch)
+==> CRD2:  From   : /etc/pki/rpm-gpg/RPM-GPG-KEY-puppetlabs
+==> CRD2: Running rpm_check_debug
+==> CRD2: Running Transaction Test
+==> CRD2: Transaction Test Succeeded
+==> CRD2: Running Transaction
+==> CRD2:   Installing : libselinux-ruby-2.0.94-5.8. [########                    ]  1/20  Installing : libselinux-ruby-2.0.94-5.8. [#################           ]  1/20  Installing : libselinux-ruby-2.0.94-5.8. [##########################  ]  1/20  Installing : libselinux-ruby-2.0.94-5.8. [########################### ]  1/20  Installing : libselinux-ruby-2.0.94-5.8.el6.x86_64                       1/20 
+==> CRD2:   Installing : virt-what-1.11-1.2.el6.x86_ [###                         ]  2/20  Installing : virt-what-1.11-1.2.el6.x86_ [########                    ]  2/20  Installing : virt-what-1.11-1.2.el6.x86_ [#####################       ]  2/20  Installing : virt-what-1.11-1.2.el6.x86_ [#######################     ]  2/20  Installing : virt-what-1.11-1.2.el6.x86_ [########################### ]  2/20  Installing : virt-what-1.11-1.2.el6.x86_64                               2/20 
+==> CRD2:   Updating   : libcurl-7.19.7-40.el6_6.4.x [                            ]  3/20  Updating   : libcurl-7.19.7-40.el6_6.4.x [#####                       ]  3/20  Updating   : libcurl-7.19.7-40.el6_6.4.x [##########                  ]  3/20  Updating   : libcurl-7.19.7-40.el6_6.4.x [###############             ]  3/20  Updating   : libcurl-7.19.7-40.el6_6.4.x [#####################       ]  3/20  Updating   : libcurl-7.19.7-40.el6_6.4.x [##########################  ]  3/20  Updating   : libcurl-7.19.7-40.el6_6.4.x [########################### ]  3/20  Updating   : libcurl-7.19.7-40.el6_6.4.x86_64                            3/20 
+==> CRD2:   Installing : compat-readline5-5.2-17.1.e [                            ]  4/20  Installing : compat-readline5-5.2-17.1.e [#####                       ]  4/20  Installing : compat-readline5-5.2-17.1.e [#########                   ]  4/20  Installing : compat-readline5-5.2-17.1.e [##############              ]  4/20  Installing : compat-readline5-5.2-17.1.e [###################         ]  4/20  Installing : compat-readline5-5.2-17.1.e [######################      ]  4/20  Installing : compat-readline5-5.2-17.1.e [#########################   ]  4/20  Installing : compat-readline5-5.2-17.1.e [########################### ]  4/20  Installing : compat-readline5-5.2-17.1.el6.x86_64                        4/20 
+==> CRD2:   Installing : ruby-libs-1.8.7.374-4.el6_6 [                            ]  5/20  Installing : ruby-libs-1.8.7.374-4.el6_6 [#                           ]  5/20  Installing : ruby-libs-1.8.7.374-4.el6_6 [##                          ]  5/20  Installing : ruby-libs-1.8.7.374-4.el6_6 [###                         ]  5/20  Installing : ruby-libs-1.8.7.374-4.el6_6 [####                        ]  5/20  Installing : ruby-libs-1.8.7.374-4.el6_6 [#####                       ]  5/20  Installing : ruby-libs-1.8.7.374-4.el6_6 [######                      ]  5/20  Installing : ruby-libs-1.8.7.374-4.el6_6 [#######                     ]  5/20  Installing : ruby-libs-1.8.7.374-4.el6_6 [########                    ]  5/20  Installing : ruby-libs-1.8.7.374-4.el6_6 [#########                   ]  5/20  Installing : ruby-libs-1.8.7.374-4.el6_6 [##########                  ]  5/20  Installing : ruby-libs-1.8.7.374-4.el6_6 [###########                 ]  5/20  Installing : ruby-libs-1.8.7.374-4.el6_6 [############                ]  5/20  Installing : ruby-libs-1.8.7.374-4.el6_6 [#############               ]  5/20  Installing : ruby-libs-1.8.7.374-4.el6_6 [##############              ]  5/20  Installing : ruby-libs-1.8.7.374-4.el6_6 [###############             ]  5/20  Installing : ruby-libs-1.8.7.374-4.el6_6 [################            ]  5/20  Installing : ruby-libs-1.8.7.374-4.el6_6 [#################           ]  5/20  Installing : ruby-libs-1.8.7.374-4.el6_6 [##################          ]  5/20  Installing : ruby-libs-1.8.7.374-4.el6_6 [###################         ]  5/20  Installing : ruby-libs-1.8.7.374-4.el6_6 [####################        ]  5/20  Installing : ruby-libs-1.8.7.374-4.el6_6 [#####################       ]  5/20  Installing : ruby-libs-1.8.7.374-4.el6_6 [######################      ]  5/20  Installing : ruby-libs-1.8.7.374-4.el6_6 [#######################     ]  5/20  Installing : ruby-libs-1.8.7.374-4.el6_6 [########################    ]  5/20  Installing : ruby-libs-1.8.7.374-4.el6_6 [#########################   ]  5/20  Installing : ruby-libs-1.8.7.374-4.el6_6 [##########################  ]  5/20  Installing : ruby-libs-1.8.7.374-4.el6_6 [########################### ]  5/20  Installing : ruby-libs-1.8.7.374-4.el6_6.x86_64                          5/20 
+==> CRD2:   Installing : ruby-1.8.7.374-4.el6_6.x86_ [                            ]  6/20  Installing : ruby-1.8.7.374-4.el6_6.x86_ [#                           ]  6/20  Installing : ruby-1.8.7.374-4.el6_6.x86_ [##                          ]  6/20  Installing : ruby-1.8.7.374-4.el6_6.x86_ [###                         ]  6/20  Installing : ruby-1.8.7.374-4.el6_6.x86_ [####                        ]  6/20  Installing : ruby-1.8.7.374-4.el6_6.x86_ [#####                       ]  6/20  Installing : ruby-1.8.7.374-4.el6_6.x86_ [######                      ]  6/20  Installing : ruby-1.8.7.374-4.el6_6.x86_ [#######                     ]  6/20  Installing : ruby-1.8.7.374-4.el6_6.x86_ [########                    ]  6/20  Installing : ruby-1.8.7.374-4.el6_6.x86_ [#########                   ]  6/20  Installing : ruby-1.8.7.374-4.el6_6.x86_ [##########                  ]  6/20  Installing : ruby-1.8.7.374-4.el6_6.x86_ [###########                 ]  6/20  Installing : ruby-1.8.7.374-4.el6_6.x86_ [############                ]  6/20  Installing : ruby-1.8.7.374-4.el6_6.x86_ [#############               ]  6/20  Installing : ruby-1.8.7.374-4.el6_6.x86_ [##############              ]  6/20  Installing : ruby-1.8.7.374-4.el6_6.x86_ [###############             ]  6/20  Installing : ruby-1.8.7.374-4.el6_6.x86_ [################            ]  6/20  Installing : ruby-1.8.7.374-4.el6_6.x86_ [#################           ]  6/20  Installing : ruby-1.8.7.374-4.el6_6.x86_ [##################          ]  6/20  Installing : ruby-1.8.7.374-4.el6_6.x86_ [###################         ]  6/20  Installing : ruby-1.8.7.374-4.el6_6.x86_ [####################        ]  6/20  Installing : ruby-1.8.7.374-4.el6_6.x86_ [#####################       ]  6/20  Installing : ruby-1.8.7.374-4.el6_6.x86_ [######################      ]  6/20  Installing : ruby-1.8.7.374-4.el6_6.x86_ [#######################     ]  6/20  Installing : ruby-1.8.7.374-4.el6_6.x86_ [########################    ]  6/20  Installing : ruby-1.8.7.374-4.el6_6.x86_ [#########################   ]  6/20  Installing : ruby-1.8.7.374-4.el6_6.x86_ [##########################  ]  6/20  Installing : ruby-1.8.7.374-4.el6_6.x86_ [########################### ]  6/20  Installing : ruby-1.8.7.374-4.el6_6.x86_64                               6/20 
+==> CRD2:   Installing : 1:facter-2.4.4-1.el6.x86_64 [                            ]  7/20  Installing : 1:facter-2.4.4-1.el6.x86_64 [#                           ]  7/20  Installing : 1:facter-2.4.4-1.el6.x86_64 [##                          ]  7/20  Installing : 1:facter-2.4.4-1.el6.x86_64 [###                         ]  7/20  Installing : 1:facter-2.4.4-1.el6.x86_64 [####                        ]  7/20  Installing : 1:facter-2.4.4-1.el6.x86_64 [#####                       ]  7/20  Installing : 1:facter-2.4.4-1.el6.x86_64 [######                      ]  7/20  Installing : 1:facter-2.4.4-1.el6.x86_64 [#######                     ]  7/20  Installing : 1:facter-2.4.4-1.el6.x86_64 [########                    ]  7/20  Installing : 1:facter-2.4.4-1.el6.x86_64 [#########                   ]  7/20  Installing : 1:facter-2.4.4-1.el6.x86_64 [##########                  ]  7/20  Installing : 1:facter-2.4.4-1.el6.x86_64 [###########                 ]  7/20  Installing : 1:facter-2.4.4-1.el6.x86_64 [############                ]  7/20  Installing : 1:facter-2.4.4-1.el6.x86_64 [#############               ]  7/20  Installing : 1:facter-2.4.4-1.el6.x86_64 [##############              ]  7/20  Installing : 1:facter-2.4.4-1.el6.x86_64 [###############             ]  7/20  Installing : 1:facter-2.4.4-1.el6.x86_64 [################            ]  7/20  Installing : 1:facter-2.4.4-1.el6.x86_64 [#################           ]  7/20  Installing : 1:facter-2.4.4-1.el6.x86_64 [##################          ]  7/20  Installing : 1:facter-2.4.4-1.el6.x86_64 [###################         ]  7/20  Installing : 1:facter-2.4.4-1.el6.x86_64 [####################        ]  7/20  Installing : 1:facter-2.4.4-1.el6.x86_64 [#####################       ]  7/20  Installing : 1:facter-2.4.4-1.el6.x86_64 [######################      ]  7/20  Installing : 1:facter-2.4.4-1.el6.x86_64 [#######################     ]  7/20  Installing : 1:facter-2.4.4-1.el6.x86_64 [########################    ]  7/20  Installing : 1:facter-2.4.4-1.el6.x86_64 [#########################   ]  7/20  Installing : 1:facter-2.4.4-1.el6.x86_64 [##########################  ]  7/20  Installing : 1:facter-2.4.4-1.el6.x86_64 [########################### ]  7/20  Installing : 1:facter-2.4.4-1.el6.x86_64                                 7/20 
+==> CRD2:   Installing : ruby-irb-1.8.7.374-4.el6_6. [                            ]  8/20  Installing : ruby-irb-1.8.7.374-4.el6_6. [#                           ]  8/20  Installing : ruby-irb-1.8.7.374-4.el6_6. [##                          ]  8/20  Installing : ruby-irb-1.8.7.374-4.el6_6. [###                         ]  8/20  Installing : ruby-irb-1.8.7.374-4.el6_6. [####                        ]  8/20  Installing : ruby-irb-1.8.7.374-4.el6_6. [######                      ]  8/20  Installing : ruby-irb-1.8.7.374-4.el6_6. [########                    ]  8/20  Installing : ruby-irb-1.8.7.374-4.el6_6. [#########                   ]  8/20  Installing : ruby-irb-1.8.7.374-4.el6_6. [###########                 ]  8/20  Installing : ruby-irb-1.8.7.374-4.el6_6. [#############               ]  8/20  Installing : ruby-irb-1.8.7.374-4.el6_6. [##############              ]  8/20  Installing : ruby-irb-1.8.7.374-4.el6_6. [################            ]  8/20  Installing : ruby-irb-1.8.7.374-4.el6_6. [##################          ]  8/20  Installing : ruby-irb-1.8.7.374-4.el6_6. [###################         ]  8/20  Installing : ruby-irb-1.8.7.374-4.el6_6. [#####################       ]  8/20  Installing : ruby-irb-1.8.7.374-4.el6_6. [#######################     ]  8/20  Installing : ruby-irb-1.8.7.374-4.el6_6. [#########################   ]  8/20  Installing : ruby-irb-1.8.7.374-4.el6_6. [##########################  ]  8/20  Installing : ruby-irb-1.8.7.374-4.el6_6. [########################### ]  8/20  Installing : ruby-irb-1.8.7.374-4.el6_6.x86_64                           8/20 
+==> CRD2:   Installing : ruby-rdoc-1.8.7.374-4.el6_6 [                            ]  9/20  Installing : ruby-rdoc-1.8.7.374-4.el6_6 [#                           ]  9/20  Installing : ruby-rdoc-1.8.7.374-4.el6_6 [##                          ]  9/20  Installing : ruby-rdoc-1.8.7.374-4.el6_6 [###                         ]  9/20  Installing : ruby-rdoc-1.8.7.374-4.el6_6 [####                        ]  9/20  Installing : ruby-rdoc-1.8.7.374-4.el6_6 [#####                       ]  9/20  Installing : ruby-rdoc-1.8.7.374-4.el6_6 [######                      ]  9/20  Installing : ruby-rdoc-1.8.7.374-4.el6_6 [#######                     ]  9/20  Installing : ruby-rdoc-1.8.7.374-4.el6_6 [########                    ]  9/20  Installing : ruby-rdoc-1.8.7.374-4.el6_6 [#########                   ]  9/20  Installing : ruby-rdoc-1.8.7.374-4.el6_6 [##########                  ]  9/20  Installing : ruby-rdoc-1.8.7.374-4.el6_6 [############                ]  9/20  Installing : ruby-rdoc-1.8.7.374-4.el6_6 [#############               ]  9/20  Installing : ruby-rdoc-1.8.7.374-4.el6_6 [##############              ]  9/20  Installing : ruby-rdoc-1.8.7.374-4.el6_6 [###############             ]  9/20  Installing : ruby-rdoc-1.8.7.374-4.el6_6 [#################           ]  9/20  Installing : ruby-rdoc-1.8.7.374-4.el6_6 [##################          ]  9/20  Installing : ruby-rdoc-1.8.7.374-4.el6_6 [###################         ]  9/20  Installing : ruby-rdoc-1.8.7.374-4.el6_6 [#####################       ]  9/20  Installing : ruby-rdoc-1.8.7.374-4.el6_6 [######################      ]  9/20  Installing : ruby-rdoc-1.8.7.374-4.el6_6 [#######################     ]  9/20  Installing : ruby-rdoc-1.8.7.374-4.el6_6 [#########################   ]  9/20  Installing : ruby-rdoc-1.8.7.374-4.el6_6 [##########################  ]  9/20  Installing : ruby-rdoc-1.8.7.374-4.el6_6 [########################### ]  9/20  Installing : ruby-rdoc-1.8.7.374-4.el6_6.x86_64                          9/20 
+==> CRD2:   Installing : rubygems-1.3.7-5.el6.noarch [                            ] 10/20  Installing : rubygems-1.3.7-5.el6.noarch [#                           ] 10/20  Installing : rubygems-1.3.7-5.el6.noarch [##                          ] 10/20  Installing : rubygems-1.3.7-5.el6.noarch [###                         ] 10/20  Installing : rubygems-1.3.7-5.el6.noarch [####                        ] 10/20  Installing : rubygems-1.3.7-5.el6.noarch [#####                       ] 10/20  Installing : rubygems-1.3.7-5.el6.noarch [######                      ] 10/20  Installing : rubygems-1.3.7-5.el6.noarch [#######                     ] 10/20  Installing : rubygems-1.3.7-5.el6.noarch [########                    ] 10/20  Installing : rubygems-1.3.7-5.el6.noarch [#########                   ] 10/20  Installing : rubygems-1.3.7-5.el6.noarch [##########                  ] 10/20  Installing : rubygems-1.3.7-5.el6.noarch [###########                 ] 10/20  Installing : rubygems-1.3.7-5.el6.noarch [############                ] 10/20  Installing : rubygems-1.3.7-5.el6.noarch [#############               ] 10/20  Installing : rubygems-1.3.7-5.el6.noarch [##############              ] 10/20  Installing : rubygems-1.3.7-5.el6.noarch [################            ] 10/20  Installing : rubygems-1.3.7-5.el6.noarch [#################           ] 10/20  Installing : rubygems-1.3.7-5.el6.noarch [####################        ] 10/20  Installing : rubygems-1.3.7-5.el6.noarch [######################      ] 10/20  Installing : rubygems-1.3.7-5.el6.noarch [#########################   ] 10/20  Installing : rubygems-1.3.7-5.el6.noarch [##########################  ] 10/20  Installing : rubygems-1.3.7-5.el6.noarch [########################### ] 10/20  Installing : rubygems-1.3.7-5.el6.noarch                                10/20 
+==> CRD2:   Installing : rubygem-json-1.5.5-3.el6.x8 [                            ] 11/20  Installing : rubygem-json-1.5.5-3.el6.x8 [#                           ] 11/20  Installing : rubygem-json-1.5.5-3.el6.x8 [###                         ] 11/20  Installing : rubygem-json-1.5.5-3.el6.x8 [#####                       ] 11/20  Installing : rubygem-json-1.5.5-3.el6.x8 [#######                     ] 11/20  Installing : rubygem-json-1.5.5-3.el6.x8 [########                    ] 11/20  Installing : rubygem-json-1.5.5-3.el6.x8 [##########                  ] 11/20  Installing : rubygem-json-1.5.5-3.el6.x8 [############                ] 11/20  Installing : rubygem-json-1.5.5-3.el6.x8 [##############              ] 11/20  Installing : rubygem-json-1.5.5-3.el6.x8 [###############             ] 11/20  Installing : rubygem-json-1.5.5-3.el6.x8 [#################           ] 11/20  Installing : rubygem-json-1.5.5-3.el6.x8 [###################         ] 11/20  Installing : rubygem-json-1.5.5-3.el6.x8 [####################        ] 11/20  Installing : rubygem-json-1.5.5-3.el6.x8 [#####################       ] 11/20  Installing : rubygem-json-1.5.5-3.el6.x8 [######################      ] 11/20  Installing : rubygem-json-1.5.5-3.el6.x8 [#######################     ] 11/20  Installing : rubygem-json-1.5.5-3.el6.x8 [########################    ] 11/20  Installing : rubygem-json-1.5.5-3.el6.x8 [#########################   ] 11/20  Installing : rubygem-json-1.5.5-3.el6.x8 [##########################  ] 11/20  Installing : rubygem-json-1.5.5-3.el6.x8 [########################### ] 11/20  Installing : rubygem-json-1.5.5-3.el6.x86_64                            11/20 
+==> CRD2:   Installing : hiera-1.3.4-1.el6.noarch [                               ] 12/20  Installing : hiera-1.3.4-1.el6.noarch [###                            ] 12/20  Installing : hiera-1.3.4-1.el6.noarch [####                           ] 12/20  Installing : hiera-1.3.4-1.el6.noarch [#########                      ] 12/20  Installing : hiera-1.3.4-1.el6.noarch [##########                     ] 12/20  Installing : hiera-1.3.4-1.el6.noarch [###########                    ] 12/20  Installing : hiera-1.3.4-1.el6.noarch [#############                  ] 12/20  Installing : hiera-1.3.4-1.el6.noarch [###############                ] 12/20  Installing : hiera-1.3.4-1.el6.noarch [################               ] 12/20  Installing : hiera-1.3.4-1.el6.noarch [#################              ] 12/20  Installing : hiera-1.3.4-1.el6.noarch [###################            ] 12/20  Installing : hiera-1.3.4-1.el6.noarch [####################           ] 12/20  Installing : hiera-1.3.4-1.el6.noarch [##########################     ] 12/20  Installing : hiera-1.3.4-1.el6.noarch [############################## ] 12/20  Installing : hiera-1.3.4-1.el6.noarch                                   12/20 
+==> CRD2:   Installing : 1:ruby-shadow-2.2.0-2.el6.x [################            ] 13/20  Installing : 1:ruby-shadow-2.2.0-2.el6.x [###################         ] 13/20  Installing : 1:ruby-shadow-2.2.0-2.el6.x [#######################     ] 13/20  Installing : 1:ruby-shadow-2.2.0-2.el6.x [########################### ] 13/20  Installing : 1:ruby-shadow-2.2.0-2.el6.x86_64                           13/20 
+==> CRD2:   Installing : augeas-libs-1.0.0-7.el6_6.1 [                            ] 14/20  Installing : augeas-libs-1.0.0-7.el6_6.1 [#                           ] 14/20  Installing : augeas-libs-1.0.0-7.el6_6.1 [###                         ] 14/20  Installing : augeas-libs-1.0.0-7.el6_6.1 [#####                       ] 14/20  Installing : augeas-libs-1.0.0-7.el6_6.1 [#######                     ] 14/20  Installing : augeas-libs-1.0.0-7.el6_6.1 [########                    ] 14/20  Installing : augeas-libs-1.0.0-7.el6_6.1 [##########                  ] 14/20  Installing : augeas-libs-1.0.0-7.el6_6.1 [###########                 ] 14/20  Installing : augeas-libs-1.0.0-7.el6_6.1 [############                ] 14/20  Installing : augeas-libs-1.0.0-7.el6_6.1 [#############               ] 14/20  Installing : augeas-libs-1.0.0-7.el6_6.1 [##############              ] 14/20  Installing : augeas-libs-1.0.0-7.el6_6.1 [###############             ] 14/20  Installing : augeas-libs-1.0.0-7.el6_6.1 [################            ] 14/20  Installing : augeas-libs-1.0.0-7.el6_6.1 [#################           ] 14/20  Installing : augeas-libs-1.0.0-7.el6_6.1 [##################          ] 14/20  Installing : augeas-libs-1.0.0-7.el6_6.1 [###################         ] 14/20  Installing : augeas-libs-1.0.0-7.el6_6.1 [####################        ] 14/20  Installing : augeas-libs-1.0.0-7.el6_6.1 [#####################       ] 14/20  Installing : augeas-libs-1.0.0-7.el6_6.1 [######################      ] 14/20  Installing : augeas-libs-1.0.0-7.el6_6.1 [#######################     ] 14/20  Installing : augeas-libs-1.0.0-7.el6_6.1 [########################    ] 14/20  Installing : augeas-libs-1.0.0-7.el6_6.1 [#########################   ] 14/20  Installing : augeas-libs-1.0.0-7.el6_6.1 [##########################  ] 14/20  Installing : augeas-libs-1.0.0-7.el6_6.1 [########################### ] 14/20  Installing : augeas-libs-1.0.0-7.el6_6.1.x86_64                         14/20 
+==> CRD2:   Installing : ruby-augeas-0.4.1-3.el6.x86 [##                          ] 15/20  Installing : ruby-augeas-0.4.1-3.el6.x86 [##########                  ] 15/20  Installing : ruby-augeas-0.4.1-3.el6.x86 [##########################  ] 15/20  Installing : ruby-augeas-0.4.1-3.el6.x86 [########################### ] 15/20  Installing : ruby-augeas-0.4.1-3.el6.x86_64                             15/20 
+==> CRD2:   Installing : puppet-3.8.1-1.el6.noarch [                              ] 16/20  Installing : puppet-3.8.1-1.el6.noarch [#                             ] 16/20  Installing : puppet-3.8.1-1.el6.noarch [##                            ] 16/20  Installing : puppet-3.8.1-1.el6.noarch [###                           ] 16/20  Installing : puppet-3.8.1-1.el6.noarch [####                          ] 16/20  Installing : puppet-3.8.1-1.el6.noarch [#####                         ] 16/20  Installing : puppet-3.8.1-1.el6.noarch [######                        ] 16/20  Installing : puppet-3.8.1-1.el6.noarch [#######                       ] 16/20  Installing : puppet-3.8.1-1.el6.noarch [########                      ] 16/20  Installing : puppet-3.8.1-1.el6.noarch [#########                     ] 16/20  Installing : puppet-3.8.1-1.el6.noarch [##########                    ] 16/20  Installing : puppet-3.8.1-1.el6.noarch [###########                   ] 16/20  Installing : puppet-3.8.1-1.el6.noarch [############                  ] 16/20  Installing : puppet-3.8.1-1.el6.noarch [#############                 ] 16/20  Installing : puppet-3.8.1-1.el6.noarch [##############                ] 16/20  Installing : puppet-3.8.1-1.el6.noarch [###############               ] 16/20  Installing : puppet-3.8.1-1.el6.noarch [################              ] 16/20  Installing : puppet-3.8.1-1.el6.noarch [#################             ] 16/20  Installing : puppet-3.8.1-1.el6.noarch [##################            ] 16/20  Installing : puppet-3.8.1-1.el6.noarch [###################           ] 16/20  Installing : puppet-3.8.1-1.el6.noarch [####################          ] 16/20  Installing : puppet-3.8.1-1.el6.noarch [#####################         ] 16/20  Installing : puppet-3.8.1-1.el6.noarch [######################        ] 16/20  Installing : puppet-3.8.1-1.el6.noarch [#######################       ] 16/20  Installing : puppet-3.8.1-1.el6.noarch [########################      ] 16/20  Installing : puppet-3.8.1-1.el6.noarch [#########################     ] 16/20  Installing : puppet-3.8.1-1.el6.noarch [##########################    ] 16/20  Installing : puppet-3.8.1-1.el6.noarch [###########################   ] 16/20  Installing : puppet-3.8.1-1.el6.noarch [############################  ] 16/20  Installing : puppet-3.8.1-1.el6.noarch [############################# ] 16/20  Installing : puppet-3.8.1-1.el6.noarch                                  16/20 
+==> CRD2:   Updating   : curl-7.19.7-40.el6_6.4.x86_ [#####                       ] 17/20  Updating   : curl-7.19.7-40.el6_6.4.x86_ [#########                   ] 17/20  Updating   : curl-7.19.7-40.el6_6.4.x86_ [##############              ] 17/20  Updating   : curl-7.19.7-40.el6_6.4.x86_ [###############             ] 17/20  Updating   : curl-7.19.7-40.el6_6.4.x86_ [###################         ] 17/20  Updating   : curl-7.19.7-40.el6_6.4.x86_ [######################      ] 17/20  Updating   : curl-7.19.7-40.el6_6.4.x86_ [########################    ] 17/20  Updating   : curl-7.19.7-40.el6_6.4.x86_ [#########################   ] 17/20  Updating   : curl-7.19.7-40.el6_6.4.x86_ [########################### ] 17/20  Updating   : curl-7.19.7-40.el6_6.4.x86_64                              17/20 
+==> CRD2:   Installing : unzip-6.0-2.el6_6.x86_64 [#                              ] 18/20  Installing : unzip-6.0-2.el6_6.x86_64 [########                       ] 18/20  Installing : unzip-6.0-2.el6_6.x86_64 [#########                      ] 18/20  Installing : unzip-6.0-2.el6_6.x86_64 [##########                     ] 18/20  Installing : unzip-6.0-2.el6_6.x86_64 [###########                    ] 18/20  Installing : unzip-6.0-2.el6_6.x86_64 [############                   ] 18/20  Installing : unzip-6.0-2.el6_6.x86_64 [#############                  ] 18/20  Installing : unzip-6.0-2.el6_6.x86_64 [##############                 ] 18/20  Installing : unzip-6.0-2.el6_6.x86_64 [###############                ] 18/20  Installing : unzip-6.0-2.el6_6.x86_64 [#####################          ] 18/20  Installing : unzip-6.0-2.el6_6.x86_64 [###########################    ] 18/20  Installing : unzip-6.0-2.el6_6.x86_64 [############################## ] 18/20  Installing : unzip-6.0-2.el6_6.x86_64                                   18/20 
+==> CRD2:   Cleanup    : curl-7.19.7-40.el6_6.1.x86_64                              19/20 
+==> CRD2:   Cleanup    : libcurl-7.19.7-40.el6_6.1.x86_64                           20/20 
+==> CRD2:   Verifying  : ruby-rdoc-1.8.7.374-4.el6_6.x86_64                          1/20 
+==> CRD2:   Verifying  : augeas-libs-1.0.0-7.el6_6.1.x86_64                          2/20 
+==> CRD2:   Verifying  : 1:facter-2.4.4-1.el6.x86_64                                 3/20 
+==> CRD2:   Verifying  : ruby-irb-1.8.7.374-4.el6_6.x86_64                           4/20 
+==> CRD2:   Verifying  : compat-readline5-5.2-17.1.el6.x86_64                        5/20 
+==> CRD2:   Verifying  : rubygem-json-1.5.5-3.el6.x86_64                             6/20 
+==> CRD2:   Verifying  : ruby-1.8.7.374-4.el6_6.x86_64                               7/20 
+==> CRD2:   Verifying  : libcurl-7.19.7-40.el6_6.4.x86_64                            8/20 
+==> CRD2:   Verifying  : unzip-6.0-2.el6_6.x86_64                                    9/20 
+==> CRD2:   Verifying  : hiera-1.3.4-1.el6.noarch                                   10/20 
+==> CRD2:   Verifying  : rubygems-1.3.7-5.el6.noarch                                11/20 
+==> CRD2:   Verifying  : curl-7.19.7-40.el6_6.4.x86_64                              12/20 
+==> CRD2:   Verifying  : virt-what-1.11-1.2.el6.x86_64                              13/20 
+==> CRD2:   Verifying  : libselinux-ruby-2.0.94-5.8.el6.x86_64                      14/20 
+==> CRD2:   Verifying  : ruby-libs-1.8.7.374-4.el6_6.x86_64                         15/20 
+==> CRD2:   Verifying  : puppet-3.8.1-1.el6.noarch                                  16/20 
+==> CRD2:   Verifying  : ruby-augeas-0.4.1-3.el6.x86_64                             17/20 
+==> CRD2:   Verifying  : 1:ruby-shadow-2.2.0-2.el6.x86_64                           18/20 
+==> CRD2:   Verifying  : libcurl-7.19.7-40.el6_6.1.x86_64                           19/20 
+==> CRD2:   Verifying  : curl-7.19.7-40.el6_6.1.x86_64                              20/20 
+==> CRD2: 
+==> CRD2: Installed:
+==> CRD2:   puppet.noarch 0:3.8.1-1.el6             unzip.x86_64 0:6.0-2.el6_6            
+==> CRD2: 
+==> CRD2: Dependency Installed:
+==> CRD2:   augeas-libs.x86_64 0:1.0.0-7.el6_6.1                                          
+==> CRD2:   compat-readline5.x86_64 0:5.2-17.1.el6                                        
+==> CRD2:   facter.x86_64 1:2.4.4-1.el6                                                   
+==> CRD2:   hiera.noarch 0:1.3.4-1.el6                                                    
+==> CRD2:   libselinux-ruby.x86_64 0:2.0.94-5.8.el6                                       
+==> CRD2:   ruby.x86_64 0:1.8.7.374-4.el6_6                                               
+==> CRD2:   ruby-augeas.x86_64 0:0.4.1-3.el6                                              
+==> CRD2:   ruby-irb.x86_64 0:1.8.7.374-4.el6_6                                           
+==> CRD2:   ruby-libs.x86_64 0:1.8.7.374-4.el6_6                                          
+==> CRD2:   ruby-rdoc.x86_64 0:1.8.7.374-4.el6_6                                          
+==> CRD2:   ruby-shadow.x86_64 1:2.2.0-2.el6                                              
+==> CRD2:   rubygem-json.x86_64 0:1.5.5-3.el6                                             
+==> CRD2:   rubygems.noarch 0:1.3.7-5.el6                                                 
+==> CRD2:   virt-what.x86_64 0:1.11-1.2.el6                                               
+==> CRD2: 
+==> CRD2: Updated:
+==> CRD2:   curl.x86_64 0:7.19.7-40.el6_6.4                                               
+==> CRD2: 
+==> CRD2: Dependency Updated:
+==> CRD2:   libcurl.x86_64 0:7.19.7-40.el6_6.4                                            
+==> CRD2: 
+==> CRD2: Complete!
+==> CRD2: Loaded plugins: fastestmirror, presto
+==> CRD2: Setting up Install Process
+==> CRD2: Loading mirror speeds from cached hostfile
+==> CRD2:  * base: mirror.solarvps.com
+==> CRD2:  * extras: mirror.metrocast.net
+==> CRD2:  * updates: mirrors.greenmountainaccess.net
+==> CRD2: Resolving Dependencies
+==> CRD2: --> Running transaction check
+==> CRD2: ---> Package rng-tools.x86_64 0:2-13.el6_2 will be installed
+==> CRD2: --> Finished Dependency Resolution
+==> CRD2: 
+==> CRD2: Dependencies Resolved
+==> CRD2: 
+==> CRD2: ================================================================================
+==> CRD2:  Package             Arch             Version              Repository      Size
+==> CRD2: ================================================================================
+==> CRD2: Installing:
+==> CRD2:  rng-tools           x86_64           2-13.el6_2           base            29 k
+==> CRD2: 
+==> CRD2: Transaction Summary
+==> CRD2: ================================================================================
+==> CRD2: Install       1 Package(s)
+==> CRD2: 
+==> CRD2: Total download size: 29 k
+==> CRD2: Installed size: 54 k
+==> CRD2: Downloading Packages:
+==> CRD2: Setting up and reading Presto delta metadata
+==> CRD2: Processing delta metadata
+==> CRD2: Package(s) data still to download: 29 k
+==> CRD2: rng-tools-2-13.el6_2.x86_64.rpm                          |  29 kB     00:00     
+==> CRD2: Running rpm_check_debug
+==> CRD2: Running Transaction Test
+==> CRD2: Transaction Test Succeeded
+==> CRD2: Running Transaction
+==> CRD2:   Installing : rng-tools-2-13.el6_2.x86_64 [                              ] 1/1  Installing : rng-tools-2-13.el6_2.x86_64 [########                      ] 1/1  Installing : rng-tools-2-13.el6_2.x86_64 [###############               ] 1/1  Installing : rng-tools-2-13.el6_2.x86_64 [#########################     ] 1/1  Installing : rng-tools-2-13.el6_2.x86_64 [############################  ] 1/1  Installing : rng-tools-2-13.el6_2.x86_64 [############################# ] 1/1  Installing : rng-tools-2-13.el6_2.x86_64                                  1/1 
+==> CRD2:   Verifying  : rng-tools-2-13.el6_2.x86_64                                  1/1 
+==> CRD2: 
+==> CRD2: Installed:
+==> CRD2:   rng-tools.x86_64 0:2-13.el6_2                                                 
+==> CRD2: 
+==> CRD2: Complete!
+==> CRD2: Starting rngd: [60G[[0;32m  OK  [0;39m]
+==> CRD2: local yum = false ; NOT Enabling local yum.  Packages will be pulled from remote...
+==> CRD2: [mNotice: Compiled catalog for crd2.csail.mit.edu in environment production in 0.07 seconds[0m
+==> CRD2: [mNotice: /Stage[main]/Bigtop_toolchain::Puppet-modules/Exec[install-puppet-stdlib]/returns: executed successfully[0m
+==> CRD2: [mNotice: Finished catalog run in 2.94 seconds[0m
+==> CRD2: Running provisioner: shell...
+    CRD2: Running: inline script
+==> CRD2: iptables: Setting chains to policy ACCEPT: filter [60G[[0;32m  OK  [0;39m]
+==> CRD2: iptables: Flushing firewall rules: [60G[[0;32m  OK  [0;39m]
+==> CRD2: iptables: Unloading modules: [60G[[0;32m  OK  [0;39m]
+==> CRD2: Running provisioner: hostmanager...
+Not creating provisioner directive for tests yet... only on vm 1 of 2
+[0;31;49mAn unknow error happened in Vagrant OpenStack provider
+
+To easily debug what happened, we recommend to set the environment
+variable VAGRANT_OPENSTACK_LOG to debug
+
+    $ export VAGRANT_OPENSTACK_LOG=debug
+
+If doing this does not help fixing your issue, there may be a bug
+in the provider. Please submit an issue on Github at
+https://github.com/ggiamarchi/vagrant-openstack-provider
+with the stracktrace and the logs.
+
+We are looking for feedback, so feel free to ask questions or
+describe features you would like to see in this provider.[0m
+Catched Error: An action 'read_state' was attempted on the machine 'CRD1',
+but another process is already executing an action on the machine.
+Vagrant locks each machine for access by only one process at a time.
+Please wait until the other Vagrant process finishes modifying this
+machine, then try again.
+
+If you believe this message is in error, please check the process
+listing for any "ruby" or "vagrant" processes and kill them. Then
+try again.
+SUCCESS
