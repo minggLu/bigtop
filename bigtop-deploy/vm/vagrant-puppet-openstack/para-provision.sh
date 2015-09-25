@@ -30,7 +30,7 @@ RUN_SMOKE_TESTS=$(grep run_smoke_tests vagrantconfig.yaml | awk -F: '/:/{gsub(/ 
 parallel_provision() {
     while read box; do
         echo $box
-     done | parallel $MAX_PROCS -I"NODE" -q \
+     done | parallel $MAX_PROCS -I"NODE" -q --no-notice \
         sh -c 'LOGFILE="logs/NODE.out.txt" ;                                 \
                 printf  "[NODE] Provisioning. Log: $LOGFILE, Result: " ;     \
                 vagrant provision NODE > $LOGFILE 2>&1 ;                      \
@@ -85,7 +85,7 @@ done | parallel_provision
 echo "preparing for smoke tests..."
 if [ "$RUN_SMOKE_TESTS" = "true" ]; then
     echo "running smoke tests..."
-    vagrant ssh hadoop-bigtop-para$NUM_INSTANCE -c "sudo su <<HERE
+    vagrant ssh hadoop-bigtop$NUM_INSTANCE -c "sudo su <<HERE
     cd /bigtop-home/bigtop-tests/smoke-tests
     export HADOOP_CONF_DIR=/etc/hadoop/conf/
     export BIGTOP_HOME=/bigtop-home/
