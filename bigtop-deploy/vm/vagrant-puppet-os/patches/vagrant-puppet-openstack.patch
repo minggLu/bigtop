@@ -1,0 +1,539 @@
+From 465560b94a70c652e5a3802e92bd24bb67906f07 Mon Sep 17 00:00:00 2001
+From: minggLu <mylu@bu.edu>
+Date: Fri, 26 Jun 2015 10:26:54 -0400
+Subject: [PATCH] Commit for pull request
+
+combine all commit, add README, Vagrantfile and vagrantconfig
+This vagrant recipe inherits from vagrant-puppet-vm, deploys hadoop cluster on OpenStack cloud environment
+
+add README to explain things, and slightly modify Vagrantfile
+
+modify README
+
+add changes for pull request
+
+remove openrc file
+
+add key_path parameter to vagrantconfig file
+
+add description on key_path
+
+Enable parallel deployment to benefit large cluster
+
+- NOTICE : credit for Joe Miller
+- para-deploy : script that does the dirty work, kinda ugly...
+- README : update information about para-deploy
+- Vagrantfile: commented out smoke tests section because it's currently handled by para-deploy.sh.
+
+- Fix the problem of using nodes.tmp
+
+- and change the spaceing problem with if statement
+- and change the name of the script
+
+delete one line
+
+update Readme
+
+Small modifications
+
+- change typo
+- add explainationg on smoke test under parallel provision
+- compare to smoke-tests.sh under utils and change code in para-provision accordingly
+
+change typo in readme
+
+update on [BIGTOP-1911]
+
+- rename folder to from vagrant-puppet-os to vagrant-puppet-openstack
+- rename server name from hadoop-bigtop-para# to hadoop-bigtop#
+- remove installation of openjdk and fix puppet file path in Vagrantfile
+- fix typo in README
+
+remove folders that're in the wrong place
+
+ooops openrc file
+
+fix num_instance not set in Vagrantfile error
+
+Add run_in_parallel option
+
+This avoids commenting out the smoke test part in Vagrantfile
+I also updated the README to explain this
+---
+ bigtop-deploy/vm/vagrant-puppet-openstack/NOTICE   |  22 +++
+ .../vm/vagrant-puppet-openstack/README.md          | 146 ++++++++++++++++++++
+ .../vm/vagrant-puppet-openstack/Vagrantfile        | 152 +++++++++++++++++++++
+ .../vm/vagrant-puppet-openstack/para-provision.sh  | 100 ++++++++++++++
+ .../vm/vagrant-puppet-openstack/vagrantconfig.yaml |  15 ++
+ 5 files changed, 435 insertions(+)
+ create mode 100644 bigtop-deploy/vm/vagrant-puppet-openstack/NOTICE
+ create mode 100644 bigtop-deploy/vm/vagrant-puppet-openstack/README.md
+ create mode 100644 bigtop-deploy/vm/vagrant-puppet-openstack/Vagrantfile
+ create mode 100755 bigtop-deploy/vm/vagrant-puppet-openstack/para-provision.sh
+ create mode 100644 bigtop-deploy/vm/vagrant-puppet-openstack/vagrantconfig.yaml
+
+diff --git a/bigtop-deploy/vm/vagrant-puppet-openstack/NOTICE b/bigtop-deploy/vm/vagrant-puppet-openstack/NOTICE
+new file mode 100644
+index 0000000..53b0f8e
+--- /dev/null
++++ b/bigtop-deploy/vm/vagrant-puppet-openstack/NOTICE
+@@ -0,0 +1,22 @@
++# para-vagrant.sh
++
++minggLu's `deploy` script is derived from the `para-vagrant.sh` script by Joe Miller, available at
++https://github.com/joemiller/sensu-tests/blob/master/para-vagrant.sh.
++
++---
++Author:: Joe Miller (<joeym@joeym.net>)
++Copyright:: Copyright (c) 2012 Joe Miller
++License:: Apache License, Version 2.0
++
++Licensed under the Apache License, Version 2.0 (the "License");
++you may not use this file except in compliance with the License.
++You may obtain a copy of the License at
++
++    http://www.apache.org/licenses/LICENSE-2.0
++
++Unless required by applicable law or agreed to in writing, software
++distributed under the License is distributed on an "AS IS" BASIS,
++WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++See the License for the specific language governing permissions and
++limitations under the License.
++---
+diff --git a/bigtop-deploy/vm/vagrant-puppet-openstack/README.md b/bigtop-deploy/vm/vagrant-puppet-openstack/README.md
+new file mode 100644
+index 0000000..bff0062
+--- /dev/null
++++ b/bigtop-deploy/vm/vagrant-puppet-openstack/README.md
+@@ -0,0 +1,146 @@
++	Licensed to the Apache Software Foundation (ASF) under one or more
++	contributor license agreements. See the NOTICE file distributed with
++	this work for additional information regarding copyright ownership.
++	The ASF licenses this file to You under the Apache License, Version 2.0
++	(the "License"); you may not use this file except in compliance with
++	the License. You may obtain a copy of the License at
++
++	http://www.apache.org/licenses/LICENSE-2.0
++
++	Unless required by applicable law or agreed to in writing, software
++	distributed under the License is distributed on an "AS IS" BASIS,
++	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++	See the License for the specific language governing permissions and
++	limitations under the License.
++
++----------------------------------------------------------------------------
++
++# BigTop OpenStack VM Provisioner
++
++## Overview 
++
++This vagrant recipe is based on the vagrant recipe from `vagrant-puppet-vm` with added feature of vagrant-openstack-provider plugin. The plugin allows us to deploy a Hadoop cluster on an actual virtual environment as if we are deploying on local vagrant vms. It will spin up and provision the vm(s) for us.
++
++The Vagrantfile creates a BigTop virtual Hadoop cluster on OpenStack by using BigTop puppet recipes and pulling from existing bigtop repositories
++
++When the configuration is correctly set up in vagrantconfig.yaml, we should be able to deploy a cluster with on single command `vagrant up`
++
++This can be use:
++
++* to deploy BigTop Hadoop cluster(s) on an OpenStack cloud environment
++* to run BigTop smoke tests on the cluster
++
++## Usage
++
++0) Set up environment 
++
++Install vagrant from [official website](www.vagrantup.com) 
++
++If you want to provision machines in parallel, install gnu-parallel 
++
++```
++# for centos
++yum install parallel 
++# for mac
++brew install parallel
++# for debian/ubuntu
++apt-get install parallel
++```
++
++1) Install [vagrant-hostmanager plugin](https://github.com/smdahlen/vagrant-hostmanager) to better manage `/etc/hosts`
++
++```
++vagrant plugin install vagrant-hostmanager
++```
++
++2) Install [vagrant-openstack-provider](https://github.com/ggiamarchi/vagrant-openstack-provider) 
++
++```
++vagrant plugin install vagrant-openstack-provider
++```
++
++3) Set up configuration 
++
++For now this is partically handled by openstack rc file and partically handled by vagrantconfig.yaml file
++
++Download rc file from Openstack Horizon dashbord Access & Security and run
++```
++source projectname-openrc.sh
++```
++You will also need to specify flavor, image_id, keypair_name, and FQDN (fully qualified domain name of your openstack environment) in vagrantconfig.yaml to successfully spin up a vm
++
++```
++flavor: "name of your choice of flavor" # e.g. m1.small 
++image_id: "UUID of your choice of image" # e.g. 8fddf8aa-1809-414d-b478-f93b8415f5f4
++keypair_name: "your key pair name on openstack" # e.g. cloud-key
++FQDN: "the fully qualified domain name of the environment"  
++key_path: "location of your private key" #e.g. ~/.ssh/cloud-key.pem 
++```
++
++There are other options in vagrantconfig.yaml that you can specify such as set number of vms in the cluster, and automatically run smoke tests
++
++The `run_in_parallel` options should be set to true if want to provision machins in parallel. see below for how to. 
++
++```
++num_instance: 1
++run_smoke_tests: true
++run_in_parallel: false
++```
++
++You can also determine what components are being installed and tested
++
++```
++components: [hadoop, yarn]
++smoke_test_components: [mapredcue, pig]
++```
++
++## GO
++
++For deployment in sequence 
++
++1. set `run_in_parallel` option in `vagrantconfig.yaml` to false
++2. run
++```
++vagrant up --provider=openstack
++```
++
++For parallel provisioning:
++
++1. set `run_in_parallel` option in `vagrantconfig.yaml` to true
++2. run
++```
++./para-provision.sh
++```
++
++#### Parallel provisioning
++
++**This script is based on Joe Miller's para-vagrant.sh script please see NOTICE for more information**
++
++Script reads parameter `num_instance`, `run_smoke_tests` and `smoke_test_components` from `vagrantconfig.yaml` to determine how many machines to spin up and whether or not to run smoke tests and what components will be tested
++
++This script will spin up vms on openstack sequentially first, and then do the provisioning in parallel. Each guest machine will have it's own log file. And will generate a log file for smoke tests if `run_smoke_tests` set to true 
++
++There are some sketchy places in the code...(cuz I suck in bash) such as: 
++* still have unprintable ^M in log file. I haven't figure out how to get rid of them without destroying the format yet
++* use of `sed`: so OS X hates me, and it won't let me use `sed -r` so again I create another temporary file for the smoke tests log
++
++**NOTE**: 
++* the name of the vm in `Vagrantfile` **has to** match the name of the vim in `para-provision.sh`, you can change them in line 66
++
++```
++for ((i=1; i<=$NUM_INSTANCE; i++)); do
++    cat <<EOF
++name_of_your_vm$i
++EOF
++```
++
++* In `Vagrantfile` the run smoke test part is currently commented out, in order to run smoke test after **all** the machines are done provisioning. The smoke tests are currently being handled by `para-provision.sh`. 
++
++#### TODO
++
++* test installing all available components
++  * spark2 is not working, looks like a puppet problem
++* test all the provided smoke tests
++  * mahout smoke tests didn't run all the way throught
++* enable_local_repo
++* modify the code to make it more generic, I only tried this on Centos 6
+diff --git a/bigtop-deploy/vm/vagrant-puppet-openstack/Vagrantfile b/bigtop-deploy/vm/vagrant-puppet-openstack/Vagrantfile
+new file mode 100644
+index 0000000..3e03c37
+--- /dev/null
++++ b/bigtop-deploy/vm/vagrant-puppet-openstack/Vagrantfile
+@@ -0,0 +1,152 @@
++# -*- mode: ruby -*-
++# vi: set ft=ruby :
++
++# Licensed to the Apache Software Foundation (ASF) under one or more
++# contributor license agreements.  See the NOTICE file distributed with
++# this work for additional information regarding copyright ownership.
++# The ASF licenses this file to You under the Apache License, Version 2.0
++# (the "License"); you may not use this file except in compliance with
++# the License.  You may obtain a copy of the License at
++#
++#     http://www.apache.org/licenses/LICENSE-2.0
++#
++# Unless required by applicable law or agreed to in writing, software
++# distributed under the License is distributed on an "AS IS" BASIS,
++# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++# See the License for the specific language governing permissions and
++# limitations under the License.
++
++require "yaml"
++
++_config = YAML.load(File.open(File.join(File.dirname(__FILE__), "vagrantconfig.yaml"), File::RDONLY).read)
++CONF = _config
++
++# Override vagrant configurations using environment variables
++keys = CONF.keys
++keys.each do |k|
++  if ENV[k.upcase] != nil then
++    puts "Overide from environment variable: " + k.upcase + " = " + ENV[k.upcase]
++    if /^\d+/.match(ENV[k.upcase])
++      CONF[k] = Integer(ENV[k.upcase])
++    else
++      CONF[k] = ENV[k.upcase]
++    end
++  end
++end
++
++# Repository
++# Example for testing a Release candidate.
++repo = CONF['repo']
++# repo = "http://bigtop.s3.amazonaws.com/releases/0.7.0/redhat/6/x86_64"
++
++# Which Linux Distribution to use. Right now only centos is tested
++distro = CONF['distro']
++
++# number of instances
++num_instances = CONF['num_instances']
++
++# hadoop ecosystem components
++components = CONF['components']
++
++# Whether to run smoke tests
++run_smoke_tests = CONF['run_smoke_tests']
++
++# Smoke test Components to run
++smoke_test_components = CONF['smoke_test_components'].join(',')
++
++# This is a update to allow dev packages
++# Force success - not worried if this step fails, since we generally only use it for development.
++enable_local_repo = CONF['enable_local_repo']
++puts "vagrant conf local repo enabled:  #{enable_local_repo}"
++
++# JDK package name
++jdk = CONF['jdk']
++
++# instance definition 
++flavor = CONF['flavor']
++image_id = CONF['image_id']
++keypair_name = CONF['keypair_name']
++FQDN = CONF['FQDN']
++key_path = CONF['key_path']
++run_in_parallel = CONF['run_in_parallel']
++require 'vagrant-openstack-provider'
++
++# master node hostname
++# be careful about the fqdn stuff, because its throught actual network
++# in this case it's csail.mit.edu
++hadoop_master = "hadoop-bigtop1.#{FQDN}"
++
++$script = <<SCRIPT
++service iptables stop
++chkconfig iptables off 
++# Prepare puppet configuration file
++mkdir -p /etc/puppet/hieradata
++cp /bigtop-home/bigtop-deploy/puppet/hiera.yaml /etc/puppet
++cp -r /bigtop-home/bigtop-deploy/puppet/hieradata/bigtop/ /etc/puppet/hieradata/
++cat > /etc/puppet/hieradata/site.yaml << EOF
++bigtop::hadoop_head_node: #{hadoop_master}
++hadoop::hadoop_storage_dirs: [/data/1, /data/2]
++bigtop::bigtop_repo_uri: #{repo}
++hadoop_cluster_node::cluster_components: #{components}
++bigtop::jdk_package_name: #{jdk}
++EOF
++SCRIPT
++
++Vagrant.configure(2) do |config|
++  # enable hostmanager to manage /etc/hosts 
++  config.hostmanager.enabled = true
++
++  # provision (multiple) node(s)
++  (1..num_instances).each do |i|
++    config.vm.define "hadoop-bigtop#{i}" do |bigtop|
++      bigtop.ssh.pty = true
++      bigtop.ssh.username = 'centos'
++      bigtop.ssh.private_key_path = key_path
++      bigtop.vm.provider :openstack do |os|
++        os.openstack_auth_url   = 'https://nimbus.csail.mit.edu:5001/v2.0/tokens'
++        os.username             = ENV['OS_USERNAME']
++        os.password             = ENV['OS_PASSWORD']
++        os.tenant_name          = ENV['OS_TENANT_NAME']
++        os.flavor               = flavor
++        os.server_name          = "hadoop-bigtop#{i}"
++        os.image                = image_id
++        os.endpoint_type        = 'publicURL'
++        os.keypair_name         = keypair_name
++        os.sync_method          = 'rsync'
++      end
++    
++      bigtop.vm.hostname = "hadoop-bigtop#{i}.#{FQDN}"
++      bigtop.hostmanager.aliases = "hadoop-bigtop#{i}"
++      
++      # sync folder from local to vm using rsync
++      bigtop.vm.synced_folder "../../../", "/bigtop-home"
++
++      # set up environment and hiera and manage hosts
++      bigtop.vm.provision :shell do |shell|
++        shell.path = "../utils/setup-env-" + distro + ".sh"
++      end
++      bigtop.vm.provision "shell", inline: $script
++    
++      # run puppet to deploy hadoop
++      bigtop.vm.provision :puppet do |puppet|
++        puppet.module_path = "../../puppet/modules/"
++        puppet.manifests_path = "../../puppet/manifests/"
++        puppet.manifest_file = "site.pp"
++        puppet.options = '--debug'
++      end
++     
++      if run_smoke_tests && !run_in_parallel then
++        if i==num_instances then
++          puts "creating provisioner directive for running tests"
++          bigtop.vm.provision :shell do |shell|
++            shell.path = "../utils/smoke-tests.sh" 
++            shell.args = ["#{smoke_test_components}"]
++          end
++        else
++          puts "Not creating provisioner directive for tests yet... only on vm #{i} of #{num_instances}"
++        end
++      end
++    end
++  end
++
++end
+diff --git a/bigtop-deploy/vm/vagrant-puppet-openstack/para-provision.sh b/bigtop-deploy/vm/vagrant-puppet-openstack/para-provision.sh
+new file mode 100755
+index 0000000..ea39b36
+--- /dev/null
++++ b/bigtop-deploy/vm/vagrant-puppet-openstack/para-provision.sh
+@@ -0,0 +1,100 @@
++#!/bin/sh
++
++# concurrency is hard, let's have a beer
++
++# This script is based onthe `para-vagrant.sh` script by Joe Miller, available at https://github.com/joemiller/sensu-tests/blob/master/para-vagrant.sh.
++# see NOTICE file
++
++# any valid parallel argument will work here, such as -P x.
++MAX_PROCS="-j 10"
++
++# Read parameter from vagrantconfig.yaml file
++NUM_INSTANCE=$(grep num_instance vagrantconfig.yaml | awk -F: '/:/{gsub(/ /, "", $2); print $2}')
++SMOKE_TEST_COMPONENTS=$(grep smoke_test_components vagrantconfig.yaml | awk -F[ '/,/{gsub(/ /, "", $2); print $2}' | awk -F] '{print $1}')
++RUN_SMOKE_TESTS=$(grep run_smoke_tests vagrantconfig.yaml | awk -F: '/:/{gsub(/ /, "", $2); print $2}')
++
++parallel_provision() {
++    while read box; do
++        echo $box
++     done | parallel $MAX_PROCS -I"NODE" -q \
++        sh -c 'LOGFILE="logs/NODE.out.txt" ;                                 \
++                printf  "[NODE] Provisioning. Log: $LOGFILE, Result: " ;     \
++                vagrant provision NODE > $LOGFILE 2>&1 ;                      \
++                echo "vagrant provision NODE > $LOGFILE 2>&1" ;               \
++                RETVAL=$? ;                                                 \
++                if [ $RETVAL -gt 0 ]; then                                  \
++                    echo " FAILURE";                                        \
++                    tail -12 $LOGFILE | sed -e "s/^/[NODE]  /g";             \
++                    echo "[NODE] ---------------------------------------------------------------------------";   \
++                    echo "FAILURE ec=$RETVAL" >>$LOGFILE;                   \
++                else                                                        \
++                    echo " SUCCESS";                                        \
++                    tail -5 $LOGFILE | sed -e "s/^/[NODE]  /g";              \
++                    echo "[NODE] ---------------------------------------------------------------------------";   \
++                    echo "SUCCESS" >>$LOGFILE;                              \
++                fi;                                                         \
++                exit $RETVAL'
++
++    failures=$(egrep  '^FAILURE' logs/*.out.txt | sed -e 's/^logs\///' -e 's/\.out\.txt:.*//' -e 's/^/  /')
++    successes=$(egrep '^SUCCESS' logs/*.out.txt | sed -e 's/^logs\///' -e 's/\.out\.txt:.*//' -e 's/^/  /')
++
++    echo
++    echo "Failures:"
++    echo '------------------'
++    echo "$failures"
++    echo
++    echo "Successes:"
++    echo '------------------'
++    echo "$successes"
++}
++
++## -- main -- ##
++
++# cleanup old logs
++mkdir logs >/dev/null 2>&1
++rm -f logs/*
++
++# spin up vms sequentially, because openstack provider doesn't support --parallel 
++# This step will update `/etc/hosts` file in vms, because since version 1.5 vagrant up runs hostmanager before provision 
++echo ' ==> Calling "vagrant up" to boot the vms...'
++vagrant up --no-provision
++
++# but run provision tasks in parallel
++echo " ==> Beginning parallel 'vagrant provision' processes ..."
++for ((i=1; i<=$NUM_INSTANCE; i++));do
++    cat <<EOF
++hadoop-bigtop$i 
++EOF
++done | parallel_provision   
++
++#run smoketest on the last node when all node finish provisioning 
++echo "preparing for smoke tests..."
++if [ "$RUN_SMOKE_TESTS" = "true" ]; then
++    echo "running smoke tests..."
++    vagrant ssh hadoop-bigtop-para$NUM_INSTANCE -c "sudo su <<HERE
++    cd /bigtop-home/bigtop-tests/smoke-tests 
++    export HADOOP_CONF_DIR=/etc/hadoop/conf/ 
++    export BIGTOP_HOME=/bigtop-home/ 
++    export HADOOP_MAPRED_HOME=/usr/lib/hadoop-mapreduce/ 
++    export HIVE_HOME=/usr/lib/hive/ 
++    export PIG_HOME=/usr/lib/pig/ 
++    export FLUME_HOME=/usr/lib/flume/ 
++    export HIVE_CONF_DIR=/etc/hive/conf/ 
++    export JAVA_HOME=/usr/lib/jvm/java-openjdk/ 
++    export MAHOUT_HOME=/usr/lib/mahout 
++    export ITEST="0.7.0" 
++
++    su -s /bin/bash $HCFS_USER -c '/usr/bin/hadoop fs -mkdir /user/vagrant /user/root'
++    su -s /bin/bash $HCFS_USER -c 'hadoop fs -chmod 777 /user/vagrant'
++    su -s /bin/bash $HCFS_USER -c 'hadoop fs -chmod 777 /user/root'
++
++    yum install -y pig hive flume mahout sqoop
++
++    ./gradlew clean compileGroovy test -Dsmoke.tests=${SMOKE_TEST_COMPONENTS} --info
++    HERE" > logs/smoke.tmp 2>&1 
++    sed "s,\x1B\[[0-9;]*[a-zA-Z],,g" logs/smoke.tmp | tr -d '^M' > logs/smoke_tests.log 
++else
++    echo "Smoke tests did not run because run_smoke_tests set to false"
++fi 
++
++rm -f logs/*.tmp 
+diff --git a/bigtop-deploy/vm/vagrant-puppet-openstack/vagrantconfig.yaml b/bigtop-deploy/vm/vagrant-puppet-openstack/vagrantconfig.yaml
+new file mode 100644
+index 0000000..407aa6a
+--- /dev/null
++++ b/bigtop-deploy/vm/vagrant-puppet-openstack/vagrantconfig.yaml
+@@ -0,0 +1,15 @@
++repo: "http://bigtop01.cloudera.org:8080/view/Releases/job/Bigtop-0.8.0/label=centos6/6/artifact/output/"
++num_instances: 1
++distro: centos
++components: [hadoop, yarn]
++enable_local_repo: false
++run_smoke_tests: false
++run_in_parallel: false 
++smoke_test_components: [mapreduce, pig]
++jdk: "java-1.7.0-openjdk-devel.x86_64"
++flavor: "" 
++image_id: ""
++keypair_name: ""
++key_path: ""
++FQDN: ""
++

@@ -1,0 +1,15 @@
+repo: "http://bigtop01.cloudera.org:8080/view/Releases/job/Bigtop-0.8.0/label=centos6/6/artifact/output/"
+num_instances: 1
+distro: centos
+components: [hadoop, yarn, mahout, hive]
+enable_local_repo: false
+run_smoke_tests: true
+run_in_parallel: false
+smoke_test_components: [mapreduce, pig]
+jdk: "java-1.7.0-openjdk-devel.x86_64"
+flavor: "m1.8core" 
+image_id: "8fddf8aa-1809-414d-b478-f93b8415f5f4"
+keypair_name: "csail-mylu-key"
+key_path: "~/.ssh/csail-mylu-key.pem"
+FQDN: "csail.mit.edu"
+
